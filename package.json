@@ -1,0 +1,19 @@
+{
+  "name": "@yowainwright/common-utilities",
+  "version": "0.0.1",
+  "description": "Common utilities for javascript development",
+  "main": "index.js",
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint-cli": "^0.14.0",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333",
+    "write-good": "^1.0.1"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
