@@ -14,6 +14,9 @@
     "write-good": "^1.0.1"
   },
   "scripts": {
-    "build": "tsc"
+    "start": "npm i",
+    "build": "tsc",
+    "lint:ts": "tslint -c tslint.json '*.{ts}'",
+    "tsc-check": "tsc --noEmit"
   }
 }

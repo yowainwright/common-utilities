@@ -1,4 +1,11 @@
 /**
+ * COMMON UTILITIES 🛠
+ * ----
+ * The following methods are used everyday in JavaScript development
+ * If you're unaware that you're using them, you're using them
+ */
+
+/**
  * compose 🚂
  * ----
  * a common function that take the output from one function
@@ -7,12 +14,29 @@
  * @param {fns} an array of functions
  * @returns the next/final value
  */
-export const compose = (...fns: Array<Function>) =>
+export const compose = (...fns: any[]) =>
   (patchedValue: any) =>
-    fns.reduceRight((fnVal: any, fn: Function) => fn(fnVal), patchedValue)
+    fns.reduceRight((fnVal: any, fn: any) => fn(fnVal), patchedValue)
 
 /**
- * pipe
+ * pipe ⛓
  * ----
- *
+ * @param {fns} an array of functions
+ * @returns the last/final value
+ */
+export const pipe = (...fns: any[]) =>
+  (patchedValue: any) =>
+    fns.reduce((fnVal: any, fn: any) => fn(fnVal), patchedValue)
+
+
+/**
+ * curry ➡️
+ */
+
+/**
+ * head 👤
+ */
+
+/**
+ * tail ➽
  */

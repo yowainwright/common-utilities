@@ -23,3 +23,12 @@ exports.compose = function () {
  * ----
  *
  */
+exports.pipe = function () {
+    var fns = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        fns[_i] = arguments[_i];
+    }
+    return function (patchedValue) {
+        return fns.reduce(function (fnVal, fn) { return fn(fnVal); }, patchedValue);
+    };
+};
