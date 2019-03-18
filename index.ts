@@ -36,19 +36,23 @@ export const pipe = (...fns: any[]) =>
 export const trace = (label: string) => (value: any) => {
   console.log(`${label}: ${value}`)
   return value
-};
-
-/**
- * curry ➡️
- */
-
+}
 
 /**
  * head 👤
+ * @param {array}
+ * @returns {item} returns the first item of an array
  */
 export const head = ([first]: any[]) => [first]
 
 /**
  * tail ➽
+ * @param {array}
+ * @returns {items} returns the rest of the items besides the first item in an array
  */
 const tail = ([first, ...rest]: any[]) => rest
+
+/**
+ * curry ➡️
+ * @TODO
+ */
