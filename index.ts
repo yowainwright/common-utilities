@@ -28,15 +28,27 @@ export const pipe = (...fns: any[]) =>
   (patchedValue: any) =>
     fns.reduce((fnVal: any, fn: any) => fn(fnVal), patchedValue)
 
+/**
+ * trace
+ * @param {label} string
+ * @param {value} any
+ */
+export const trace = (label: string) => (value: any) => {
+  console.log(`${label}: ${value}`)
+  return value
+};
 
 /**
  * curry ➡️
  */
 
+
 /**
  * head 👤
  */
+export const head = ([first]: any[]) => [first]
 
 /**
  * tail ➽
  */
+const tail = ([first, ...rest]: any[]) => rest
