@@ -1,6 +1,6 @@
 # Common Utilities
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/yowainwright/common-utilities.svg?token=3e72ad51d011ac8c238c443aa2c21d02573a8340729832e4e4ff2296a00a3f2e&ts=1582955254245)](https://greenkeeper.io/)
+
 
 This repository contains common utilities for javascript development.
 
