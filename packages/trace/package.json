@@ -1,0 +1,10 @@
+{
+  "name": "@common-utilities/trace",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, Trace",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)"
+}

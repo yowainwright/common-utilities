@@ -1,5 +1,5 @@
 {
-  "name": "@yowainwright/common-utilities",
+  "name": "@common-utilities/root",
   "version": "0.0.1",
   "description": "Common utilities for javascript development",
   "main": "index.js",
@@ -10,6 +10,7 @@
     "markdownlint-cli": "^0.22.0",
     "ts-jest": "^25.2.1",
     "tslint": "^6.0.0",
+    "lerna": "^3.20.2",
     "typescript": "^3.3.3333",
     "write-good": "^1.0.1"
   },
