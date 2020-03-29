@@ -16,9 +16,6 @@ Listed below are Common Utilities packages
 
 | ------------------------------------------------ | ------------------------------------------------ |
 | [@common-utilities/compose](/packages/compose) | a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value |
-| [@common-utilities/head](/packages/head) | |
-| [@common-utilities/pipe](/packages/pipe) | |
-| [@common-utilities/trace](/packages/trace) | |
 
 ---
 
