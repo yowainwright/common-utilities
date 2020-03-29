@@ -14,11 +14,11 @@ These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ra
 
 Listed below are Common Utilities packages
 
-|------------------------------------------------|
-| [@common-utilities/compose](/packages/compose) |
-| [@common-utilities/head](/packages/head) |
-| [@common-utilities/pipe](/packages/pipe) |
-| [@common-utilities/trace](/packages/trace) |
+|------------------------------------------------|---|
+| [@common-utilities/compose](/packages/compose) | |
+| [@common-utilities/head](/packages/head) | |
+| [@common-utilities/pipe](/packages/pipe) | |
+| [@common-utilities/trace](/packages/trace) | |
 
 ---
 
