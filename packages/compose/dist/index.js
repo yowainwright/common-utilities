@@ -1,5 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict'
+Object.defineProperty(exports, '__esModule', { value: true })
 /**
  * compose 🚂
  * ----
@@ -9,5 +9,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @param {fns} an array of functions
  * @returns the next/final value
  */
-exports.compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue);
+exports.compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 //# sourceMappingURL=index.js.map

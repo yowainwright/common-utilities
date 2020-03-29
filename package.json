@@ -64,11 +64,41 @@
     }
   },
   "commitlint": {
-    "extends": ["@commitlint/config-lerna-scopes"],
+    "extends": [
+      "@commitlint/config-lerna-scopes"
+    ],
     "rules": {
-      "header-max-length": [2, "always", 120],
-      "scope-enum": [2, "always", ["root", "compose", "head", "pipe", "trace"]],
-      "type-enum": [2, "always", ["chore", "feat", "fix", "docs", "style", "refactor", "test", "release", "revert"]]
+      "header-max-length": [
+        2,
+        "always",
+        120
+      ],
+      "scope-enum": [
+        2,
+        "always",
+        [
+          "root",
+          "compose",
+          "head",
+          "pipe",
+          "trace"
+        ]
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "chore",
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "test",
+          "release",
+          "revert"
+        ]
+      ]
     }
   },
   "husky": {
@@ -81,10 +111,14 @@
     }
   },
   "jest": {
-    "projects": ["<rootDir>/packages/*"],
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
     "resetMocks": true,
     "rootDir": "./",
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
@@ -97,5 +131,9 @@
     "*.{ts,tsx}": [
       "jest --bail --findRelatedTests"
     ]
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.19.0",
+    "lint-staged": "^10.0.10"
   }
 }
