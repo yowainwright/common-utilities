@@ -14,10 +14,11 @@ These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ra
 
 Listed below are Common Utilities packages
 
-- **[@common-utilities/compose](/packages/compose)**
-- **[@common-utilities/head](/packages/head)**
-- **[@common-utilities/pipe](/packages/pipe)**
-- **[@common-utilities/trace](/packages/trace)**
+|------------------------------------------------|
+| [@common-utilities/compose](/packages/compose) |
+| [@common-utilities/head](/packages/head) |
+| [@common-utilities/pipe](/packages/pipe) |
+| [@common-utilities/trace](/packages/trace) |
 
 ---
 
@@ -28,8 +29,7 @@ A common function that take the output from one function and automatically patch
 ### Function
 
 ```javascript
-const compose = (...fns) => patchedValue =>
-  fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue);
+const compose = (...fns) => patchedValue => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 ### Usage
