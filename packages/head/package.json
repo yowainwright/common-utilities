@@ -2,9 +2,16 @@
   "name": "@common-utilities/head",
   "version": "0.0.1",
   "description": "A basic implementation of the common utility function, Head",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "private": false,
   "repository": "git@github.com:yowainwright/common-utilities.git",
-  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)"
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "tsc": "tsc --noEmit",
+    "lint": "eslint . --ext '.ts,.tsx,.js,.json,.md,.snap' --cache",
+    "lint:fix": "yarn lint -- --fix"
+  }
 }

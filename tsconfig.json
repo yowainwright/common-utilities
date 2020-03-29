@@ -1,33 +1,25 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "checkJs": false,
+    "declaration": true,
     "esModuleInterop": true,
+    "checkJs": false,
     "jsx": "react",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "outDir": "./dist",
     "preserveConstEnums": true,
     "removeComments": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es6"
   },
-  "exclude": [
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "packages/**/dist/**",
-    "packages/*/dist/**",
-    "coverage",
-    "**/__tests__/*"
-  ]
+  "exclude": ["**/*.test.ts", "packages/**/dist/**", "coverage", "**/__tests__/*", "*.js"]
 }

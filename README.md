@@ -1,10 +1,25 @@
 # Common Utilities
 
-
-
 This repository contains common utilities for javascript development.
 
-These methods are used and written elsewhere ([LoDash](), [Ramda]()). This repository is beneficial to me and may be beneficial to others because it documents common JavaScript utilities functions for those that are learning them.
+These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ramda](https://ramdajs.com/docs/)). This repository is beneficial to me and may be beneficial to others because it documents common JavaScript utilities functions for those that are learning them.
+
+---
+
+[Packages](#packages) | [Compose](#compose)
+
+---
+
+## Packages
+
+Listed below are Common Utilities packages
+
+- **[@common-utilities/compose](/packages/compose)**
+- **[@common-utilities/head](/packages/head)**
+- **[@common-utilities/pipe](/packages/pipe)**
+- **[@common-utilities/trace](/packages/trace)**
+
+---
 
 ## Compose 🚂
 
@@ -13,19 +28,18 @@ A common function that take the output from one function and automatically patch
 ### Function
 
 ```javascript
-
-const compose = (...fns) => patchedValue => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
-
+const compose = (...fns) => patchedValue =>
+  fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue);
 ```
 
 ### Usage
 
 ```
-
 compose(
   add(2),
   subtract(3),
   multiple(5)
 )
-
 ```
+
+---
