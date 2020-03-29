@@ -16,5 +16,16 @@
     "lint": "eslint . --ext '.ts,.tsx,.js,.json,.md,.snap' --cache",
     "lint:fix": "yarn lint -- --fix"
   },
+  "jest": {
+    "name": "@common-utilities/trace",
+    "projects": ["<rootDir>/packages/*"],
+    "resetMocks": true,
+    "rootDir": "./",
+    "roots": ["<rootDir>/src"],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
   "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"
 }

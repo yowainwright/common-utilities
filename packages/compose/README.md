@@ -5,12 +5,11 @@ A common function that take the output from one function and automatically patch
 ## Function
 
 ```javascript
-const compose = (...fns) => patchedValue =>
-  fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue);
+const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 ## Usage
 
 ```javascript
-compose(add(2), subtract(3), multiple(5));
+compose(add(2), subtract(3), multiple(5))
 ```
