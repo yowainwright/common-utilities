@@ -12,12 +12,13 @@ These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ra
 
 ## Packages
 
-Listed below are Common Utilities packages
-
-- **[@common-utilities/compose](/packages/compose)**
-- **[@common-utilities/head](/packages/head)**
-- **[@common-utilities/pipe](/packages/pipe)**
-- **[@common-utilities/trace](/packages/trace)**
+| Package                                        | Utility                                                                                       |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [@common-utilities/compose](/packages/compose) | passes function value until it delivers a final return value                                  |
+| [@common-utilities/head](/packages/head)       | returns the first value of an array                                                           |
+| [@common-utilities/pipe](/packages/pipe)       | passes function value until it delivers a final return value in the opposite order of compose |
+| [@common-utilities/trace](/packages/trace)     | functionally logs values                                                                      |
+| [@common-utilities/repeat](/packages/repeat)   | recursively replaces a value based on a certain length                                        |
 
 ---
 
@@ -28,7 +29,7 @@ A common function that take the output from one function and automatically patch
 ### Function
 
 ```javascript
-const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
+const compose = (...fns) => patchedValue => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 ### Usage

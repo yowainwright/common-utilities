@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "prettier", "markdown", "json", "jest", "filenames", "import", "@typescript-eslint"],
+  "plugins": ["react", "prettier", "json", "jest", "filenames", "import", "@typescript-eslint"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",

@@ -1,0 +1,34 @@
+{
+  "name": "@common-utilities/repeat",
+  "version": "0.0.1",
+  "description": "a functional recursive `do while loop` which executes based a certain count (i)",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "tsc": "tsc --noEmit",
+    "lint": "eslint . --ext '.ts,.tsx,.js,.json,.md,.snap' --cache",
+    "lint:fix": "yarn lint -- --fix"
+  },
+  "jest": {
+    "name": "@common-utilities/trace",
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
+    "resetMocks": true,
+    "rootDir": "./",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  }
+}
