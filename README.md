@@ -12,8 +12,6 @@ These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ra
 
 ## Packages
 
-Listed below are Common Utilities packages
-
 | Package                                        | Utility                                                                                       |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | [@common-utilities/compose](/packages/compose) | passes function value until it delivers a final return value                                  |
