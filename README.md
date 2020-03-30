@@ -1,16 +1,16 @@
-# Common Utilities
+# Common Utilities 🧰
 
-This repository contains common utilities for javascript development.
-
-These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ramda](https://ramdajs.com/docs/)). This repository is beneficial to me and may be beneficial to others because it documents common JavaScript utilities functions for those that are learning them.
+Common functional typed utilities functions for javascript development.
 
 ---
 
-[Packages](#packages) | [Compose](#compose)
+[Packages](#packages) | [Gloassary](#glossary) | [Cites](#cites)
 
 ---
 
 ## Packages
+
+Common Utilities provides bite-sized packages of each utility. Use what it needed without what is not.
 
 | Package                                        | Utility                                                                                       |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------- |
@@ -22,17 +22,21 @@ These methods are used and written elsewhere ([LoDash](https://lodash.com/), [Ra
 
 ---
 
-## Compose 🚂
+## Glossary
+
+Below are sectioned descriptions and usages of eact implemented Common Utility.
+
+### Compose 🚂
 
 A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
 
-### Function
+#### Function
 
 ```javascript
 const compose = (...fns) => patchedValue => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
-### Usage
+#### Usage
 
 ```
 compose(
@@ -43,3 +47,7 @@ compose(
 ```
 
 ---
+
+## Cites
+
+Many packaged Common Utilities are written elsewhere ([LoDash](https://lodash.com/), [Ramda](https://ramdajs.com/docs/)). Common Utilities defines and simplifies functions useful for everyday JavaScript development.
