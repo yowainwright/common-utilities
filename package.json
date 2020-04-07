@@ -134,6 +134,6 @@
   },
   "dependencies": {
     "eslint-plugin-react": "^7.19.0",
-    "lint-staged": "^10.0.10"
+    "lint-staged": "^10.1.1"
   }
 }
