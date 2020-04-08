@@ -1,15 +1,32 @@
-# @common-utilities/compose
+# @common-utilities/compose 🧰
 
-A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
+A common function composed of function arguments which returns their value to the next function until returning a final value.
+
+## Install
+
+```bash
+yarn add @common-utilities/compose -D
+```
 
 ## Function
 
 ```javascript
-const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
+const compose = (...fns) => (val) => fns.reduceRight((fnVal, fn) => fn(fnVal), val)
+```
+
+```typescript
+const compose = (...fns: Function[]) => (val: any) => fns.reduceRight((fnVal: any, fn: Function) => fn(fnVal), val)
 ```
 
 ## Usage
 
 ```javascript
-compose(add(2), subtract(3), multiple(5))
+const add1 = val = val + 1;
+const subtract2 = val = val - 2;
+const multiplyBy3 = val = val * 3;
+compose(add1, subtract2, multiplyBy3)
 ```
+
+----
+
+View other [common utilities](/).
