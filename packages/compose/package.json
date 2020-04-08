@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/compose",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A basic implementation of the common utility function, Compose",
   "main": "dist/index.js",
   "license": "MIT",
@@ -18,13 +18,17 @@
   },
   "jest": {
     "name": "@common-utilities/compose",
-    "projects": ["<rootDir>/packages/*"],
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
     "resetMocks": true,
     "rootDir": "./",
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
+      "^.+\\.(ts)$": "ts-jest"
     }
   },
   "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"

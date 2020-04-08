@@ -113,16 +113,7 @@
   "jest": {
     "projects": [
       "<rootDir>/packages/*"
-    ],
-    "resetMocks": true,
-    "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    }
+    ]
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md}": [

@@ -9,3 +9,5 @@
  */
 export const compose = (...fns: any[]) => (patchedValue: any) =>
   fns.reduceRight((fnVal: any, fn: any) => fn(fnVal), patchedValue)
+
+export default compose
