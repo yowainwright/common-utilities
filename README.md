@@ -33,20 +33,50 @@ A common function that take the output from one function and automatically patch
 #### Function
 
 ```javascript
-const compose = (...fns) => patchedValue => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
+const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 #### Usage
 
-```
-compose(
-  add(2),
-  subtract(3),
-  multiple(5)
-)
+```javascript
+compose(add1, subtract3, multipleBy5)
 ```
 
 ---
+
+### Head 👤
+
+A common function for return the value of the first item in an Array.
+
+#### Function
+
+```javascript
+export const head = ([first]) => first
+```
+
+#### Usage
+
+```javascript
+head([0, 1, 2, 3, 4])
+```
+
+---
+
+### Pipe ⛓
+
+A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
+
+#### Function
+
+```javascript
+const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), patchedValue)
+```
+
+#### Usage
+
+```javascript
+pipe(add1, subtract2, multipleBy3)
+```
 
 ## Cites
 

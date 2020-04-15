@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/head",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A basic implementation of the common utility function, Head",
   "main": "dist/index.js",
   "license": "MIT",
@@ -18,10 +18,14 @@
   },
   "jest": {
     "name": "@common-utilities/head",
-    "projects": ["<rootDir>/packages/*"],
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
     "resetMocks": true,
     "rootDir": "./",
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"

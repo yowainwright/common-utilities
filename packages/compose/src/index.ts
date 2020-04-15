@@ -7,7 +7,7 @@
  * @param {fns} an array of functions
  * @returns the next/final value
  */
-export const compose = (...fns: any[]) => (patchedValue: any) =>
-  fns.reduceRight((fnVal: any, fn: any) => fn(fnVal), patchedValue)
+export const compose = (...fns: unknown[]) => (patchedValue: unknown): unknown =>
+  fns.reduceRight((fnVal: unknown, fn: Function) => fn(fnVal), patchedValue)
 
 export default compose

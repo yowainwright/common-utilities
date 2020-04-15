@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/pipe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A basic implementation of the common utility function, Pipe",
   "main": "dist/index.js",
   "license": "MIT",
@@ -18,10 +18,14 @@
   },
   "jest": {
     "name": "@common-utilities/pipe",
-    "projects": ["<rootDir>/packages/*"],
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
     "resetMocks": true,
     "rootDir": "./",
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
