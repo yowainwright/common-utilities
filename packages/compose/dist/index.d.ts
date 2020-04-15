@@ -7,4 +7,5 @@
  * @param {fns} an array of functions
  * @returns the next/final value
  */
-export declare const compose: (...fns: any[]) => (patchedValue: any) => any
+export declare const compose: (...fns: unknown[]) => (patchedValue: unknown) => unknown;
+export default compose;

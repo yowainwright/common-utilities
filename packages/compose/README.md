@@ -1,4 +1,4 @@
-# @common-utilities/compose 🧰
+# @common-utilities/compose 🧰 🚂
 
 A common function composed of function arguments which returns their value to the next function until returning a final value.
 
@@ -21,12 +21,12 @@ const compose = (...fns: Function[]) => (val: any) => fns.reduceRight((fnVal: an
 ## Usage
 
 ```javascript
-const add1 = val = val + 1;
-const subtract2 = val = val - 2;
-const multiplyBy3 = val = val * 3;
+const add1 = (val = val + 1)
+const subtract2 = (val = val - 2)
+const multiplyBy3 = (val = val * 3)
 compose(add1, subtract2, multiplyBy3)
 ```
 
-----
+---
 
-View other [common utilities](/).
+View other [common utilities](../../README.md).
