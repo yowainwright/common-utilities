@@ -1,7 +1,7 @@
 {
   "name": "@common-utilities/head",
   "version": "0.0.2",
-  "description": "A basic implementation of the common utility function, Head",
+  "description": "A basic implementation of the common utility function, Head 👤",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {

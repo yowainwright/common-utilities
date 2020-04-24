@@ -1,8 +1,10 @@
 {
   "name": "@common-utilities/compose",
-  "version": "0.0.3",
-  "description": "A basic implementation of the common utility function, Compose",
+  "version": "0.0.4",
+  "description": "A basic implementation of the common utility function, Compose 🚂",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

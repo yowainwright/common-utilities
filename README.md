@@ -24,9 +24,9 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 ## Glossary
 
-Below are sectioned descriptions and usages of eact implemented Common Utility.
+Below are sectioned descriptions and usages of each implemented Common Utility.
 
-### Compose 🚂
+### [Compose](<(/packages/compose)>) 🚂
 
 A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
 
@@ -44,7 +44,7 @@ compose(add1, subtract3, multipleBy5)
 
 ---
 
-### Head 👤
+### [Head](<(/packages/head)>) 👤
 
 A common function for return the value of the first item in an Array.
 
@@ -62,7 +62,7 @@ head([0, 1, 2, 3, 4])
 
 ---
 
-### Pipe ⛓
+### [Pipe](/packages/pipe) ⛓
 
 A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
 

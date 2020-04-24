@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "checkJs": false,
     "jsx": "react",
+    "importHelpers": true,
     "lib": ["esnext", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
