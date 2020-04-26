@@ -26,7 +26,9 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-### [Compose](<(/packages/compose)>) 🚂
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace)
+
+### [Compose](/packages/compose) 🚂
 
 A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
 
@@ -44,14 +46,14 @@ compose(add1, subtract3, multipleBy5)
 
 ---
 
-### [Head](<(/packages/head)>) 👤
+### [Head](/packages/head) 👤
 
 A common function for return the value of the first item in an Array.
 
 #### Function
 
 ```javascript
-export const head = ([first]) => first
+const head = ([first]) => first
 ```
 
 #### Usage
@@ -77,6 +79,29 @@ const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), 
 ```javascript
 pipe(add1, subtract2, multipleBy3)
 ```
+
+---
+
+### [Trace](/package/trace) 🖋
+
+A common function for tracing values
+
+#### Function
+
+```javascript
+const trace = (label) => (value): => {
+  console.log(`${label}: ${value}`)
+  return value
+}
+```
+
+#### Usage
+
+```javascript
+trace('number 2')(2)
+```
+
+---
 
 ## Cites
 

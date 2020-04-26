@@ -1,7 +1,7 @@
 {
   "name": "@common-utilities/trace",
   "version": "0.0.1",
-  "description": "A basic implementation of the common utility function, Trace",
+  "description": "A basic implementation of the common utility function, Trace 🖋",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {
@@ -18,10 +18,14 @@
   },
   "jest": {
     "name": "@common-utilities/trace",
-    "projects": ["<rootDir>/packages/*"],
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
     "resetMocks": true,
     "rootDir": "./",
-    "roots": ["<rootDir>/src"],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
