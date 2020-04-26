@@ -28,6 +28,8 @@ Below are sectioned descriptions and usages of each implemented Common Utility.
 
 [Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace)
 
+---
+
 ### [Compose](/packages/compose) 🚂
 
 A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
