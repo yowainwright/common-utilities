@@ -62,3 +62,6 @@ typings/
 
 .DS_Store
 **/.DS_Store
+
+package-lock.json
+packages/**/package-lock.json
