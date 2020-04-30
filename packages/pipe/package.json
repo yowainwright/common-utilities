@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/pipe",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A basic implementation of the common utility function, Pipe",
   "main": "dist/index.js",
   "license": "MIT",
@@ -11,10 +11,7 @@
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf dist",
-    "tsc": "tsc --noEmit",
-    "lint": "eslint . --ext '.ts,.tsx,.js,.json,.md,.snap' --cache",
-    "lint:fix": "yarn lint -- --fix"
+    "clean": "rimraf dist"
   },
   "jest": {
     "name": "@common-utilities/pipe",
