@@ -3,7 +3,9 @@
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![npm version](https://badge.fury.io/js/%40common-utilities%2Fpipe.svg)](https://badge.fury.io/js/%40common-utilities%2Fpipe)
 
-**Pipe** is a common function composed of function arguments which returns their value to the next function until returning a final value in the opposite order of compose
+**Pipe** is a common function composed of function arguments which returns their value to the next function until returning a final value in the opposite order of compose.
+
+---
 
 ## Install
 
@@ -38,5 +40,7 @@ pipe(add1, subtract2, multiplyBy3)
 **No cruft. No bloat. No dependencies.**
 
 Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+
+---
 
 View other [common utilities](https://github.com/yowainwright/common-utilities).

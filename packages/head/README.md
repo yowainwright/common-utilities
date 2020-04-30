@@ -5,6 +5,8 @@
 
 **Head** is a common function for return the value of the first item in an Array.
 
+---
+
 ## Install
 
 ```bash
@@ -35,5 +37,7 @@ const firstInputItem = head(input)
 **No cruft. No bloat. No dependencies.**
 
 Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+
+---
 
 View other [common utilities](https://github.com/yowainwright/common-utilities).

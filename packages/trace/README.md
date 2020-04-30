@@ -5,6 +5,8 @@
 
 A common function for tracing values.
 
+---
+
 ## Install
 
 ```bash
@@ -41,5 +43,7 @@ const result = trace('number')(2)
 **No cruft. No bloat. No dependencies.**
 
 Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+
+---
 
 View other [common utilities](https://github.com/yowainwright/common-utilities).

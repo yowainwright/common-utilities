@@ -5,6 +5,8 @@
 
 **Compose** is a common function composed of function arguments which returns their value to the next function until returning a final value.
 
+---
+
 ## Install
 
 ```bash
@@ -37,5 +39,7 @@ compose(add1, subtract2, multiplyBy3)
 **No cruft. No bloat. No dependencies.**
 
 Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+
+---
 
 View other [common utilities](https://github.com/yowainwright/common-utilities).

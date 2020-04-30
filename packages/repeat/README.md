@@ -7,6 +7,8 @@
 
 The repeat function can be used to replace while loops.
 
+---
+
 ## Install
 
 ```bash
@@ -39,5 +41,7 @@ repeat(100)(add1)(0)
 **No cruft. No bloat. No dependencies.**
 
 Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+
+---
 
 View other [common utilities](https://github.com/yowainwright/common-utilities).
