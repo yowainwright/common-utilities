@@ -1,11 +1,11 @@
 # Common Utilities 🧰
 
-[Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
-[Dependabot](https://badgen.net/dependabot/badgen/yowainwright/common-utilities?icon=dependabot)
+![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
+![Dependabot](https://badgen.net/dependabot/badgen/yowainwright/common-utilities?icon=dependabot)
 
 > Common functional typed utility functions for javascript development.
 
-**No cruft. No bloat. No dependencies.**<br />
+**No cruft. No bloat. No dependencies.**
 
 Just simple well documented and tested utilities—so why not use 'em?
 
