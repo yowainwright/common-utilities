@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/compose",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A basic implementation of the common utility function, Compose 🚂",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -13,10 +13,7 @@
   "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf dist",
-    "tsc": "tsc --noEmit",
-    "lint": "eslint . --ext '.ts,.tsx,.js,.json,.md,.snap' --cache",
-    "lint:fix": "yarn lint -- --fix"
+    "clean": "rimraf dist"
   },
   "jest": {
     "name": "@common-utilities/compose",

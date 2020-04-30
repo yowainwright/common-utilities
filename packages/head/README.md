@@ -27,4 +27,9 @@ const firstInputItem = head(input)
 
 ---
 
+## Common Utilities 🧰
+
+No cruft. No bloat. No dependencies.<br />
+Just simiple well documented and tested utilities —so why not use 'em?
+
 View other [common utilities](../../README.md).
