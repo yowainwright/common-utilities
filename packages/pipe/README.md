@@ -1,6 +1,6 @@
 # @common-utilities/pipe 🧰⛓
 
-A common function composed of function arguments which returns their value to the next function until returning a final value in the opposite order of compose
+**Pipe** is a common function composed of function arguments which returns their value to the next function until returning a final value in the opposite order of compose
 
 ## Install
 
@@ -22,9 +22,9 @@ const pipe = (...fns: unknown[]) => (patchedValue: unknown): unknown =>
 ## Usage
 
 ```javascript
-const add1 = (val = val + 1)
-const subtract2 = (val = val - 2)
-const multiplyBy3 = (val = val * 3)
+const add1 = (val) => val + 1
+const subtract2 = (val) => val - 2
+const multiplyBy3 = (val) => val * 3
 pipe(add1, subtract2, multiplyBy3)
 ```
 

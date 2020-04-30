@@ -26,13 +26,13 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace)
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat)
 
 ---
 
 ### [Compose](/packages/compose) 🚂
 
-A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
+**Compose** common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
 
 #### Function
 
@@ -50,7 +50,7 @@ compose(add1, subtract3, multipleBy5)
 
 ### [Head](/packages/head) 👤
 
-A common function for return the value of the first item in an Array.
+**Head** common function for return the value of the first item in an Array.
 
 #### Function
 
@@ -68,7 +68,7 @@ head([0, 1, 2, 3, 4])
 
 ### [Pipe](/packages/pipe) ⛓
 
-A common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
+**Pipe** common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
 
 #### Function
 
@@ -84,23 +84,22 @@ pipe(add1, subtract2, multipleBy3)
 
 ---
 
-### [Trace](/package/trace) 🖋
+### [Repeat](/package/repeat) 🖋
 
-A common function for tracing values
+**Repeat** is a common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value
 
 #### Function
 
 ```javascript
-const trace = (label) => (value): => {
-  console.log(`${label}: ${value}`)
-  return value
-}
+const repeat = (iterations) => (callback) => (initialValue) =>
+  iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
 ```
 
 #### Usage
 
 ```javascript
-trace('number 2')(2)
+const add1 = (val) => val + 1
+repeat(100)(add1)(0)
 ```
 
 ---

@@ -1,7 +1,11 @@
 /**
  * repeat 🔁
- * @param i a number (count) to be iterated
- * a functional recursive `do while loop` which executes based a certain count (i)
+ * @param (iterations) the number of iterations to run
+ * @param (f) a callback function to be run on each iteration
+ * @param (initiaValue) the intialValue
+ * a functional recursive `while loop` which executes based iterations
  */
-export const repeat = (i: number) => (callback) => (value): unknown =>
-  i === 0 ? value : repeat(i - 1)(callback)(callback(value))
+export const repeat = (iterations: number) => (callback: Function) => (initialValue): unknown =>
+  iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
+
+export default repeat

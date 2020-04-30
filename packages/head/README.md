@@ -1,6 +1,6 @@
 # @common-utilities/head 🧰👤
 
-A common function for return the value of the first item in an Array.
+**Head** is a common function for return the value of the first item in an Array.
 
 ## Install
 
