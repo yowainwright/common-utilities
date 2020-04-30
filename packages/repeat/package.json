@@ -1,7 +1,7 @@
 {
   "name": "@common-utilities/repeat",
   "version": "0.0.1",
-  "description": "a functional recursive `do while loop` which executes based a certain count (i)",
+  "description": "A common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {

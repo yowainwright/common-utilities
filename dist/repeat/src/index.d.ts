@@ -5,7 +5,5 @@
  * @param (initiaValue) the intialValue
  * a functional recursive `while loop` which executes based iterations
  */
-export const repeat = (iterations: number) => (callback: Function) => (initialValue): unknown =>
-  iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
-
-export default repeat
+export declare const repeat: (iterations: number) => (callback: Function) => (initialValue: any) => unknown;
+export default repeat;
