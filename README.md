@@ -1,9 +1,11 @@
 # Common Utilities 🧰
 
-> Common functional typed utility functions for javascript development.
+![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
-No cruft. No bloat. No dependencies.<br />
-Just simiple well documented and tested utilities—so why not use 'em?
+**No cruft. No bloat. No dependencies.**
+
+Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
 
 ---
 
