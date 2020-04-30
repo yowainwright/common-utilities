@@ -39,8 +39,9 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "build": "lerna run build --stream --parallel",
+    "build": "lerna exec --no-bail --stream yarn build",
     "clean": "lerna clean",
+    "clean:dist": "lerna exec --no-bail --stream yarn clean",
     "ci": "run-s lint:ci tsc test:ci",
     "lint": "yarn lint:cmd --fix",
     "lint:ci": "yarn lint:cmd",
@@ -53,8 +54,6 @@
     "commitmsg": "commitlint -e",
     "deploy": "lerna publish from-package --ignore-scripts",
     "deploy:all": "lerna publish --ignore-scripts",
-    "refresh": "lerna clean",
-    "rebuild": "rifraf yarn.lock && yarn",
     "tsc": "tsc -p ./tsconfig.test.json"
   },
   "config": {

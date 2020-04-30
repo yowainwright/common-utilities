@@ -1,6 +1,9 @@
 # Common Utilities 🧰
 
-Common functional typed utilities functions for javascript development.
+> Common functional typed utility functions for javascript development.
+
+No cruft. No bloat. No dependencies.<br />
+Just simiple well documented and tested utilities—so why not use 'em?
 
 ---
 
@@ -32,7 +35,7 @@ Below are sectioned descriptions and usages of each implemented Common Utility.
 
 ### [Compose](/packages/compose) 🚂
 
-**Compose** common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
+**Compose** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
 
 #### Function
 
@@ -50,7 +53,7 @@ compose(add1, subtract3, multipleBy5)
 
 ### [Head](/packages/head) 👤
 
-**Head** common function for return the value of the first item in an Array.
+**Head** is a common function for return the value of the first item in an Array.
 
 #### Function
 
@@ -68,7 +71,7 @@ head([0, 1, 2, 3, 4])
 
 ### [Pipe](/packages/pipe) ⛓
 
-**Pipe** common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
+**Pipe** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
 
 #### Function
 
@@ -106,4 +109,4 @@ repeat(100)(add1)(0)
 
 ## Cites
 
-Many packaged Common Utilities are written elsewhere ([LoDash](https://lodash.com/), [Ramda](https://ramdajs.com/docs/)). Common Utilities defines and simplifies functions useful for everyday JavaScript development.
+Many packaged Common Utilities are written very well, elsewhere. See [LoDash](https://lodash.com/) and [Ramda](https://ramdajs.com/docs/)).
