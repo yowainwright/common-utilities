@@ -1,0 +1,12 @@
+{
+  "name": "@common-utilities/isObject",
+  "version": "0.0.1",
+  "description": "Basic function implementations to check if a variable is an object 🎛",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com>",
+  "license": "MIT"
+}

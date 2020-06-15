@@ -1,0 +1,12 @@
+{
+  "name": "@common-utilities/merge-objects",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, cleanarray 🧹",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com>",
+  "license": "MIT"
+}
