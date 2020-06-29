@@ -17,13 +17,14 @@ Just simple typed functional well documented and tested javascript utility funct
 
 Common Utilities provides bite-sized packages of each utility. Use what it needed without what is not.
 
-| Package                                        | Utility                                                                                       |
-| ---------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [@common-utilities/compose](/packages/compose) | passes function value until it delivers a final return value                                  |
-| [@common-utilities/head](/packages/head)       | returns the first value of an array                                                           |
-| [@common-utilities/pipe](/packages/pipe)       | passes function value until it delivers a final return value in the opposite order of compose |
-| [@common-utilities/trace](/packages/trace)     | functionally logs values                                                                      |
-| [@common-utilities/repeat](/packages/repeat)   | recursively replaces a value based on a certain length                                        |
+| Package                                                  | Utility                                                                                       |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [@common-utilities/compose](/packages/compose)           | passes function value until it delivers a final return value                                  |
+| [@common-utilities/head](/packages/head)                 | returns the first value of an array                                                           |
+| [@common-utilities/pipe](/packages/pipe)                 | passes function value until it delivers a final return value in the opposite order of compose |
+| [@common-utilities/trace](/packages/trace)               | functionally logs values                                                                      |
+| [@common-utilities/repeat](/packages/repeat)             | recursively replaces a value based on a certain length                                        |
+| [@common-utilities/filter-array](/packages/filter-array) | removes duplicates from an array                                                              |
 
 ---
 
@@ -31,7 +32,7 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat)
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array)
 
 ---
 
@@ -89,7 +90,7 @@ pipe(add1, subtract2, multipleBy3)
 
 ---
 
-### [Repeat](/package/repeat) 🖋
+### [Repeat](/packages/repeat) 🖋
 
 **Repeat** is a common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value
 
@@ -108,6 +109,8 @@ repeat(100)(add1)(0)
 ```
 
 ---
+
+### [Filter-Array](/packages/filter-array) 🧹
 
 ## Cites
 

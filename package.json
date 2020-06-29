@@ -80,7 +80,10 @@
           "head",
           "pipe",
           "repeat",
-          "trace"
+          "trace",
+          "filter-array",
+          "merge-objects",
+          "is-object"
         ]
       ],
       "type-enum": [
