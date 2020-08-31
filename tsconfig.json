@@ -7,7 +7,7 @@
     "checkJs": false,
     "jsx": "react",
     "importHelpers": true,
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext", "dom", "es6", "dom.iterable"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": false,

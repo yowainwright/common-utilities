@@ -1,22 +1,22 @@
 import filterArray from '../../fllter-array/src'
 import { isArray, isObject } from '../../is-object/src'
 
-type Item = any
+type Item = unknown
 
 /**
  * @name mergeObjects
  * @param {item}
  * @param {otherItem}
  */
-export const mergeObjects = (item: Item, otherItem: Item) => {
+export const mergeObjects = (item: Item, otherItem: Item): Item => {
   if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
     return item
   }
   if (isArray(item) && isArray(otherItem)) {
-    return filterArray([...item, ...otherItem])
+    return filterArray([...(item as Array<Item>), ...(otherItem as Array<Item>)])
   }
 
-  return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce((acc: any, key: any) => {
+  return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce((acc: object, key: string) => {
     if (typeof acc[key] === 'undefined') {
       acc[key] = otherItem[key]
     } else if (isObject(acc[key]) || isArray(acc[key])) {
