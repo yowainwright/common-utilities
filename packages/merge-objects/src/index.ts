@@ -16,14 +16,17 @@ export const mergeObjects = (item: Item, otherItem: Item): Item => {
     return filterArray([...(item as Array<Item>), ...(otherItem as Array<Item>)])
   }
 
-  return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce((acc: object, key: string) => {
-    if (typeof acc[key] === 'undefined') {
-      acc[key] = otherItem[key]
-    } else if (isObject(acc[key]) || isArray(acc[key])) {
-      acc[key] = mergeObjects(item[key], otherItem[key])
-    } else if (acc[key] !== otherItem[key] && typeof otherItem[key] !== 'undefined') {
-      acc[key] = otherItem[key]
-    }
-    return acc
-  }, item)
+  return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce(
+    (acc: Record<string, unknown>, key: string) => {
+      if (typeof acc[key] === 'undefined') {
+        acc[key] = otherItem[key]
+      } else if (isObject(acc[key]) || isArray(acc[key])) {
+        acc[key] = mergeObjects(item[key], otherItem[key])
+      } else if (acc[key] !== otherItem[key] && typeof otherItem[key] !== 'undefined') {
+        acc[key] = otherItem[key]
+      }
+      return acc
+    },
+    item,
+  )
 }
