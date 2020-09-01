@@ -308,15 +308,10 @@
     "@commitlint/types" "^9.1.1"
     lodash "^4.17.15"
 
-"@commitlint/execute-rule@^8.3.4":
-  version "8.3.4"
-  resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-8.3.4.tgz#1b63f0713b197889d90b76f9eea1abc010d256b1"
-  integrity sha512-f4HigYjeIBn9f7OuNv5zh2y5vWaAhNFrfeul8CRJDy82l3Y+09lxOTGxfF3uMXKrZq4LmuK6qvvRCZ8mUrVvzQ==
-
-"@commitlint/execute-rule@^9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-9.1.1.tgz#59bfe018d85545881e4bd1a47f9cd155b2df4c2c"
-  integrity sha512-kCncHMXfVDfmUx1NExl7T+s7udAWEOh039DFGR9R5MWoy+zm2cJsCdsbWFFuNbcPWCKor57ywdIUN2t048P6Yg==
+"@commitlint/execute-rule@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/execute-rule/-/execute-rule-9.1.2.tgz#74a77eae50c8d2e5766822061ddf0df1b4f08027"
+  integrity sha512-NGbeo0KCVYo1yj9vVPFHv6RGFpIF6wcQxpFYUKGIzZVV9Vz1WyiKS689JXa99Dt1aN0cZlEJJLnTNDIgYls0Vg==
 
 "@commitlint/format@^9.1.1":
   version "9.1.1"
@@ -343,30 +338,17 @@
     "@commitlint/rules" "^9.1.1"
     "@commitlint/types" "^9.1.1"
 
-"@commitlint/load@>6.1.1", "@commitlint/load@^9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-9.1.1.tgz#8b1580ab821729bbe197e95f960e7cee966402ae"
-  integrity sha512-RCIX44M8nq3bW98vuxA6C2rM0wAnZlneFls2OVi5l2BvD/rsQ2R9CZYwPt/MYU6RbwMmlGhkuHdScwK6pJeUqA==
+"@commitlint/load@>6.1.1", "@commitlint/load@^9.1.1", "@commitlint/load@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-9.1.2.tgz#c79634e8805ab35f318c535fdbda748288bf5395"
+  integrity sha512-FPL82xBuF7J3EJ57kLVoligQP4BFRwrknooP+vNT787AXmQ/Fddc/iYYwHwy67pNkk5N++/51UyDl/CqiHb6nA==
   dependencies:
-    "@commitlint/execute-rule" "^9.1.1"
-    "@commitlint/resolve-extends" "^9.1.1"
-    "@commitlint/types" "^9.1.1"
+    "@commitlint/execute-rule" "^9.1.2"
+    "@commitlint/resolve-extends" "^9.1.2"
+    "@commitlint/types" "^9.1.2"
     chalk "4.1.0"
     cosmiconfig "^6.0.0"
-    lodash "^4.17.15"
-    resolve-from "^5.0.0"
-
-"@commitlint/load@^8.3.5":
-  version "8.3.5"
-  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-8.3.5.tgz#3f059225ede92166ba94cf4c48e3d67c8b08b18a"
-  integrity sha512-poF7R1CtQvIXRmVIe63FjSQmN9KDqjRtU5A6hxqXBga87yB2VUJzic85TV6PcQc+wStk52cjrMI+g0zFx+Zxrw==
-  dependencies:
-    "@commitlint/execute-rule" "^8.3.4"
-    "@commitlint/resolve-extends" "^8.3.5"
-    babel-runtime "^6.23.0"
-    chalk "2.4.2"
-    cosmiconfig "^5.2.0"
-    lodash "4.17.15"
+    lodash "^4.17.19"
     resolve-from "^5.0.0"
 
 "@commitlint/message@^9.1.1":
@@ -382,15 +364,15 @@
     conventional-changelog-angular "^5.0.0"
     conventional-commits-parser "^3.0.0"
 
-"@commitlint/prompt@^8.3.5":
-  version "8.3.5"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-8.3.5.tgz#9f5acbcb27d98111af980f42855eebc24823f577"
-  integrity sha512-tQM9Wq0+KxhivSwXIISNJv7HGrx3MTI/rP0gyrr97F20nPz91OV4Moj9AUJ7kKvJVv+17kmCus4zcIoRBmmSVQ==
+"@commitlint/prompt@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-9.1.2.tgz#b0fa35525fa940943eb388292780acbcb9aa4f6c"
+  integrity sha512-VxpF+e+rYZZ+8DjIEY3arSnWiKVbDISVxWGbrxUUbheIBnqr1fAFcpJHJWBOzJTW79J79Y6Y6KGcu2fXvPx0ug==
   dependencies:
-    "@commitlint/load" "^8.3.5"
-    babel-runtime "^6.23.0"
-    chalk "^2.0.0"
-    lodash "4.17.15"
+    "@babel/runtime" "^7.9.6"
+    "@commitlint/load" "^9.1.2"
+    chalk "^4.0.0"
+    lodash "^4.17.19"
     throat "^5.0.0"
     vorpal "^1.12.0"
 
@@ -403,23 +385,13 @@
     fs-extra "^8.1.0"
     git-raw-commits "^2.0.0"
 
-"@commitlint/resolve-extends@^8.3.5":
-  version "8.3.5"
-  resolved "https://registry.yarnpkg.com/@commitlint/resolve-extends/-/resolve-extends-8.3.5.tgz#8fff800f292ac217ae30b1862f5f9a84b278310a"
-  integrity sha512-nHhFAK29qiXNe6oH6uG5wqBnCR+BQnxlBW/q5fjtxIaQALgfoNLHwLS9exzbIRFqwJckpR6yMCfgMbmbAOtklQ==
+"@commitlint/resolve-extends@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/resolve-extends/-/resolve-extends-9.1.2.tgz#222dcb73b139b6645cf3ce3bd55db429a98600b3"
+  integrity sha512-HcoL+qFGmWEu9VM4fY0HI+VzF4yHcg3x+9Hx6pYFZ+r2wLbnKs964y0v68oyMO/mS/46MVoLNXZGR8U3adpadg==
   dependencies:
     import-fresh "^3.0.0"
-    lodash "4.17.15"
-    resolve-from "^5.0.0"
-    resolve-global "^1.0.0"
-
-"@commitlint/resolve-extends@^9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/resolve-extends/-/resolve-extends-9.1.1.tgz#8ce703fcd2426ab1f5449906442267e18c995430"
-  integrity sha512-IxxNaSUT+dPhSCQPAMpQyHQlcSVikDxQWJFP6uwGJUU5rQff+0yQTuC3taWI2NWaATukjNWboAbH2vgBDnrDrg==
-  dependencies:
-    import-fresh "^3.0.0"
-    lodash "^4.17.15"
+    lodash "^4.17.19"
     resolve-from "^5.0.0"
     resolve-global "^1.0.0"
 
@@ -449,6 +421,11 @@
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.1.tgz#d97ebc35d20eed6d8458361cbca5c7cb85d45184"
   integrity sha512-SXY8bCQ1qacJ8AUTUxjabY8G6OjSmMPLN9MBCzGaKOjpPNX6z8zbXTbk9oU3GHZLtcxweWLCi2n49IRS4iQlwg==
+
+"@commitlint/types@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-9.1.2.tgz#d05f66db03e3a3638a654e8badf2deb489eb220d"
+  integrity sha512-r3fwVbVH+M8W0qYlBBZFsUwKe6NT5qvz+EmU7sr8VeN1cQ63z+3cfXyTo7WGGEMEgKiT0jboNAK3b1FZp8k9LQ==
 
 "@evocateur/libnpmaccess@^3.1.2":
   version "3.1.2"
@@ -2145,7 +2122,7 @@ babel-preset-jest@^25.5.0:
     babel-plugin-jest-hoist "^25.5.0"
     babel-preset-current-node-syntax "^0.1.2"
 
-babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -2389,15 +2366,6 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-chalk@2.4.2, chalk@^2.0.0, chalk@^2.1.0, chalk@^2.3.1, chalk@^2.4.1, chalk@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
-  integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
-  dependencies:
-    ansi-styles "^3.2.1"
-    escape-string-regexp "^1.0.5"
-    supports-color "^5.3.0"
-
 chalk@4.1.0, chalk@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
@@ -2416,6 +2384,15 @@ chalk@^1.0.0, chalk@^1.1.0:
     has-ansi "^2.0.0"
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
+
+chalk@^2.0.0, chalk@^2.1.0, chalk@^2.3.1, chalk@^2.4.1, chalk@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
+  integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
+  dependencies:
+    ansi-styles "^3.2.1"
+    escape-string-regexp "^1.0.5"
+    supports-color "^5.3.0"
 
 chalk@^3.0.0:
   version "3.0.0"
@@ -2834,7 +2811,7 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cosmiconfig@^5.1.0, cosmiconfig@^5.2.0:
+cosmiconfig@^5.1.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.2.1.tgz#040f726809c591e77a17c0a3626ca45b4f168b1a"
   integrity sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==
