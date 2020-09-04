@@ -3,7 +3,7 @@
  * ----
  * a common function that removes deplicate items from an array
  * ----
- * @param {fns} an array
+ * @param {arr} an array
  * @returns an array w/o duplicates
  * @note will not work for arrays with objects
  */

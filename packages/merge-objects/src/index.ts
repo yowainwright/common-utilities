@@ -5,8 +5,8 @@ type Item = unknown
 
 /**
  * @name mergeObjects
- * @param {item}
- * @param {otherItem}
+ * @param {item} probably an object
+ * @param {otherItem} probably another object
  */
 export const mergeObjects = (item: Item, otherItem: Item): Item => {
   if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
@@ -30,3 +30,5 @@ export const mergeObjects = (item: Item, otherItem: Item): Item => {
     item,
   )
 }
+
+export default mergeObjects
