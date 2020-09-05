@@ -291,14 +291,14 @@
     resolve-from "5.0.0"
     resolve-global "1.0.0"
 
-"@commitlint/config-lerna-scopes@^8.3.4":
-  version "8.3.4"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-8.3.4.tgz#4e977cb39114664ce7db502b1d8e5d77f1a92340"
-  integrity sha512-kaSZ4i9uA/v0AS4Nt4E0D+qYtnPEnkYqOYvgxee16rUxP8uCgBbiv6oNnF3Tk/eHxopHzbG80n1YVYcb2s7edw==
+"@commitlint/config-lerna-scopes@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-9.1.2.tgz#ff4d5248692573e6d1c8b8b499f0c660ab987235"
+  integrity sha512-pETpJUoXQZ65uZ9TLz1hOACoicV0dradr5vDgBAoZ48ZkYszQ38jSE4flTQeOFmYCqL91nUxFT0jKpxLMobpEQ==
   dependencies:
     import-from "3.0.0"
     resolve-pkg "2.0.0"
-    semver "6.3.0"
+    semver "7.3.2"
 
 "@commitlint/ensure@^9.1.1":
   version "9.1.1"
@@ -7428,7 +7428,7 @@ semver-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
-semver@6.3.0, semver@6.x, semver@^6.0.0, semver@^6.1.2, semver@^6.2.0, semver@^6.3.0:
+semver@6.x, semver@^6.0.0, semver@^6.1.2, semver@^6.2.0, semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
