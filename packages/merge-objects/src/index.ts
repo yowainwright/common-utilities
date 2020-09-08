@@ -1,7 +1,14 @@
-import filterArray from '../../fllter-array/src'
-import { isArray, isObject } from '../../is-object/src'
-
 type Item = unknown
+
+/**
+ * @note helper functions
+ * @note see `@common-utilities/filter-array`, `@common-utilities/is-object`for detail
+ */
+const filterArray = (arr: Item[]): Item[] =>
+  arr.filter((item: Item, index: number, self: Item[]) => self.indexOf(item) === index)
+const isArray = (item: Item): boolean => Array.isArray(item)
+const isOfObjectType = (item: Item): boolean => item !== null && typeof item === 'object'
+const isObject = (item: Item): boolean => isOfObjectType(item) && !isArray(item)
 
 /**
  * @name mergeObjects
