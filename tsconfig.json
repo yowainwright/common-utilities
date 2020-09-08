@@ -22,5 +22,5 @@
     "sourceMap": true,
     "target": "es6"
   },
-  "exclude": ["**/*.test.ts", "packages/**/dist/**", "coverage", "**/__tests__/*", "*.js"]
+  "exclude": ["**/*.test.ts", "packages/**/dist/**", "coverage", "*.js"]
 }

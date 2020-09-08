@@ -39,7 +39,8 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "build": "lerna exec --no-bail --stream yarn build",
+    "build": "yarn clean:dist && yarn build:dist",
+    "build:dist": "lerna exec --no-bail --stream yarn build",
     "clean": "lerna clean",
     "clean:dist": "lerna exec --no-bail --stream yarn clean",
     "ci": "run-s lint:ci tsc test:ci",
@@ -48,11 +49,11 @@
     "lint:cmd": "eslint . --ext '.ts,.tsx,.js,.json,.snap' --cache",
     "test": "yarn test:cmd",
     "test:ci": "yarn test:cmd --ci",
-    "test:cmd": "jest",
+    "test:cmd": "jest -o --maxWorkers=4 --noStackTrace --collectCoverage",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e",
-    "deploy": "lerna publish from-package --ignore-scripts",
+    "deploy": "lerna publish from-package --ignore-scripts --canary --yes",
     "deploy:all": "lerna publish --ignore-scripts",
     "tsc": "tsc -p ./tsconfig.test.json"
   },
@@ -109,7 +110,7 @@
       "post-checkout": "if [[ $HUSKY_GIT_PARAMS =~ 1$ ]]; then yarn; fi",
       "post-merge": "yarn",
       "post-rewrite": "yarn",
-      "pre-commit": "yarn tsc && lint-staged"
+      "pre-commit": "yarn tsc && lint-staged "
     }
   },
   "jest": {

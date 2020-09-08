@@ -67,3 +67,5 @@ package-lock.json
 packages/**/package-lock.json
 
 dist/
+
+packages/**/dist/
