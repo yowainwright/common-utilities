@@ -1,7 +1,7 @@
 {
   "name": "@common-utilities/merge-objects",
   "version": "0.0.1",
-  "description": "A basic implementation of the common utility function, merge-objects 🧹",
+  "description": "A basic implementation of the common utility function, merge-objects 👯‍♂️",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

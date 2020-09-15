@@ -17,14 +17,16 @@ Just simple typed functional well documented and tested javascript utility funct
 
 Common Utilities provides bite-sized packages of each utility. Use what it needed without what is not.
 
-| Package                                                  | Utility                                                                                       |
-| -------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [@common-utilities/compose](/packages/compose)           | passes function value until it delivers a final return value                                  |
-| [@common-utilities/head](/packages/head)                 | returns the first value of an array                                                           |
-| [@common-utilities/pipe](/packages/pipe)                 | passes function value until it delivers a final return value in the opposite order of compose |
-| [@common-utilities/trace](/packages/trace)               | functionally logs values                                                                      |
-| [@common-utilities/repeat](/packages/repeat)             | recursively replaces a value based on a certain length                                        |
-| [@common-utilities/filter-array](/packages/filter-array) | removes duplicates from an array                                                              |
+| Package                                                    | Utility                                                                                       |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [@common-utilities/compose](/packages/compose)             | passes function value until it delivers a final return value                                  |
+| [@common-utilities/head](/packages/head)                   | returns the first value of an array                                                           |
+| [@common-utilities/pipe](/packages/pipe)                   | passes function value until it delivers a final return value in the opposite order of compose |
+| [@common-utilities/trace](/packages/trace)                 | functionally logs values                                                                      |
+| [@common-utilities/repeat](/packages/repeat)               | recursively replaces a value based on a certain length                                        |
+| [@common-utilities/filter-array](/packages/filter-array)   | removes duplicates from an array                                                              |
+| [@common-utilities/is-object](/packages/is-object)         | determines if data is of object type                                                          |
+| [@common-utilities/merge-objects](/packages/merge-objects) | deeply merges 2 objects                                                                       |
 
 ---
 
@@ -32,7 +34,7 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array)
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects)
 
 ---
 
@@ -111,6 +113,96 @@ repeat(100)(add1)(0)
 ---
 
 ### [Filter-Array](/packages/filter-array) 🧹
+
+**FilterArray** is a common function a common function that removes deplicate items from an array.
+
+```javascript
+const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
+```
+
+#### Usage
+
+```javascript
+const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
+```
+
+---
+
+### [Is-Object](#is-object) 🎛
+
+**IsObject** is a common function for knowings whether data is of Object type.
+This function comes with `isArray` and `isOfObjectTypes` helper methods.
+
+#### Function
+
+```javascript
+const isArray = (item) => Array.isArray(item)
+const isOfObjectType = (item) => item !== null && typeof item === 'object'
+const isObject = (item) => isOfObjectType(item) && !isArray(item)
+```
+
+#### Usage
+
+isArray
+
+```javascript
+const result = isArray(['test', 'test']) // true
+const result = isArray({ foo: 'test' }) // false
+```
+
+isOfObjectType
+
+```javascript
+const result = isOfObjectType(['test', 'test']) // true
+const result = isOfObjectType({ foo: 'test' }) // true
+const result = isOfObjectType(9) // false
+const result = isOfObjectType('string') // false
+const result = isOfObjectType(null) // false
+const result = isOfObjectType(undefined) // false
+```
+
+isObject
+
+```javascript
+const result = isObject(['test', 'test']) // false
+const result = isObject({ foo: 'test' }) // true
+```
+
+---
+
+### [Merge-Objects](#merge-objects) 👯‍♂️
+
+**MergeObjects** is a common function for merging two objects deeply.
+
+#### Function
+
+```javascript
+const mergeObjects = (item, otherItem) => {
+  if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
+    return item
+  }
+  if (isArray(item) && isArray(otherItem)) {
+    return filterArray([...item, ...otherItem])
+  }
+
+  return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce((acc, key: string) => {
+    if (typeof acc[key] === 'undefined') {
+      acc[key] = otherItem[key]
+    } else if (isObject(acc[key]) || isArray(acc[key])) {
+      acc[key] = mergeObjects(item[key], otherItem[key])
+    } else if (acc[key] !== otherItem[key] && typeof otherItem[key] !== 'undefined') {
+      acc[key] = otherItem[key]
+    }
+    return acc
+  }, item)
+}
+```
+
+#### Usage
+
+```javascript
+const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
+```
 
 ## Cites
 

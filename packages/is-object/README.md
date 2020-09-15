@@ -1,4 +1,4 @@
-# @common-utilities/is-object 🧰⁉️
+# @common-utilities/is-object 🧰🎛
 
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![npm version](https://badge.fury.io/js/%40common-utilities%2Fis-object.svg)](https://badge.fury.io/js/%40common-utilities%2is-object)
