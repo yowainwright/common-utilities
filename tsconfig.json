@@ -7,14 +7,13 @@
     "checkJs": false,
     "jsx": "react",
     "importHelpers": true,
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext", "dom", "es6", "dom.iterable"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./dist",
     "preserveConstEnums": true,
     "removeComments": false,
     "resolveJsonModule": true,
@@ -22,5 +21,5 @@
     "sourceMap": true,
     "target": "es6"
   },
-  "exclude": ["**/*.test.ts", "packages/**/dist/**", "coverage", "**/__tests__/*", "*.js"]
+  "exclude": ["dist", "**/*.test.ts", "packages/*/dist/**", "*.js"]
 }

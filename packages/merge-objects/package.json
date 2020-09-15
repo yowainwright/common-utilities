@@ -1,0 +1,28 @@
+{
+  "name": "@common-utilities/merge-objects",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, merge-objects 👯‍♂️",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "name": "@common-utilities/merge-objects",
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
+    "resetMocks": true,
+    "rootDir": "./",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(ts)$": "ts-jest"
+    }
+  }
+}

@@ -39,21 +39,22 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "build": "lerna exec --no-bail --stream yarn build",
+    "build": "yarn clean:dist && yarn build:dist",
+    "build:dist": "lerna run build",
     "clean": "lerna clean",
-    "clean:dist": "lerna exec --no-bail --stream yarn clean",
+    "clean:dist": "lerna run clean",
     "ci": "run-s lint:ci tsc test:ci",
     "lint": "yarn lint:cmd --fix",
     "lint:ci": "yarn lint:cmd",
     "lint:cmd": "eslint . --ext '.ts,.tsx,.js,.json,.snap' --cache",
     "test": "yarn test:cmd",
     "test:ci": "yarn test:cmd --ci",
-    "test:cmd": "jest",
+    "test:cmd": "jest --maxWorkers=4 --noStackTrace --collectCoverage=true",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e",
-    "deploy": "lerna publish from-package --ignore-scripts",
-    "deploy:all": "lerna publish --ignore-scripts",
+    "deploy": "yarn build && lerna publish from-package --ignore-scripts --canary --yes",
+    "deploy:all": "yarn build && lerna publish --ignore-scripts",
     "tsc": "tsc -p ./tsconfig.test.json"
   },
   "config": {
@@ -80,7 +81,10 @@
           "head",
           "pipe",
           "repeat",
-          "trace"
+          "trace",
+          "filter-array",
+          "merge-objects",
+          "is-object"
         ]
       ],
       "type-enum": [
@@ -106,7 +110,7 @@
       "post-checkout": "if [[ $HUSKY_GIT_PARAMS =~ 1$ ]]; then yarn; fi",
       "post-merge": "yarn",
       "post-rewrite": "yarn",
-      "pre-commit": "yarn tsc && lint-staged"
+      "pre-commit": "yarn tsc && lint-staged "
     }
   },
   "jest": {
