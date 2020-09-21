@@ -129,7 +129,7 @@ const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'f
 
 ---
 
-### [Is-Object](#is-object) 🎛
+### [Is-Object](/packages/is-object) 🎛
 
 **IsObject** is a common function for knowings whether data is of Object type.
 This function comes with `isArray` and `isOfObjectTypes` helper methods.
@@ -171,7 +171,7 @@ const result = isObject({ foo: 'test' }) // true
 
 ---
 
-### [Merge-Objects](#merge-objects) 👯‍♂️
+### [Merge-Objects](/packages/merge-objects) 👯‍♂️
 
 **MergeObjects** is a common function for merging two objects deeply.
 
@@ -205,7 +205,7 @@ const mergeObjects = (item, otherItem) => {
 const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
 ```
 
-### [String-interpolation](#string-interpolation) 🧵
+### [String-interpolation](/packages/string-interpolation) 🧵
 
 **String Interpolation** is a common function for interpolating variables in strings.
 
