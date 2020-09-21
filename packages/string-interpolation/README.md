@@ -3,7 +3,7 @@
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![npm version](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation.svg)](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation)
 
-**String Interpolation** is a common function composed of function arguments which returns their value to the next function until returning a final value in the opposite order of compose.
+**String Interpolation** is a common function for interpolating variables in strings.
 
 ---
 
