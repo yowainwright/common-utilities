@@ -84,7 +84,8 @@
           "trace",
           "filter-array",
           "merge-objects",
-          "is-object"
+          "is-object",
+          "string-interpolation"
         ]
       ],
       "type-enum": [

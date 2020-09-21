@@ -1,0 +1,32 @@
+{
+  "name": "@common-utilities/string-interpolation",
+  "version": "0.0.1",
+  "description": "A common utility for interpolating variables in strings, string-interpolation",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist"
+  },
+  "jest": {
+    "name": "@common-utilities/string-interpolation",
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
+    "resetMocks": true,
+    "rootDir": "./",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"
+}
