@@ -17,16 +17,17 @@ Just simple typed functional well documented and tested javascript utility funct
 
 Common Utilities provides bite-sized packages of each utility. Use what it needed without what is not.
 
-| Package                                                    | Utility                                                                                       |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [@common-utilities/compose](/packages/compose)             | passes function value until it delivers a final return value                                  |
-| [@common-utilities/head](/packages/head)                   | returns the first value of an array                                                           |
-| [@common-utilities/pipe](/packages/pipe)                   | passes function value until it delivers a final return value in the opposite order of compose |
-| [@common-utilities/trace](/packages/trace)                 | functionally logs values                                                                      |
-| [@common-utilities/repeat](/packages/repeat)               | recursively replaces a value based on a certain length                                        |
-| [@common-utilities/filter-array](/packages/filter-array)   | removes duplicates from an array                                                              |
-| [@common-utilities/is-object](/packages/is-object)         | determines if data is of object type                                                          |
-| [@common-utilities/merge-objects](/packages/merge-objects) | deeply merges 2 objects                                                                       |
+| Package                                                                  | Utility                                                                                       |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| [@common-utilities/compose](/packages/compose)                           | passes function value until it delivers a final return value                                  |
+| [@common-utilities/head](/packages/head)                                 | returns the first value of an array                                                           |
+| [@common-utilities/pipe](/packages/pipe)                                 | passes function value until it delivers a final return value in the opposite order of compose |
+| [@common-utilities/trace](/packages/trace)                               | functionally logs values                                                                      |
+| [@common-utilities/repeat](/packages/repeat)                             | recursively replaces a value based on a certain length                                        |
+| [@common-utilities/filter-array](/packages/filter-array)                 | removes duplicates from an array                                                              |
+| [@common-utilities/is-object](/packages/is-object)                       | determines if data is of object type                                                          |
+| [@common-utilities/merge-objects](/packages/merge-objects)               | deeply merges 2 objects                                                                       |
+| [@common-utilities/string-interpolation](/packages/string-interpolation) | interpolating variables in strings                                                            |
 
 ---
 
@@ -34,7 +35,7 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects)
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects) | [String-interpolation](#string-interpolation)
 
 ---
 
@@ -203,6 +204,30 @@ const mergeObjects = (item, otherItem) => {
 ```javascript
 const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
 ```
+
+### [String-interpolation](#string-interpolation) 🧵
+
+**String Interpolation** is a common function for interpolating variables in strings.
+
+#### Function
+
+```javascript
+const stringInterpolation = (str, arr) =>
+  !str || !arr
+    ? arr.reduce((generatedStr, item) => {
+        const dynamicKey = Object.keys(item).toString()
+        return generatedStr.replace(`#{${dynamicKey}}`, item[dynamicKey])
+      }, str)
+    : str
+```
+
+#### Usage
+
+```javascript
+const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }]) // This string has a knot in it
+```
+
+---
 
 ## Cites
 
