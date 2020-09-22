@@ -17,17 +17,18 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 
 Common Utilities provides bite-sized packages of each utility. Use what it needed without what is not.
 
-| Package                                                                  | Utility                                                                                       |
-| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-| [@common-utilities/compose](/packages/compose)                           | passes function value until it delivers a final return value                                  |
-| [@common-utilities/head](/packages/head)                                 | returns the first value of an array                                                           |
-| [@common-utilities/pipe](/packages/pipe)                                 | passes function value until it delivers a final return value in the opposite order of compose |
-| [@common-utilities/trace](/packages/trace)                               | functionally logs values                                                                      |
-| [@common-utilities/repeat](/packages/repeat)                             | recursively replaces a value based on a certain length                                        |
-| [@common-utilities/filter-array](/packages/filter-array)                 | removes duplicates from an array                                                              |
-| [@common-utilities/is-object](/packages/is-object)                       | determines if data is of object type                                                          |
-| [@common-utilities/merge-objects](/packages/merge-objects)               | deeply merges 2 objects                                                                       |
-| [@common-utilities/string-interpolation](/packages/string-interpolation) | interpolating variables in strings                                                            |
+| Package                                                                    | Utility                                                                                       |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [@common-utilities/compose](/packages/compose)                             | passes function value until it delivers a final return value                                  |
+| [@common-utilities/head](/packages/head)                                   | returns the first value of an array                                                           |
+| [@common-utilities/pipe](/packages/pipe)                                   | passes function value until it delivers a final return value in the opposite order of compose |
+| [@common-utilities/trace](/packages/trace)                                 | functionally logs values                                                                      |
+| [@common-utilities/repeat](/packages/repeat)                               | recursively replaces a value based on a certain length                                        |
+| [@common-utilities/filter-array](/packages/filter-array)                   | removes duplicates from an array                                                              |
+| [@common-utilities/is-object](/packages/is-object)                         | determines if data is of object type                                                          |
+| [@common-utilities/merge-objects](/packages/merge-objects)                 | deeply merges 2 objects                                                                       |
+| [@common-utilities/string-interpolation](/packages/string-interpolation)   | interpolating variables in strings                                                            |
+| [@common-utilities/kebab-to-camel-string](/packages/kebab-to-camel-string) | returns a kebab string as a camel string                                                      |
 
 ---
 
@@ -35,7 +36,7 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects) | [String-interpolation](#string-interpolation)
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects) | [String-interpolation](#string-interpolation) | [Kebab-to-camel-string](#kebab-to-camel-string)
 
 ---
 
@@ -227,7 +228,44 @@ const stringInterpolation = (str, arr) =>
 
 ```typescript
 stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
-// => 'This string has a knot in it'
+// => 'This string has a knot in i
+```
+
+### [Kebab-to-camel-string](/packages/kebab-to-camel-string) 🍢🐫
+
+**kebabToCamelString** is a common function for returning a kebab string as a camel string.
+
+#### Function
+
+```typescript
+// string
+const kebabToCamelString = (kebabString) =>
+  kebabString
+    .split('-')
+    .map((camelString, i) =>
+      i === 0 ? camelString : camelString ? `${camelString.charAt(0).toUpperCase()}${camelString.slice(1)}` : '',
+    )
+    .join('')
+
+// object
+const kebabToCamelStringsInObject = (kebabObjectStrings) =>
+  Object.keys(kebabObjectStrings).length
+    ? Object.entries(kebabObjectStrings)
+        .map(([kebabKey, value]) => [`${kebabToCamelString(kebabKey)}`, value])
+        .reduce((flags, [key, value]) => Object.assign(flags, { [key]: value }), {})
+    : {}
+```
+
+#### Usage
+
+```typescript
+// string
+kebabToCamelString('test-thing')
+// testThing
+
+// object
+kebabToCamelStringsInObject({ 'test-thing': 'foo' })
+// { testThing: 'foo' }
 ```
 
 ---

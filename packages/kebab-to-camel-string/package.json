@@ -1,7 +1,7 @@
 {
-  "name": "@common-utilities/repeat",
-  "version": "0.0.5",
-  "description": "A common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value",
+  "name": "@common-utilities/kebab-to-camel-string",
+  "version": "0.0.1",
+  "description": "A common function for returning a kebab string as a camel string. 🍢🐫",
   "main": "dist/index.js",
   "license": "MIT",
   "publishConfig": {
@@ -14,7 +14,7 @@
     "clean": "rimraf dist"
   },
   "jest": {
-    "name": "@common-utilities/repeat",
+    "name": "@common-utilities/kebab-to-camel-string",
     "projects": [
       "<rootDir>/packages/*"
     ],
