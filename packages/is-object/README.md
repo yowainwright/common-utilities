@@ -37,26 +37,26 @@ const isObject = (item: unknown): boolean => isOfObjectType(item) && !isArray(it
 isArray
 
 ```typescript
-const result = isArray(['test', 'test']) // true
-const result = isArray({ foo: 'test' }) // false
+isArray(['test', 'test']) // true
+isArray({ foo: 'test' }) // false
 ```
 
 isOfObjectType
 
 ```typescript
-const result = isOfObjectType(['test', 'test']) // true
-const result = isOfObjectType({ foo: 'test' }) // true
-const result = isOfObjectType(9) // false
-const result = isOfObjectType('string') // false
-const result = isOfObjectType(null) // false
-const result = isOfObjectType(undefined) // false
+isOfObjectType(['test', 'test']) // true
+isOfObjectType({ foo: 'test' }) // true
+isOfObjectType(9) // false
+isOfObjectType('string') // false
+isOfObjectType(null) // false
+isOfObjectType(undefined) // false
 ```
 
 isObject
 
 ```typescript
-const result = isObject(['test', 'test']) // false
-const result = isObject({ foo: 'test' }) // true
+isObject(['test', 'test']) // false
+isObject({ foo: 'test' }) // true
 ```
 
 ---
@@ -65,7 +65,7 @@ const result = isObject({ foo: 'test' }) // true
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

@@ -32,7 +32,7 @@ export const trace = (label: string) => (value: unknown): unknown => {
 ## Usage
 
 ```typescript
-const result = trace('number')(2)
+trace('number')(2)
 // logs number 2, awe s**t
 ```
 
@@ -42,7 +42,7 @@ const result = trace('number')(2)
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

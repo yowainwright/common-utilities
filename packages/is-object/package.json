@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/is-object",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Basic implementations of common utility function that check if data is an object 🎛",
   "main": "dist/index.js",
   "module": "dist/index.js",
