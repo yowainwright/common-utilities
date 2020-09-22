@@ -38,7 +38,8 @@ const stringInterpolation = (str: string, arr: unknown[]): string =>
 ## Usage
 
 ```typescript
-const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }]) // This string has a knot in it
+stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
+// => 'This string has a knot in it'
 ```
 
 ---
@@ -47,7 +48,7 @@ const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicD
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

@@ -69,7 +69,8 @@ const mergeObjects = (item: Item, otherItem: Item): Item => {
 ## Usage
 
 ```typescript
-const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
+mergeObjects({ foo: 'bar' }, { baz: 'biz' })
+// => { foo 'bar', baz: 'biz' }
 ```
 
 ---
@@ -78,7 +79,7 @@ const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

@@ -29,7 +29,8 @@ const compose = (...fns: Function[]) => (val: any) => fns.reduceRight((fnVal: an
 const add1 = (val) => val + 1
 const subtract2 = (val) => val - 2
 const multiplyBy3 = (val) => val * 3
-compose(add1, subtract2, multiplyBy3)
+const result = compose(add1, subtract2, multiplyBy3)
+// result(3) // 5 (3 + 1 - 3 * 5)
 ```
 
 ---
@@ -38,7 +39,7 @@ compose(add1, subtract2, multiplyBy3)
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

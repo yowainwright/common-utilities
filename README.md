@@ -5,7 +5,7 @@
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 
@@ -52,7 +52,8 @@ const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(
 #### Usage
 
 ```typescript
-compose(add1, subtract3, multipleBy5)
+const result = compose(add1, subtract3, multipleBy5)
+// result(3) // 5 (3 + 1 - 3 * 5)
 ```
 
 ---
@@ -70,7 +71,7 @@ const head = ([first]) => first
 #### Usage
 
 ```typescript
-head([0, 1, 2, 3, 4])
+head([0, 1, 2, 3, 4]) // 0
 ```
 
 ---
@@ -88,7 +89,8 @@ const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), 
 #### Usage
 
 ```typescript
-pipe(add1, subtract2, multipleBy3)
+const reuslt = pipe(add1, subtract2, multipleBy3)
+// result(3) // 8 (3 * 3 - 2 + 1)
 ```
 
 ---
@@ -108,7 +110,7 @@ const repeat = (iterations) => (callback) => (initialValue) =>
 
 ```typescript
 const add1 = (val) => val + 1
-repeat(100)(add1)(0)
+repeat(100)(add1)(0) // 100
 ```
 
 ---
@@ -124,7 +126,7 @@ const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item
 #### Usage
 
 ```typescript
-const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
+filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
 ```
 
 ---
@@ -147,26 +149,26 @@ const isObject = (item) => isOfObjectType(item) && !isArray(item)
 isArray
 
 ```typescript
-const result = isArray(['test', 'test']) // true
-const result = isArray({ foo: 'test' }) // false
+isArray(['test', 'test']) // true
+isArray({ foo: 'test' }) // false
 ```
 
 isOfObjectType
 
 ```typescript
-const result = isOfObjectType(['test', 'test']) // true
-const result = isOfObjectType({ foo: 'test' }) // true
-const result = isOfObjectType(9) // false
-const result = isOfObjectType('string') // false
-const result = isOfObjectType(null) // false
-const result = isOfObjectType(undefined) // false
+isOfObjectType(['test', 'test']) // true
+isOfObjectType({ foo: 'test' }) // true
+isOfObjectType(9) // false
+isOfObjectType('string') // false
+isOfObjectType(null) // false
+isOfObjectType(undefined) // false
 ```
 
 isObject
 
 ```typescript
-const result = isObject(['test', 'test']) // false
-const result = isObject({ foo: 'test' }) // true
+isObject(['test', 'test']) // false
+isObject({ foo: 'test' }) // true
 ```
 
 ---
@@ -202,7 +204,7 @@ const mergeObjects = (item, otherItem) => {
 #### Usage
 
 ```typescript
-const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
+mergeObjects({ foo: 'bar' }, { baz: 'biz' }) // { foo: 'bar', baz: 'biz' }
 ```
 
 ### [String-interpolation](/packages/string-interpolation) 🧵
@@ -224,11 +226,13 @@ const stringInterpolation = (str, arr) =>
 #### Usage
 
 ```typescript
-const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }]) // This string has a knot in it
+stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
+// => 'This string has a knot in it'
 ```
 
 ---
 
 ## Cites
 
-Many packaged Common Utilities are written very well, elsewhere. See [LoDash](https://lodash.com/) and [Ramda](https://ramdajs.com/docs/)).
+Many/all of these Common Utilities packages are written very well elsewhere.
+See [LoDash](https://lodash.com/) and [Ramda](https://ramdajs.com/docs/)).

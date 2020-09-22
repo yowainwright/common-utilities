@@ -31,7 +31,7 @@ export const repeat = (iterations: number) => (callback: Function) => (initialVa
 
 ```typescript
 const add1 = (val) => val + 1
-repeat(100)(add1)(0)
+repeat(100)(add1)(0) // 100
 ```
 
 ---
@@ -40,7 +40,7 @@ repeat(100)(add1)(0)
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

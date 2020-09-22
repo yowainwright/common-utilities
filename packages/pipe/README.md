@@ -30,7 +30,8 @@ const pipe = (...fns: unknown[]) => (patchedValue: unknown): unknown =>
 const add1 = (val) => val + 1
 const subtract2 = (val) => val - 2
 const multiplyBy3 = (val) => val * 3
-pipe(add1, subtract2, multiplyBy3)
+const result = pipe(add1, subtract2, multiplyBy3)
+result(3) // 8 (3 * 3 - 2 + 1)
 ```
 
 ---
@@ -39,7 +40,7 @@ pipe(add1, subtract2, multiplyBy3)
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

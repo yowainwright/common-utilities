@@ -28,6 +28,7 @@ const head = ([first]: unknown[]): unknown => first
 ```typescript
 const input = Array.from(Array(10).keys())
 const firstInputItem = head(input)
+// 0
 ```
 
 ---
@@ -36,7 +37,7 @@ const firstInputItem = head(input)
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 

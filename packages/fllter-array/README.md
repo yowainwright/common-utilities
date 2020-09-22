@@ -27,7 +27,8 @@ const filterArray = (arr: unknown[]): unknown[] =>
 ## Usage
 
 ```typescript
-const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
+const result = filterArray(['test', 'test', 'foo', 'bar', 'biz'])
+// ['test', 'foo', 'bar', 'biz'])
 ```
 
 ---
@@ -36,7 +37,7 @@ const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'f
 
 **No cruft. No bloat. No dependencies.**
 
-Just simple typed functional well documented and tested javascript utility functions—so why not use 'em?
+Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 
