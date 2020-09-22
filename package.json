@@ -80,7 +80,8 @@
           "filter-array",
           "merge-objects",
           "is-object",
-          "string-interpolation"
+          "string-interpolation",
+          "kebab-to-camel-string"
         ]
       ],
       "type-enum": [
