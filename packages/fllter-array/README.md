@@ -27,7 +27,7 @@ const filterArray = (arr: unknown[]): unknown[] =>
 ## Usage
 
 ```typescript
-const result = filterArray(['test', 'test', 'foo', 'bar', 'biz'])
+filterArray(['test', 'test', 'foo', 'bar', 'biz'])
 // ['test', 'foo', 'bar', 'biz'])
 ```
 

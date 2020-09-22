@@ -52,8 +52,12 @@ const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(
 #### Usage
 
 ```typescript
+<<<<<<< HEAD
 const result = compose(add1, subtract3, multipleBy5)
 // result(3) // 5 (3 + 1 - 3 * 5)
+=======
+compose(add1, subtract3, multipleBy5)
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ---
@@ -71,7 +75,11 @@ const head = ([first]) => first
 #### Usage
 
 ```typescript
+<<<<<<< HEAD
 head([0, 1, 2, 3, 4]) // 0
+=======
+head([0, 1, 2, 3, 4])
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ---
@@ -89,8 +97,12 @@ const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), 
 #### Usage
 
 ```typescript
+<<<<<<< HEAD
 const reuslt = pipe(add1, subtract2, multipleBy3)
 // result(3) // 8 (3 * 3 - 2 + 1)
+=======
+pipe(add1, subtract2, multipleBy3)
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ---
@@ -126,7 +138,11 @@ const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item
 #### Usage
 
 ```typescript
+<<<<<<< HEAD
 filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
+=======
+const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ---
@@ -149,26 +165,45 @@ const isObject = (item) => isOfObjectType(item) && !isArray(item)
 isArray
 
 ```typescript
+<<<<<<< HEAD
 isArray(['test', 'test']) // true
 isArray({ foo: 'test' }) // false
+=======
+const result = isArray(['test', 'test']) // true
+const result = isArray({ foo: 'test' }) // false
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 isOfObjectType
 
 ```typescript
+<<<<<<< HEAD
 isOfObjectType(['test', 'test']) // true
 isOfObjectType({ foo: 'test' }) // true
 isOfObjectType(9) // false
 isOfObjectType('string') // false
 isOfObjectType(null) // false
 isOfObjectType(undefined) // false
+=======
+const result = isOfObjectType(['test', 'test']) // true
+const result = isOfObjectType({ foo: 'test' }) // true
+const result = isOfObjectType(9) // false
+const result = isOfObjectType('string') // false
+const result = isOfObjectType(null) // false
+const result = isOfObjectType(undefined) // false
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 isObject
 
 ```typescript
+<<<<<<< HEAD
 isObject(['test', 'test']) // false
 isObject({ foo: 'test' }) // true
+=======
+const result = isObject(['test', 'test']) // false
+const result = isObject({ foo: 'test' }) // true
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ---
@@ -204,7 +239,11 @@ const mergeObjects = (item, otherItem) => {
 #### Usage
 
 ```typescript
+<<<<<<< HEAD
 mergeObjects({ foo: 'bar' }, { baz: 'biz' }) // { foo: 'bar', baz: 'biz' }
+=======
+const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ### [String-interpolation](/packages/string-interpolation) 🧵
@@ -226,8 +265,12 @@ const stringInterpolation = (str, arr) =>
 #### Usage
 
 ```typescript
+<<<<<<< HEAD
 stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
 // => 'This string has a knot in it'
+=======
+const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }]) // This string has a knot in it
+>>>>>>> 3a8d57845fcdeb9de6775c225f4a80df3bd40681
 ```
 
 ---
