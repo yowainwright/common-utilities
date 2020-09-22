@@ -15,7 +15,7 @@ yarn add @common-utilities/pipe -D
 
 ## Function
 
-```javascript
+```typescript
 const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
@@ -26,7 +26,7 @@ const pipe = (...fns: unknown[]) => (patchedValue: unknown): unknown =>
 
 ## Usage
 
-```javascript
+```typescript
 const add1 = (val) => val + 1
 const subtract2 = (val) => val - 2
 const multiplyBy3 = (val) => val * 3

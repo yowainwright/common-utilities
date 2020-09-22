@@ -17,7 +17,7 @@ yarn add @common-utilities/merge-objects -D
 
 JavaScript
 
-```javascript
+```typescript
 const mergeObjects = (item, otherItem) => {
   if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
     return item
@@ -68,7 +68,7 @@ const mergeObjects = (item: Item, otherItem: Item): Item => {
 
 ## Usage
 
-```javascript
+```typescript
 const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
 ```
 

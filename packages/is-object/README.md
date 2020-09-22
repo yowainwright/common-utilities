@@ -18,7 +18,7 @@ yarn add @common-utilities/is-object -D
 
 JavaScript
 
-```javascript
+```typescript
 const isArray = (item) => Array.isArray(item)
 const isOfObjectType = (item) => item !== null && typeof item === 'object'
 const isObject = (item) => isOfObjectType(item) && !isArray(item)
@@ -36,14 +36,14 @@ const isObject = (item: unknown): boolean => isOfObjectType(item) && !isArray(it
 
 isArray
 
-```javascript
+```typescript
 const result = isArray(['test', 'test']) // true
 const result = isArray({ foo: 'test' }) // false
 ```
 
 isOfObjectType
 
-```javascript
+```typescript
 const result = isOfObjectType(['test', 'test']) // true
 const result = isOfObjectType({ foo: 'test' }) // true
 const result = isOfObjectType(9) // false
@@ -54,7 +54,7 @@ const result = isOfObjectType(undefined) // false
 
 isObject
 
-```javascript
+```typescript
 const result = isObject(['test', 'test']) // false
 const result = isObject({ foo: 'test' }) // true
 ```

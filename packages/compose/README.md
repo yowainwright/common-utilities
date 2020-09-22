@@ -15,7 +15,7 @@ yarn add @common-utilities/compose -D
 
 ## Function
 
-```javascript
+```typescript
 const compose = (...fns) => (val) => fns.reduceRight((fnVal, fn) => fn(fnVal), val)
 ```
 
@@ -25,7 +25,7 @@ const compose = (...fns: Function[]) => (val: any) => fns.reduceRight((fnVal: an
 
 ## Usage
 
-```javascript
+```typescript
 const add1 = (val) => val + 1
 const subtract2 = (val) => val - 2
 const multiplyBy3 = (val) => val * 3
