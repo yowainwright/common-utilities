@@ -17,7 +17,7 @@ yarn add @common-utilities/repeat -D
 
 ## Function
 
-```javascript
+```typescript
 const repeat = (iterations) => (callback) => (initialValue) =>
   iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
 ```
@@ -29,7 +29,7 @@ export const repeat = (iterations: number) => (callback: Function) => (initialVa
 
 ## Usage
 
-```javascript
+```typescript
 const add1 = (val) => val + 1
 repeat(100)(add1)(0)
 ```

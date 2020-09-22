@@ -15,7 +15,7 @@ yarn add @common-utilities/string-interpolation -D
 
 ## Function
 
-```javascript
+```typescript
 const stringInterpolation = (str, arr) =>
   !str || !arr
     ? arr.reduce((generatedStr, item) => {
@@ -37,7 +37,7 @@ const stringInterpolation = (str: string, arr: unknown[]): string =>
 
 ## Usage
 
-```javascript
+```typescript
 const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }]) // This string has a knot in it
 ```
 

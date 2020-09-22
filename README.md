@@ -45,13 +45,13 @@ Below are sectioned descriptions and usages of each implemented Common Utility.
 
 #### Function
 
-```javascript
+```typescript
 const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 #### Usage
 
-```javascript
+```typescript
 compose(add1, subtract3, multipleBy5)
 ```
 
@@ -63,13 +63,13 @@ compose(add1, subtract3, multipleBy5)
 
 #### Function
 
-```javascript
+```typescript
 const head = ([first]) => first
 ```
 
 #### Usage
 
-```javascript
+```typescript
 head([0, 1, 2, 3, 4])
 ```
 
@@ -81,13 +81,13 @@ head([0, 1, 2, 3, 4])
 
 #### Function
 
-```javascript
+```typescript
 const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 #### Usage
 
-```javascript
+```typescript
 pipe(add1, subtract2, multipleBy3)
 ```
 
@@ -99,14 +99,14 @@ pipe(add1, subtract2, multipleBy3)
 
 #### Function
 
-```javascript
+```typescript
 const repeat = (iterations) => (callback) => (initialValue) =>
   iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
 ```
 
 #### Usage
 
-```javascript
+```typescript
 const add1 = (val) => val + 1
 repeat(100)(add1)(0)
 ```
@@ -117,13 +117,13 @@ repeat(100)(add1)(0)
 
 **FilterArray** is a common function a common function that removes deplicate items from an array.
 
-```javascript
+```typescript
 const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
 ```
 
 #### Usage
 
-```javascript
+```typescript
 const result = filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
 ```
 
@@ -136,7 +136,7 @@ This function comes with `isArray` and `isOfObjectTypes` helper methods.
 
 #### Function
 
-```javascript
+```typescript
 const isArray = (item) => Array.isArray(item)
 const isOfObjectType = (item) => item !== null && typeof item === 'object'
 const isObject = (item) => isOfObjectType(item) && !isArray(item)
@@ -146,14 +146,14 @@ const isObject = (item) => isOfObjectType(item) && !isArray(item)
 
 isArray
 
-```javascript
+```typescript
 const result = isArray(['test', 'test']) // true
 const result = isArray({ foo: 'test' }) // false
 ```
 
 isOfObjectType
 
-```javascript
+```typescript
 const result = isOfObjectType(['test', 'test']) // true
 const result = isOfObjectType({ foo: 'test' }) // true
 const result = isOfObjectType(9) // false
@@ -164,7 +164,7 @@ const result = isOfObjectType(undefined) // false
 
 isObject
 
-```javascript
+```typescript
 const result = isObject(['test', 'test']) // false
 const result = isObject({ foo: 'test' }) // true
 ```
@@ -177,7 +177,7 @@ const result = isObject({ foo: 'test' }) // true
 
 #### Function
 
-```javascript
+```typescript
 const mergeObjects = (item, otherItem) => {
   if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
     return item
@@ -201,7 +201,7 @@ const mergeObjects = (item, otherItem) => {
 
 #### Usage
 
-```javascript
+```typescript
 const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
 ```
 
@@ -211,7 +211,7 @@ const result = mergeObjects({ foo: 'bar' }, { baz: 'biz' })
 
 #### Function
 
-```javascript
+```typescript
 const stringInterpolation = (str, arr) =>
   !str || !arr
     ? arr.reduce((generatedStr, item) => {
@@ -223,7 +223,7 @@ const stringInterpolation = (str, arr) =>
 
 #### Usage
 
-```javascript
+```typescript
 const result = stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }]) // This string has a knot in it
 ```
 
