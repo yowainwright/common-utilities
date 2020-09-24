@@ -2,10 +2,10 @@
   "name": "@common-utilities/root",
   "version": "0.0.1",
   "description": "Common utilities for javascript development 🧰",
-  "main": "index.js",
   "repository": "git@github.com:yowainwright/common-utilities.git",
   "author": "Jeff Wainwright <yowainwright@gmail.com>",
   "license": "MIT",
+  "main": "README.md",
   "private": true,
   "workspaces": [
     "packages/*"

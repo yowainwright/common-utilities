@@ -1,8 +1,10 @@
 {
   "name": "@common-utilities/repeat",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

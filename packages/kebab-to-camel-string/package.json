@@ -1,8 +1,10 @@
 {
   "name": "@common-utilities/kebab-to-camel-string",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A common function for returning a kebab string as a camel string. 🍢🐫",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

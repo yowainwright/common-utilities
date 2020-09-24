@@ -1,8 +1,10 @@
 {
   "name": "@common-utilities/pipe",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A basic implementation of the common utility function, Pipe",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
