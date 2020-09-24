@@ -3,6 +3,8 @@
   "version": "0.0.3",
   "description": "A common utility for interpolating variables in strings, string-interpolation",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
