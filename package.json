@@ -29,8 +29,10 @@
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.2.1",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
     "tslib": "^2.0.1",
-    "typescript": "^3.3.3333"
+    "typescript": "^4.0.3"
   },
   "scripts": {
     "build": "yarn clean:dist && yarn build:dist",
@@ -81,7 +83,8 @@
           "merge-objects",
           "is-object",
           "string-interpolation",
-          "kebab-to-camel-string"
+          "kebab-to-camel-string",
+          "trim-whitespace"
         ]
       ],
       "type-enum": [

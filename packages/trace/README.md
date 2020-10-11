@@ -16,14 +16,14 @@ yarn add @common-utilities/trace -D
 ## Function
 
 ```typescript
-export const trace = (label) => (value) => {
+const trace = (label) => (value) => {
   console.log(`${label}: ${value}`)
   return value
 }
 ```
 
 ```typescript
-export const trace = (label: string) => (value: unknown): unknown => {
+const trace = (label: string) => (value: unknown): unknown => {
   console.log(`${label}: ${value}`)
   return value
 }
