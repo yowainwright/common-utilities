@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./packages",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,

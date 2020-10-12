@@ -1,7 +1,7 @@
 {
-  "name": "@common-utilities/trace",
-  "version": "0.0.6",
-  "description": "A basic implementation of the common utility function, Trace 🖋",
+  "name": "@common-utilities/trim-whitespace",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, trim-whitespace ⬜️",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "lint:fix": "yarn lint -- --fix"
   },
   "jest": {
-    "name": "@common-utilities/trace",
+    "name": "@common-utilities/trim-whitespace",
     "projects": [
       "<rootDir>/packages/*"
     ],
@@ -32,6 +32,5 @@
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
     }
-  },
-  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"
+  }
 }

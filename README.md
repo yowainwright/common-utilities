@@ -29,6 +29,7 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 | [@common-utilities/merge-objects](/packages/merge-objects)                 | deeply merges 2 objects                                                                       |
 | [@common-utilities/string-interpolation](/packages/string-interpolation)   | interpolating variables in strings                                                            |
 | [@common-utilities/kebab-to-camel-string](/packages/kebab-to-camel-string) | returns a kebab string as a camel string                                                      |
+| [@common-utilities/trim-whitespace](/packages/trim-whitespace)             | returns a string with trimmed whitespace                                                      |
 
 ---
 
@@ -36,13 +37,13 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects) | [String-interpolation](#string-interpolation) | [Kebab-to-camel-string](#kebab-to-camel-string)
+[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects) | [String-interpolation](#string-interpolation) | [Kebab-to-camel-string](#kebab-to-camel-string) | [Trim-whitespace](#trim-whitespace)
 
 ---
 
-### [Compose](/packages/compose) 🚂
+### Compose 🚂
 
-**Compose** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
+**[Compose](/packages/compose)** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value.
 
 #### Function
 
@@ -59,9 +60,9 @@ const result = compose(add1, subtract3, multipleBy5)
 
 ---
 
-### [Head](/packages/head) 👤
+### Head 👤
 
-**Head** is a common function for return the value of the first item in an Array.
+**[Head](/packages/head)** is a common function for return the value of the first item in an Array.
 
 #### Function
 
@@ -77,9 +78,9 @@ head([0, 1, 2, 3, 4]) // 01
 
 ---
 
-### [Pipe](/packages/pipe) ⛓
+### Pipe ⛓
 
-**Pipe** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
+**[Pipe](/packages/pipe)** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
 
 #### Function
 
@@ -96,9 +97,9 @@ const result = pipe(add1, subtract2, multipleBy3)
 
 ---
 
-### [Repeat](/packages/repeat) 🖋
+### Repeat 🖋
 
-**Repeat** is a common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value
+**[Repeat](/packages/repeat)** is a common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value
 
 #### Function
 
@@ -116,9 +117,9 @@ repeat(100)(add1)(0) // 100
 
 ---
 
-### [Filter-Array](/packages/filter-array) 🧹
+### Filter-Array 🧹
 
-**FilterArray** is a common function a common function that removes deplicate items from an array.
+**[Filter Array](/packages/filter-array)** is a common function a common function that removes deplicate items from an array.
 
 ```typescript
 const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
@@ -132,9 +133,9 @@ filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'bi
 
 ---
 
-### [Is-Object](/packages/is-object) 🎛
+### Is-Object 🎛
 
-**IsObject** is a common function for knowings whether data is of Object type.
+**[IsObject](/packages/is-object)** is a common function for knowings whether data is of Object type.
 This function comes with `isArray` and `isOfObjectTypes` helper methods.
 
 #### Function
@@ -174,9 +175,9 @@ isObject({ foo: 'test' }) // true
 
 ---
 
-### [Merge-Objects](/packages/merge-objects) 👯‍♂️
+### Merge-Objects]👯‍♂️
 
-**MergeObjects** is a common function for merging two objects deeply.
+**[Merge Objects](/packages/merge-objects)** is a common function for merging two objects deeply.
 
 #### Function
 
@@ -208,9 +209,9 @@ const mergeObjects = (item, otherItem) => {
 mergeObjects({ foo: 'bar' }, { baz: 'biz' }) // { foo: 'bar', baz: 'biz' }
 ```
 
-### [String-interpolation](/packages/string-interpolation) 🧵
+### String-interpolation 🧵
 
-**String Interpolation** is a common function for interpolating variables in strings.
+**[String Interpolation](/packages/string-interpolation)** is a common function for interpolating variables in strings.
 
 #### Function
 
@@ -231,9 +232,9 @@ stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in
 // => 'This string has a knot in i
 ```
 
-### [Kebab-to-camel-string](/packages/kebab-to-camel-string) 🍢🐫
+### Kebab-to-camel-string 🍢🐫
 
-**kebabToCamelString** is a common function for returning a kebab string as a camel string.
+**[Kebab to Camel String](/packages/kebab-to-camel-string)** is a common function for returning a kebab string as a camel string.
 
 #### Function
 
@@ -270,7 +271,32 @@ kebabToCamelStringsInObject({ 'test-thing': 'foo' })
 
 ---
 
+### Trim-whitespace 🍢🐫
+
+**[Trim Whitespace](/packages/trim-whitespace)** is a common function for returning a string with trimmed text.
+
+## Function
+
+```typescript
+const trimWhitespace = (string) =>
+  string
+    .trim()
+    .split('  ')
+    .map((word) => word.trim())
+    .filter((word) => word !== '')
+    .join(' ')
+```
+
+## Usage
+
+```typescript
+trimWhitespace('    This is some  really crazy.     string.   ')
+// This is some really crazy. string.
+```
+
+---
+
 ## Cites
 
 Many/all of these Common Utilities packages are written very well elsewhere.
-See [LoDash](https://lodash.com/) and [Ramda](https://ramdajs.com/docs/)).
+See [LoDash](https://lodash.com/) and [Ramda](https://ramdajs.com/docs/) for a great start!
