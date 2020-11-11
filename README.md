@@ -37,7 +37,7 @@ Common Utilities provides bite-sized packages of each utility. Use what it neede
 
 Below are sectioned descriptions and usages of each implemented Common Utility.
 
-[Compose](#compose) | [Head](#head) | [Pipe](#pipe) | [Trace](#trace) | [Repeat](#repeat) | [Filter-Array](#filter-array) | [Is-Object](#is-object) | [Merge-Objects](#merge-objects) | [String-interpolation](#string-interpolation) | [Kebab-to-camel-string](#kebab-to-camel-string) | [Trim-whitespace](#trim-whitespace)
+[Compose](#compose-) | [Head](#head-) | [Pipe](#pipe-) | [Trace](#trace-) | [Repeat](#repeat-) | [Filter-Array](#filter-array-) | [Is-Object](#is-object-) | [Merge-Objects](#merge-objects-) | [String-interpolation](#string-interpolation-) | [Kebab-to-camel-string](#kebab-to-camel-string-) | [Trim-whitespace](#trim-whitespace-)
 
 ---
 
@@ -121,6 +121,8 @@ repeat(100)(add1)(0) // 100
 
 **[Filter Array](/packages/filter-array)** is a common function a common function that removes deplicate items from an array.
 
+#### Function
+
 ```typescript
 const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
 ```
@@ -175,7 +177,7 @@ isObject({ foo: 'test' }) // true
 
 ---
 
-### Merge-Objects]👯‍♂️
+### Merge-Objects👯‍♂️
 
 **[Merge Objects](/packages/merge-objects)** is a common function for merging two objects deeply.
 
@@ -275,7 +277,7 @@ kebabToCamelStringsInObject({ 'test-thing': 'foo' })
 
 **[Trim Whitespace](/packages/trim-whitespace)** is a common function for returning a string with trimmed text.
 
-## Function
+#### Function
 
 ```typescript
 const trimWhitespace = (string) =>
@@ -287,7 +289,7 @@ const trimWhitespace = (string) =>
     .join(' ')
 ```
 
-## Usage
+#### Usage
 
 ```typescript
 trimWhitespace('    This is some  really crazy.     string.   ')

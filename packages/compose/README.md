@@ -15,10 +15,12 @@ yarn add @common-utilities/compose -D
 
 ## Function
 
+**JavaScript**
 ```typescript
 const compose = (...fns) => (val) => fns.reduceRight((fnVal, fn) => fn(fnVal), val)
 ```
 
+**TypeScript**
 ```typescript
 const compose = (...fns: Function[]) => (val: any) => fns.reduceRight((fnVal: any, fn: Function) => fn(fnVal), val)
 ```
