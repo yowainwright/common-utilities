@@ -1,7 +1,7 @@
 {
-  "name": "@common-utilities/string-interpolation",
-  "version": "0.0.4",
-  "description": "A common utility for interpolating variables in strings, string-interpolation",
+  "name": "@common-utilities/wait-until-defined",
+  "version": "1.0.0",
+  "description": "A basic implementation of the common utility function, wait until defined ⌚️",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,7 +16,7 @@
     "clean": "rimraf dist"
   },
   "jest": {
-    "name": "@common-utilities/string-interpolation",
+    "name": "@common-utilities/wait-until-defined",
     "projects": [
       "<rootDir>/packages/*"
     ],
@@ -27,7 +27,7 @@
     ],
     "testEnvironment": "node",
     "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
+      "^.+\\.(ts)$": "ts-jest"
     }
   },
   "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"

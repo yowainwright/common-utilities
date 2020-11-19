@@ -15,15 +15,8 @@ yarn add @common-utilities/trace -D
 
 ## Function
 
-```typescript
+```javascript
 const trace = (label) => (value) => {
-  console.log(`${label}: ${value}`)
-  return value
-}
-```
-
-```typescript
-const trace = (label: string) => (value: unknown): unknown => {
   console.log(`${label}: ${value}`)
   return value
 }
@@ -31,7 +24,7 @@ const trace = (label: string) => (value: unknown): unknown => {
 
 ## Usage
 
-```typescript
+```javascript
 trace('number')(2)
 // logs number 2, awe s**t
 ```

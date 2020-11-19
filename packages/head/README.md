@@ -15,17 +15,13 @@ yarn add @common-utilities/head -D
 
 ## Function
 
-```typescript
+```javascript
 const head = ([first]): => first
-```
-
-```typescript
-const head = ([first]: unknown[]): unknown => first
 ```
 
 ## Usage
 
-```typescript
+```javascript
 const input = Array.from(Array(10).keys())
 const firstInputItem = head(input)
 // 0

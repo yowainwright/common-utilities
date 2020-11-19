@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/repeat",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A common function composed of function arguments which recursively invoke a callback function based on iterations returning a final value",
   "main": "dist/index.js",
   "module": "dist/index.js",

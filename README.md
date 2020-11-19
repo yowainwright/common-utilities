@@ -47,13 +47,13 @@ Below are sectioned descriptions and usages of each implemented Common Utility.
 
 #### Function
 
-```typescript
+```javascript
 const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 #### Usage
 
-```typescript
+```javascript
 const result = compose(add1, subtract3, multipleBy5)
 // result(3) // 5 (3 + 1 - 3 * 5)
 ```
@@ -66,13 +66,13 @@ const result = compose(add1, subtract3, multipleBy5)
 
 #### Function
 
-```typescript
+```javascript
 const head = ([first]) => first
 ```
 
 #### Usage
 
-```typescript
+```javascript
 head([0, 1, 2, 3, 4]) // 01
 ```
 
@@ -84,13 +84,13 @@ head([0, 1, 2, 3, 4]) // 01
 
 #### Function
 
-```typescript
+```javascript
 const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), patchedValue)
 ```
 
 #### Usage
 
-```typescript
+```javascript
 const result = pipe(add1, subtract2, multipleBy3)
 // result(3) // 8 (3 * 3 - 2 + 1)
 ```
@@ -103,14 +103,14 @@ const result = pipe(add1, subtract2, multipleBy3)
 
 #### Function
 
-```typescript
+```javascript
 const repeat = (iterations) => (callback) => (initialValue) =>
   iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
 ```
 
 #### Usage
 
-```typescript
+```javascript
 const add1 = (val) => val + 1
 repeat(100)(add1)(0) // 100
 ```
@@ -123,13 +123,13 @@ repeat(100)(add1)(0) // 100
 
 #### Function
 
-```typescript
+```javascript
 const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
 ```
 
 #### Usage
 
-```typescript
+```javascript
 filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'biz'])
 ```
 
@@ -142,7 +142,7 @@ This function comes with `isArray` and `isOfObjectTypes` helper methods.
 
 #### Function
 
-```typescript
+```javascript
 const isArray = (item) => Array.isArray(item)
 const isOfObjectType = (item) => item !== null && typeof item === 'object'
 const isObject = (item) => isOfObjectType(item) && !isArray(item)
@@ -152,14 +152,14 @@ const isObject = (item) => isOfObjectType(item) && !isArray(item)
 
 isArray
 
-```typescript
+```javascript
 isArray(['test', 'test']) // true
 isArray({ foo: 'test' }) // false
 ```
 
 isOfObjectType
 
-```typescript
+```javascript
 isOfObjectType(['test', 'test']) // true
 isOfObjectType({ foo: 'test' }) // true
 isOfObjectType(9) // false
@@ -170,7 +170,7 @@ isOfObjectType(undefined) // false
 
 isObject
 
-```typescript
+```javascript
 isObject(['test', 'test']) // false
 isObject({ foo: 'test' }) // true
 ```
@@ -183,7 +183,7 @@ isObject({ foo: 'test' }) // true
 
 #### Function
 
-```typescript
+```javascript
 const mergeObjects = (item, otherItem) => {
   if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
     return item
@@ -207,7 +207,7 @@ const mergeObjects = (item, otherItem) => {
 
 #### Usage
 
-```typescript
+```javascript
 mergeObjects({ foo: 'bar' }, { baz: 'biz' }) // { foo: 'bar', baz: 'biz' }
 ```
 
@@ -217,7 +217,7 @@ mergeObjects({ foo: 'bar' }, { baz: 'biz' }) // { foo: 'bar', baz: 'biz' }
 
 #### Function
 
-```typescript
+```javascript
 const stringInterpolation = (str, arr) =>
   !str || !arr
     ? arr.reduce((generatedStr, item) => {
@@ -229,7 +229,7 @@ const stringInterpolation = (str, arr) =>
 
 #### Usage
 
-```typescript
+```javascript
 stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
 // => 'This string has a knot in i
 ```
@@ -240,7 +240,7 @@ stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in
 
 #### Function
 
-```typescript
+```javascript
 // string
 const kebabToCamelString = (kebabString) =>
   kebabString
@@ -261,7 +261,7 @@ const kebabToCamelStringsInObject = (kebabObjectStrings) =>
 
 #### Usage
 
-```typescript
+```javascript
 // string
 kebabToCamelString('test-thing')
 // testThing
@@ -279,7 +279,7 @@ kebabToCamelStringsInObject({ 'test-thing': 'foo' })
 
 #### Function
 
-```typescript
+```javascript
 const trimWhitespace = (string) =>
   string
     .trim()
@@ -291,7 +291,7 @@ const trimWhitespace = (string) =>
 
 #### Usage
 
-```typescript
+```javascript
 trimWhitespace('    This is some  really crazy.     string.   ')
 // This is some really crazy. string.
 ```

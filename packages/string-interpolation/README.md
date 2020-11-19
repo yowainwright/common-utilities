@@ -15,7 +15,7 @@ yarn add @common-utilities/string-interpolation -D
 
 ## Function
 
-```typescript
+```javascript
 const stringInterpolation = (str, arr) =>
   !str || !arr
     ? arr.reduce((generatedStr, item) => {
@@ -25,19 +25,9 @@ const stringInterpolation = (str, arr) =>
     : str
 ```
 
-```typescript
-const stringInterpolation = (str: string, arr: unknown[]): string =>
-  !str || !arr
-    ? arr.reduce((generatedStr: string, item: unknown) => {
-        const dynamicKey: string = Object.keys(item).toString()
-        return generatedStr.replace(`#{${dynamicKey}}`, item[dynamicKey])
-      }, str)
-    : str
-```
-
 ## Usage
 
-```typescript
+```javascript
 stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
 // => 'This string has a knot in it'
 ```
