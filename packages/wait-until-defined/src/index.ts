@@ -1,58 +1,54 @@
 /**
  * waitUntilDefined ⌚️
- * @param value
- * @param intervals
+ * @param callbackFn
+ * @param interval
  * @param timeout
- * @note return a value, or undefined after a specified time
+ * @returns Promise<boolean>
+ * @note returns promise which returns a boolean before or at a specified time
+ * @note https://codepen.io/yowainwright/pen/f27a8364abb3d85e0d2e9a53020c2cae
  */
-
-type Counter = {
-  total: number
-  upOne: () => number
-}
 
 /**
- * counter
- * @note count a total which can be added by 1
+ * wait
+ * @param timeout
+ * @returns Promise<boolean>
+ * @note adds a delay of a specified time
  */
-const counter = (): Counter => ({
-  total: 0,
-  upOne(): number {
-    return this.total + 1
-  },
-})
-
-type SetDefinition = {
-  value: undefined | unknown
-  update: (value: unknown) => unknown
-}
+export const wait = (timeout): Promise<number> => new Promise((resolve) => setTimeout(resolve, timeout))
 
 /**
- * setDefinition
- * @param value
- * @note sets the definition of a value and updates that value
+ * isDefined
+ * @param callbackFn
+ * @returns Promise<boolean>
+ * @note returns a true/false based on a callback function's return value
  */
-const setDefinition = (value = undefined): SetDefinition => ({
-  value,
-  update(value: unknown): unknown {
-    return (this.value = value)
-  },
-})
+export const isDefined = (callbackFn: () => boolean): Promise<boolean> =>
+  new Promise((resolve) => resolve(callbackFn()))
 
-export const waitUntilDefined = (value: unknown, intervals: number, timeout: number): unknown => {
-  const count = counter()
-  const iterations = Math.round(timeout / intervals)
-  const definition = setDefinition(value)
-  if (definition.value) {
-    return definition.value
+/**
+ * checkDefinition
+ * @param callbackFn
+ * @param timeout
+ * @param count
+ * @returns Promise<boolean>
+ * @note returns a promise which returns a boolean or runs the function recursively
+ */
+export const checkDefinition = async (callbackFn: () => boolean, timeout: number, count: number): Promise<boolean> => {
+  const definition = await isDefined(callbackFn)
+  if (definition) {
+    return definition
+  } else {
+    await wait(timeout)
+    return checkDefinition(callbackFn, timeout, count - 1)
   }
-  const check = setInterval(() => {
-    count.upOne()
-    if (count.total >= iterations) {
-      clearInterval(check)
-    } else if (definition?.value) {
-      clearInterval(check)
-    }
-  }, intervals)
-  return definition.value
+}
+
+export const waitUntilDefined = async (
+  callbackFn: () => boolean,
+  interval: number,
+  timeout: number,
+): Promise<boolean> => {
+  const count = timeout / interval
+  const definition = await checkDefinition(callbackFn, interval, count)
+  return definition
 }

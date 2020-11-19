@@ -15,7 +15,7 @@ yarn add @common-utilities/trim-whitespace -D
 
 ## Function
 
-```typescript
+```javascript
 const trimWhitespace = (string) =>
   string
     .trim()
@@ -25,19 +25,9 @@ const trimWhitespace = (string) =>
     .join(' ')
 ```
 
-```typescript
-const trimWhitespace = (string: string): string =>
-  string
-    .trim()
-    .split('  ')
-    .map((word: string): string[] => word.trim())
-    .filter((word: string): string[] => word !== '')
-    .join(' ')
-```
-
 ## Usage
 
-```typescript
+```javascript
 trimWhitespace('    This is some  really crazy.     string.   ')
 // This is some really crazy. string.
 ```

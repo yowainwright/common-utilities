@@ -15,18 +15,13 @@ yarn add @common-utilities/filter-array -D
 
 ## Function
 
-```typescript
+```javascript
 const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
-```
-
-```typescript
-const filterArray = (arr: unknown[]): unknown[] =>
-  arr.filter((item: unknown, index: number, self: unknown[]) => self.indexOf(item) === index)
 ```
 
 ## Usage
 
-```typescript
+```javascript
 filterArray(['test', 'test', 'foo', 'bar', 'biz'])
 // ['test', 'foo', 'bar', 'biz'])
 ```

@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/merge-objects",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A basic implementation of the common utility function, merge-objects 👯‍♂️",
   "main": "dist/index.js",
   "module": "dist/index.js",
