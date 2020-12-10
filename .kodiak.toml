@@ -2,5 +2,5 @@
 # Minimal config. version is the only required field.
 version = 1
 auto_approve_usernames = ["dependabot"]
-merge.automerge_label = 'automerge 🚀'
-update.autoupdate_label = 'autoupdate 🔁'
+merge.automerge_label = ['dependencies','automerge 🚀']
+update.autoupdate_label = ['dependencies','autoupdate 🔁']
