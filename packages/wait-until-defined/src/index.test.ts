@@ -2,15 +2,35 @@ import { wait, isDefined, checkDefinition, waitUntilDefined } from './index'
 
 describe('@common-utilities/', () => {
   describe('wait-until-defined', () => {
-    describe('wait', () => { 
-
+    it('wait', async () => {
+      let test
+      setTimeout(() => {
+        test = 2
+      }, 10)
+      const result = await wait(30)
+      expect(result).toBe(true)
+      expect(test).toEqual(2)
     })
-    
-    describe('isDefined', () => { 
 
+    it('isDefined', async () => {
+      const thing = 'yay'
+      const testVar = () => thing === 'yay'
+      const result = await isDefined(testVar)
+      expect(result).toEqual(true)
     })
+  })
 
-    describe('checkDefinition', () => { })
+  it('checkDefinition', async () => {
+    const thing = 'yay'
+    const testVar = () => thing === 'yay'
+    const result = await checkDefinition(testVar, 10, 1)
+    expect(result).toEqual(true)
+  })
 
-    describe('waitUntilDefined', () => { });
+  it('waitUntilDefined', async () => {
+    const thing = 'yay'
+    const testVar = () => thing === 'yay'
+    const result = await waitUntilDefined(testVar, 10, 1)
+    expect(result).toEqual(true)
+  })
 })

@@ -14,7 +14,8 @@
  * @returns Promise<boolean>
  * @note adds a delay of a specified time
  */
-export const wait = (timeout): Promise<number> => new Promise((resolve) => setTimeout(resolve, timeout))
+export const wait = (timeout: number): Promise<true> =>
+  new Promise((resolve) => setTimeout(() => resolve(true), timeout))
 
 /**
  * isDefined
