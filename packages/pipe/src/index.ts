@@ -9,6 +9,6 @@
  * @returns the last/final value
  */
 export const pipe = (...fns: unknown[]) => (patchedValue: unknown): unknown =>
-  fns.reduce((fnVal: unknown, fn: Function) => fn(fnVal), patchedValue)
+  fns.reduce((fnVal: unknown, fn: (fnVal: unknown) => unknown) => fn(fnVal), patchedValue)
 
 export default pipe
