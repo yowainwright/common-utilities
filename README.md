@@ -13,11 +13,11 @@ Common Utilities fills a gap between 1-line-of-code (1LOC) JavaScript utility so
 
 #### Common Utilities 🧰 &nbsp; vs 1-line-of-code
 
-Common Utilities provides an option to [1LOC]() because each function can be imported rather than copied. This ensures that you don't need to write your own tests while knowing you're using easy to read tested code!
+Common Utilities provides an option to [1LOC](https://1loc.dev/) because each function can be imported rather than copied. This ensures that you don't need to write your own tests while knowing you're using easy to read tested code!
 
 #### Common Utilities 🧰 &nbsp; vs Utilities Libraries
 
-Common Utilities provides an option to [Ramba]() or [Lodash]() because it provides solutions to many common JavaScript utility functions. Where Ramba and Lodash provides better overall coverage of what each JavaScript utility does, they also are more challenging to quickly know if the code does what **you** need it to do. Also, Libraries like [Ramda]() and [Lodash]() may assume that you [tree shake]() unused code in your build pipeline and are generally more bytes of code.
+Common Utilities provides an option to [Ramba](https://ramdajs.com/) or [Lodash](https://lodash.com/) because it provides solutions to many common JavaScript utility functions. Where Ramba and Lodash provides better overall coverage of what each JavaScript utility does, they also are more challenging to quickly know if the code does what **you** need it to do. Also, Libraries like [Ramda](https://ramdajs.com/#usage) and [Lodash](https://lodash.com/per-method-packages) may assume that you [tree shake](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking) unused code in your build pipeline and are generally more bytes of code.
 
 ---
 
@@ -371,5 +371,5 @@ const test = async () => {
 
 ## Cites
 
-Many/all of these Common Utilities packages are written very well elsewhere.
-See [LoDash](https://lodash.com/) and [Ramda](https://ramdajs.com/docs/) for a great start!
+Many/all of these Common Utilities are written very well elsewhere.
+See [1LOC](https://1loc.dev/), [LoDash](https://lodash.com/), and [Ramda](https://ramdajs.com/docs/) for a great start!
