@@ -7,6 +7,18 @@
 
 Simple, typed, functional, documented, and tested javascript utility functions.
 
+### Why
+
+Common Utilities fills a gap between 1-line-of-code (1LOC) JavaScript utility solutions and large JavaScript utility libraries. If having tested code chunks and brevity is optimal when importing a utlity, consider Common Utilities!
+
+#### Common Utilities 🧰 vs 1-line-of-code
+
+Common Utilities provides an option to [1LOC]() because each function can be imported rather than copied. This ensures that you don't need to write your own tests while knowing you're using easy to read tested code!
+
+#### Common Utilities 🧰 vs Utilities Libraries
+
+Common Utilities provides an option to [Ramba]() or [Lodash]() because it provides solutions to many common JavaScript utility functions. Where Ramba and Lodash provides better overall coverage of what each JavaScript utility does, they also are more challenging to quickly know if the code does what **you** need it to do. Also, Libraries like [Ramda]() and [Lodash]() may assume that you [tree shake]() unused code in your build pipeline and are generally more bytes of code.
+
 ---
 
 [Packages](#packages) | [Gloassary](#glossary) | [Cites](#cites)
@@ -15,7 +27,8 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 
 ## Packages
 
-Common Utilities provides bite-sized packages of each utility. Use what it needed without what is not.
+Common Utilities provides bite-sized packages of each utility.
+Use what it needed without what is not.
 
 | Package                                                                    | Utility                                                                                       |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
@@ -294,6 +307,8 @@ kebabToCamelStringsInObject({ 'test-thing': 'foo' })
 
 **[Trim Whitespace](/packages/trim-whitespace)** is a common function for returning a string with trimmed text.
 
+Trim-whitespace is useful for removing extra spaces from inputed strings.
+
 #### Function
 
 ```typescript
@@ -311,6 +326,45 @@ const trimWhitespace = (string) =>
 ```typescript
 trimWhitespace('    This is some  really crazy.     string.   ')
 // This is some really crazy. string.
+```
+
+### Wait-until-defined ⌚️
+
+**[Wait-until-defined](/packages/wait-until-defined)** is a common function for waiting until data is defined via a callback which returns a boolean.
+
+Wait-until-defined is useful for waiting until some data type is defined.
+
+#### Function
+
+```javascript
+const wait = (timeout) => new Promise((resolve) => setTimeout(resolve, timeout))
+const isDefined = (callbackFn) => new Promise((resolve) => resolve(callbackFn()))
+const checkDefinition = async (callbackFn, timeout, count) => {
+  const definition = await isDefined(callbackFn)
+  if (definition) {
+    return definition
+  } else {
+    await wait(timeout)
+    return checkDefinition(callbackFn, timeout, count - 1)
+  }
+}
+const waitUntilDefined = async (callbackFn, interval, timeout) => {
+  const count = timeout / interval
+  const definition = await checkDefinition(callbackFn, interval, count)
+  return definition
+}
+```
+
+#### Usage
+
+```javascript
+setTimeout(() => (window.Test = 'yay'), 2000)
+const hasWindowTest = () => window.Test === 'test'
+const test = async () => {
+  const check = await waitUntilDefined(hasWindowTest, 50, 3000)
+  return check
+}
+// true
 ```
 
 ---
