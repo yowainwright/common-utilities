@@ -3,19 +3,19 @@
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
-**No cruft. No bloat. No dependencies.**
+#### No cruft. No bloat. No dependencies.
 
 Simple, typed, functional, documented, and tested javascript utility functions.
 
-### Why
+## Why
 
 Common Utilities fills a gap between 1-line-of-code (1LOC) JavaScript utility solutions and large JavaScript utility libraries. If having tested code chunks and brevity is optimal when importing a utlity, consider Common Utilities!
 
-#### Common Utilities 🧰 vs 1-line-of-code
+#### Common Utilities 🧰 &nbsp; vs 1-line-of-code
 
 Common Utilities provides an option to [1LOC]() because each function can be imported rather than copied. This ensures that you don't need to write your own tests while knowing you're using easy to read tested code!
 
-#### Common Utilities 🧰 vs Utilities Libraries
+#### Common Utilities 🧰 &nbsp; vs Utilities Libraries
 
 Common Utilities provides an option to [Ramba]() or [Lodash]() because it provides solutions to many common JavaScript utility functions. Where Ramba and Lodash provides better overall coverage of what each JavaScript utility does, they also are more challenging to quickly know if the code does what **you** need it to do. Also, Libraries like [Ramda]() and [Lodash]() may assume that you [tree shake]() unused code in your build pipeline and are generally more bytes of code.
 
