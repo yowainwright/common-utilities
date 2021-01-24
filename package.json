@@ -14,12 +14,12 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-lerna-scopes": "^11.0.0",
     "@commitlint/prompt": "^11.0.0",
-    "@heartly/eslint-config-typescript": "^0.0.2",
+    "@heartly/eslint-config-typescript": "0.0.4",
     "@heartly/prettier-config": "^0.0.1",
     "@types/jest": "^26.0.4",
     "@types/node": "^14.6.4",
     "commitizen": "^4.0.3",
-    "eslint": "^7.13.0",
+    "eslint": "7.18.0",
     "husky": "^4.2.3",
     "jest": "^25.4.0",
     "lerna": "^3.20.2",
@@ -81,7 +81,8 @@
           "is-object",
           "string-interpolation",
           "kebab-to-camel-string",
-          "trim-whitespace"
+          "trim-whitespace",
+          "wait-until-defined"
         ]
       ],
       "type-enum": [
