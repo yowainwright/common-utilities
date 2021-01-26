@@ -39,6 +39,10 @@ export const mergeObjects = (item: Item, otherItem: Item): Item => {
   )
 }
 
-const isPrototypePolluted = (key: string) => ['__proto__', 'constructor', 'prototype'].includes(key)
+/**
+ * @name isPrototypePolluted
+ * @param {key} probably a string
+ */
+const isPrototypePolluted = (key: string) => [ '__proto__', 'constructor', 'prototype'].includes(key)
 
 export default mergeObjects
