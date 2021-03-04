@@ -297,9 +297,9 @@
     yargs "^15.1.0"
 
 "@commitlint/config-lerna-scopes@^12.0.0":
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-12.0.0.tgz#9b751a21a27d66350b6a46be41253e504c043043"
-  integrity sha512-hHNkPz3bI0KD9YnyXazvbmFmPj+PFHmD3O6j3AYFrOSL0UgAtriXfiXWlw4Ty5PLnVGLrxnrZFA8z4EID1cgCA==
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-12.0.1.tgz#3ae4fe71efbecc49dc92a4c801ea66c00f397f1d"
+  integrity sha512-k3xT6ey3nyGYFl3xGlzivmuE+/rLJEBWg7wn+3XPRVLdovwxgA3fCqSrK17mJRCKcjcJbto70Uwmj27VDG0Kng==
   dependencies:
     globby "^11.0.1"
     import-from "3.0.0"
