@@ -2,6 +2,8 @@
 
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=Simple%2C+typed%2C+functional%2C+documented%2C+and+tested+javascript+utility+functions)
+
 
 #### No cruft. No bloat. No dependencies.
 
