@@ -11,7 +11,7 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 
-Common Utilities fills a gap between 1-line-of-code (1LOC) JavaScript utility solutions and large JavaScript utility libraries. If having typed, tested JavaScript utility functions and brevity is what you want, consider Common Utilities! Read the slightly longer [comparision](#comparision) for more insight.
+> **Common Utilities** fills a gap between 1-line-of-code (1LOC) JavaScript utility solutions and large JavaScript utility libraries. If having typed, tested JavaScript utility functions and brevity is what you want, consider Common Utilities! Read the slightly longer [comparision](#comparision) for more insight.
 
 ---
 
