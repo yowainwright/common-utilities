@@ -23,8 +23,8 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 Common Utilities provides bite-sized packages of each utility.
 Use what it needed without what is not.
 
-| Package                                                                    | Utility                                                                                       |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Package                                                                    | Version |Utility                                                                                       |
+| -------------------------------------------------------------------------- | --- | --------------------------------------------------------------------------------------------- |
 | [Compose](/packages/compose)                             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fcompose.svg)](https://badge.fury.io/js/%40common-utilities%2Fcompose) | passes function value until it delivers a final return value                                  |
 | [Head](/packages/head)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fhead.svg)](https://badge.fury.io/js/%40common-utilities%2Fhead) | returns the first value of an array                                                           |
 | [Pipe](/packages/pipe)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fpipe.svg)](https://badge.fury.io/js/%40common-utilities%2Fpipe) | passes function value until it delivers a final return value in the opposite order of compose |
