@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/trace",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A basic implementation of the common utility function, Trace 🖋",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -33,5 +33,14 @@
       "^.+\\.(ts|tsx)$": "ts-jest"
     }
   },
-  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"
+  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed",
+  "keywords": [
+    "log",
+    "check",
+    "development",
+    "debug",
+    "debugging",
+    "utility",
+    "functional"
+  ]
 }

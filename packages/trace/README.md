@@ -13,15 +13,6 @@ A common function for tracing values.
 yarn add @common-utilities/trace -D
 ```
 
-## Function
-
-```javascript
-const trace = (label) => (value) => {
-  console.log(`${label}: ${value}`)
-  return value
-}
-```
-
 ## Usage
 
 ```javascript

@@ -13,12 +13,6 @@
 yarn add @common-utilities/pipe -D
 ```
 
-## Function
-
-```javascript
-const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), patchedValue)
-```
-
 ## Usage
 
 ```javascript

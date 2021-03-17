@@ -14,14 +14,6 @@ This function comes with `isArray` and `isOfObjectTypes` helper methods.
 yarn add @common-utilities/is-object -D
 ```
 
-## Function
-
-```javascript
-const isArray = (item) => Array.isArray(item)
-const isOfObjectType = (item) => item !== null && typeof item === 'object'
-const isObject = (item) => isOfObjectType(item) && !isArray(item)
-```
-
 ## Usage
 
 isArray

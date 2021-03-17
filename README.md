@@ -2,7 +2,6 @@
 
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=Simple%2C+typed%2C+functional%2C+documented%2C+and+tested+javascript+utility+functions)
 
 
 #### No cruft. No bloat. No dependencies.
@@ -24,20 +23,20 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 Common Utilities provides bite-sized packages of each utility.
 Use what it needed without what is not.
 
-| Package                                                                    | Utility                                                                                       |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [@common-utilities/compose](/packages/compose)                             | passes function value until it delivers a final return value                                  |
-| [@common-utilities/head](/packages/head)                                   | returns the first value of an array                                                           |
-| [@common-utilities/pipe](/packages/pipe)                                   | passes function value until it delivers a final return value in the opposite order of compose |
-| [@common-utilities/trace](/packages/trace)                                 | functionally logs values                                                                      |
-| [@common-utilities/repeat](/packages/repeat)                               | recursively replaces a value based on a certain length                                        |
-| [@common-utilities/filter-array](/packages/filter-array)                   | removes duplicates from an array                                                              |
-| [@common-utilities/is-object](/packages/is-object)                         | determines if data is of object type                                                          |
-| [@common-utilities/merge-objects](/packages/merge-objects)                 | deeply merges 2 objects                                                                       |
-| [@common-utilities/string-interpolation](/packages/string-interpolation)   | interpolating variables in strings                                                            |
-| [@common-utilities/kebab-to-camel-string](/packages/kebab-to-camel-string) | returns a kebab string as a camel string                                                      |
-| [@common-utilities/trim-whitespace](/packages/trim-whitespace)             | returns a string with trimmed whitespace                                                      |
-| [@common-utilities/wait-until-defined](/packages/wait-until-defined)       | waits and checks for a callback function to returns true                                      |
+| Package                                                                    | NPM Version |Utility                                                                                       |
+| -------------------------------------------------------------------------- | --- | --------------------------------------------------------------------------------------------- |
+| [Compose](/packages/compose)                             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fcompose.svg)](https://badge.fury.io/js/%40common-utilities%2Fcompose) | passes function value until it delivers a final return value                                  |
+| [Head](/packages/head)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fhead.svg)](https://badge.fury.io/js/%40common-utilities%2Fhead) | returns the first value of an array                                                           |
+| [Pipe](/packages/pipe)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fpipe.svg)](https://badge.fury.io/js/%40common-utilities%2Fpipe) | passes function value until it delivers a final return value in the opposite order of compose |
+| [Trace](/packages/trace)                                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrace) | functionally logs values                                                                      |
+| [Repeat](/packages/repeat)                               | [![npm version](https://badge.fury.io/js/%40common-utilities%2Frepeat.svg)](https://badge.fury.io/js/%40common-utilities%2Frepeat) | recursively replaces a value based on a certain length                                        |
+| [Filter-array](/packages/filter-array)                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ffilter-array.svg)](https://badge.fury.io/js/%40common-utilities%2Ffilter-array) | removes duplicates from an array                                                              |
+| [Is-object](/packages/is-object)                         | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fis-object.svg)](https://badge.fury.io/js/%40common-utilities%2is-object) | determines if data is of object type                                                          |
+| [Merge-objects](/packages/merge-objects)                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fmerge-objects.svg)](https://badge.fury.io/js/%40common-utilities%2merge-objects) | deeply merges 2 objects                                                                       |
+| [String-interpolation](/packages/string-interpolation)   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation.svg)](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation) | interpolating variables in strings                                                            |
+| [Kebab-to-camel-string](/packages/kebab-to-camel-string) | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string.svg)](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string) | returns a kebab string as a camel string                                                      |
+| [Trim-whitespace](/packages/trim-whitespace)             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace) | returns a string with trimmed whitespace                                                      |
+| [Wait-until-defined](/packages/wait-until-defined)       | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined.svg)](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined) | waits and checks for a callback function to returns true                                      |
 
 ---
 
@@ -55,12 +54,6 @@ Below are sectioned descriptions and code usages of each implemented Common Util
 
 Compose is useful for computing a series of functions in a composed fashion improving code readability and testability.
 
-#### Function
-
-```typescript
-const compose = (...fns) => (patchedValue) => fns.reduceRight((fnVal, fn) => fn(fnVal), patchedValue)
-```
-
 #### Usage
 
 ```typescript
@@ -73,12 +66,6 @@ const result = compose(add1, subtract3, multipleBy5)
 ### Head 👤
 
 **[Head](/packages/head)** is a common function for return the value of the first item in an Array.
-
-#### Function
-
-```typescript
-const head = ([first]) => first
-```
 
 #### Usage
 
@@ -93,12 +80,6 @@ head([0, 1, 2, 3, 4]) // 01
 **[Pipe](/packages/pipe)** is a common function that take the output from one function and automatically patches it to the input of the next function until it spits out the final value in the opposite order of Compose.
 
 Like compose, Pipe is useful for computing a series of functions in a composed fashion improving code readability and testability but in the opposite order of Compose.
-
-#### Function
-
-```typescript
-const pipe = (...fns) => (patchedValue) => fns.reduce((fnVal, fn) => fn(fnVal), patchedValue)
-```
 
 #### Usage
 
@@ -115,13 +96,6 @@ const result = pipe(add1, subtract2, multipleBy3)
 
 Repeat is useful for declaritively performing a while loop, making it more testable.
 
-#### Function
-
-```typescript
-const repeat = (iterations) => (callback) => (initialValue) =>
-  iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
-```
-
 #### Usage
 
 ```typescript
@@ -137,12 +111,6 @@ repeat(100)(add1)(0) // 100
 
 Filter is useful for ensuring an array is exact.
 
-#### Function
-
-```typescript
-const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
-```
-
 #### Usage
 
 ```typescript
@@ -157,14 +125,6 @@ filterArray(['test', 'test', 'foo', 'bar', 'biz']) // ['test', 'foo', 'bar', 'bi
 This function comes with `isArray` and `isOfObjectTypes` helper methods.
 
 Is object is useful for determining that an object is an object **and** not an array.
-
-#### Function
-
-```typescript
-const isArray = (item) => Array.isArray(item)
-const isOfObjectType = (item) => item !== null && typeof item === 'object'
-const isObject = (item) => isOfObjectType(item) && !isArray(item)
-```
 
 #### Usage
 
@@ -201,30 +161,6 @@ isObject({ foo: 'test' }) // true
 
 Merge Objects is useful for merging objects with nested object and/or array properties.
 
-#### Function
-
-```typescript
-const mergeObjects = (item, otherItem) => {
-  if ((!isObject(item) && !isArray(item)) || (!isObject(otherItem) && !isArray(otherItem))) {
-    return item
-  }
-  if (isArray(item) && isArray(otherItem)) {
-    return filterArray([...item, ...otherItem])
-  }
-
-  return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce((acc, key: string) => {
-    if (typeof acc[key] === 'undefined') {
-      acc[key] = otherItem[key]
-    } else if (isObject(acc[key]) || isArray(acc[key])) {
-      acc[key] = mergeObjects(item[key], otherItem[key])
-    } else if (acc[key] !== otherItem[key] && typeof otherItem[key] !== 'undefined') {
-      acc[key] = otherItem[key]
-    }
-    return acc
-  }, item)
-}
-```
-
 #### Usage
 
 ```typescript
@@ -236,18 +172,6 @@ mergeObjects({ foo: 'bar' }, { baz: 'biz' }) // { foo: 'bar', baz: 'biz' }
 **[String Interpolation](/packages/string-interpolation)** is a common function for interpolating variables in strings.
 
 String Interpolation is useful for adding dynamic data to strings.
-
-#### Function
-
-```typescript
-const stringInterpolation = (str, arr) =>
-  !str || !arr
-    ? arr.reduce((generatedStr, item) => {
-        const dynamicKey = Object.keys(item).toString()
-        return generatedStr.replace(`#{${dynamicKey}}`, item[dynamicKey])
-      }, str)
-    : str
-```
 
 #### Usage
 
@@ -261,27 +185,6 @@ stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in
 **[Kebab to Camel String](/packages/kebab-to-camel-string)** is a common function for returning a kebab string as a camel string.
 
 Kebab to Camel String is useful for switching objects from kebab case to camel case which is more usable in JavaScript.
-
-#### Function
-
-```typescript
-// string
-const kebabToCamelString = (kebabString) =>
-  kebabString
-    .split('-')
-    .map((camelString, i) =>
-      i === 0 ? camelString : camelString ? `${camelString.charAt(0).toUpperCase()}${camelString.slice(1)}` : '',
-    )
-    .join('')
-
-// object
-const kebabToCamelStringsInObject = (kebabObjectStrings) =>
-  Object.keys(kebabObjectStrings).length
-    ? Object.entries(kebabObjectStrings)
-        .map(([kebabKey, value]) => [`${kebabToCamelString(kebabKey)}`, value])
-        .reduce((flags, [key, value]) => Object.assign(flags, { [key]: value }), {})
-    : {}
-```
 
 #### Usage
 
@@ -297,23 +200,11 @@ kebabToCamelStringsInObject({ 'test-thing': 'foo' })
 
 ---
 
-### Trim-whitespace 🍢🐫
+### Trim-whitespace ⬜️
 
 **[Trim Whitespace](/packages/trim-whitespace)** is a common function for returning a string with trimmed text.
 
 Trim-whitespace is useful for removing extra spaces from inputed strings.
-
-#### Function
-
-```typescript
-const trimWhitespace = (string) =>
-  string
-    .trim()
-    .split('  ')
-    .map((word) => word.trim())
-    .filter((word) => word !== '')
-    .join(' ')
-```
 
 #### Usage
 
@@ -327,27 +218,6 @@ trimWhitespace('    This is some  really crazy.     string.   ')
 **[Wait-until-defined](/packages/wait-until-defined)** is a common function for waiting until data is defined via a callback which returns a boolean.
 
 Wait-until-defined is useful for waiting until some data type is defined.
-
-#### Function
-
-```javascript
-const wait = (timeout) => new Promise((resolve) => setTimeout(resolve, timeout))
-const isDefined = (callbackFn) => new Promise((resolve) => resolve(callbackFn()))
-const checkDefinition = async (callbackFn, timeout, count) => {
-  const definition = await isDefined(callbackFn)
-  if (definition) {
-    return definition
-  } else {
-    await wait(timeout)
-    return checkDefinition(callbackFn, timeout, count - 1)
-  }
-}
-const waitUntilDefined = async (callbackFn, interval, timeout) => {
-  const count = timeout / interval
-  const definition = await checkDefinition(callbackFn, interval, count)
-  return definition
-}
-```
 
 #### Usage
 

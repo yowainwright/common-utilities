@@ -25,7 +25,6 @@ export const mergeObjects = (item: Item, otherItem: Item): Item => {
 
   return filterArray([...Object.keys(item), ...Object.keys(otherItem)]).reduce(
     (acc: Record<string, unknown>, key: string) => {
-      
       if (typeof acc[key] === 'undefined') {
         acc[key] = otherItem[key]
       } else if (isObject(acc[key]) || isArray(acc[key])) {
@@ -43,6 +42,6 @@ export const mergeObjects = (item: Item, otherItem: Item): Item => {
  * @name isPrototypePolluted
  * @param {key} probably a string
  */
-const isPrototypePolluted = (key: string) => [ '__proto__', 'constructor', 'prototype'].includes(key)
+const isPrototypePolluted = (key: string) => ['__proto__', 'constructor', 'prototype'].includes(key)
 
 export default mergeObjects

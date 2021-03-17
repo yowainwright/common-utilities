@@ -13,12 +13,6 @@
 yarn add @common-utilities/head -D
 ```
 
-## Function
-
-```javascript
-const head = ([first]): => first
-```
-
 ## Usage
 
 ```javascript

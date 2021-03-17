@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/string-interpolation",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A common utility for interpolating variables in strings, string-interpolation",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -30,5 +30,14 @@
       "^.+\\.(ts|tsx)$": "ts-jest"
     }
   },
-  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed"
+  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed",
+  "keywords": [
+    "dynamic",
+    "interpolation",
+    "text",
+    "strings",
+    "formatting",
+    "utility",
+    "functional"
+  ]
 }
