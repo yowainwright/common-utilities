@@ -2,7 +2,6 @@
 
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=Simple%2C+typed%2C+functional%2C+documented%2C+and+tested+javascript+utility+functions)
 
 
 #### No cruft. No bloat. No dependencies.
@@ -26,18 +25,18 @@ Use what it needed without what is not.
 
 | Package                                                                    | Utility                                                                                       |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [Compose](/packages/compose)                             | passes function value until it delivers a final return value                                  |
-| [Head](/packages/head)                                   | returns the first value of an array                                                           |
-| [Pipe](/packages/pipe)                                   | passes function value until it delivers a final return value in the opposite order of compose |
-| [Trace](/packages/trace)                                 | functionally logs values                                                                      |
-| [Repeat](/packages/repeat)                               | recursively replaces a value based on a certain length                                        |
-| [Filter-array](/packages/filter-array)                   | removes duplicates from an array                                                              |
-| [Is-object](/packages/is-object)                         | determines if data is of object type                                                          |
-| [Merge-objects](/packages/merge-objects)                 | deeply merges 2 objects                                                                       |
-| [String-interpolation](/packages/string-interpolation)   | interpolating variables in strings                                                            |
-| [Kebab-to-camel-string](/packages/kebab-to-camel-string) | returns a kebab string as a camel string                                                      |
-| [Trim-whitespace](/packages/trim-whitespace)             | returns a string with trimmed whitespace                                                      |
-| [Wait-until-defined](/packages/wait-until-defined)       | waits and checks for a callback function to returns true                                      |
+| [Compose](/packages/compose)                             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fcompose.svg)](https://badge.fury.io/js/%40common-utilities%2Fcompose) | passes function value until it delivers a final return value                                  |
+| [Head](/packages/head)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fhead.svg)](https://badge.fury.io/js/%40common-utilities%2Fhead) | returns the first value of an array                                                           |
+| [Pipe](/packages/pipe)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fpipe.svg)](https://badge.fury.io/js/%40common-utilities%2Fpipe) | passes function value until it delivers a final return value in the opposite order of compose |
+| [Trace](/packages/trace)                                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrace) | functionally logs values                                                                      |
+| [Repeat](/packages/repeat)                               | [![npm version](https://badge.fury.io/js/%40common-utilities%2Frepeat.svg)](https://badge.fury.io/js/%40common-utilities%2Frepeat) | recursively replaces a value based on a certain length                                        |
+| [Filter-array](/packages/filter-array)                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ffilter-array.svg)](https://badge.fury.io/js/%40common-utilities%2Ffilter-array) | removes duplicates from an array                                                              |
+| [Is-object](/packages/is-object)                         | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fis-object.svg)](https://badge.fury.io/js/%40common-utilities%2is-object) | determines if data is of object type                                                          |
+| [Merge-objects](/packages/merge-objects)                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fmerge-objects.svg)](https://badge.fury.io/js/%40common-utilities%2merge-objects) | deeply merges 2 objects                                                                       |
+| [String-interpolation](/packages/string-interpolation)   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation.svg)](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation) | interpolating variables in strings                                                            |
+| [Kebab-to-camel-string](/packages/kebab-to-camel-string) | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string.svg)](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string) | returns a kebab string as a camel string                                                      |
+| [Trim-whitespace](/packages/trim-whitespace)             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace) | returns a string with trimmed whitespace                                                      |
+| [Wait-until-defined](/packages/wait-until-defined)       | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined.svg)](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined) | waits and checks for a callback function to returns true                                      |
 
 ---
 
