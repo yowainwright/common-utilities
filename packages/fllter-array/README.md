@@ -13,12 +13,6 @@
 yarn add @common-utilities/filter-array -D
 ```
 
-## Function
-
-```javascript
-const filterArray = (arr) => arr.filter((item, index, self) => self.indexOf(item) === index)
-```
-
 ## Usage
 
 ```javascript

@@ -13,18 +13,6 @@
 yarn add @common-utilities/string-interpolation -D
 ```
 
-## Function
-
-```javascript
-const stringInterpolation = (str, arr) =>
-  !str || !arr
-    ? arr.reduce((generatedStr, item) => {
-        const dynamicKey = Object.keys(item).toString()
-        return generatedStr.replace(`#{${dynamicKey}}`, item[dynamicKey])
-      }, str)
-    : str
-```
-
 ## Usage
 
 ```javascript

@@ -13,27 +13,6 @@
 yarn add @common-utilities/wait-until-defined -D
 ```
 
-## Function
-
-```javascript
-const wait = (timeout) => new Promise((resolve) => setTimeout(resolve, timeout))
-const isDefined = (callbackFn) => new Promise((resolve) => resolve(callbackFn()))
-const checkDefinition = async (callbackFn, timeout, count) => {
-  const definition = await isDefined(callbackFn)
-  if (definition) {
-    return definition
-  } else {
-    await wait(timeout)
-    return checkDefinition(callbackFn, timeout, count - 1)
-  }
-}
-const waitUntilDefined = async (callbackFn, interval, timeout) => {
-  const count = timeout / interval
-  const definition = await checkDefinition(callbackFn, interval, count)
-  return definition
-}
-```
-
 ## Usage
 
 ```javascript

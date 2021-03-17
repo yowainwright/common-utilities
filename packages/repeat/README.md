@@ -15,13 +15,6 @@ The repeat function can be used to replace while loops.
 yarn add @common-utilities/repeat -D
 ```
 
-## Function
-
-```javascript
-const repeat = (iterations) => (callback) => (initialValue) =>
-  iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
-```
-
 ## Usage
 
 ```javascript

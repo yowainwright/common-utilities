@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/filter-array",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A basic implementation of the common utility function, filter-array 🧹",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -30,5 +30,14 @@
       "^.+\\.(ts)$": "ts-jest"
     }
   },
-  "gitHead": "91f796bedc77546871476c1b71d4bd771973f626"
+  "gitHead": "91f796bedc77546871476c1b71d4bd771973f626",
+  "keywords": [
+    "array",
+    "map",
+    "set",
+    "filtering",
+    "filter-array",
+    "utility",
+    "functional"
+  ]
 }
