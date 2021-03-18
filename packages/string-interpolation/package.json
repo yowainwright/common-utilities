@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/string-interpolation",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A common utility for interpolating variables in strings, string-interpolation",
   "main": "dist/index.js",
   "module": "dist/index.js",

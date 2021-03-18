@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/filter-array",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A basic implementation of the common utility function, filter-array 🧹",
   "main": "dist/index.js",
   "module": "dist/index.js",
