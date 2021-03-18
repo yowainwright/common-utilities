@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/compose",
-  "version": "0.0.11",
+  "version": "0.1.1",
   "description": "A basic implementation of the common utility function, Compose 🚂",
   "main": "dist/index.js",
   "module": "dist/index.js",
