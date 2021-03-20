@@ -71,6 +71,7 @@
         [
           "root",
           "compose",
+          "debounce",
           "head",
           "pipe",
           "repeat",
