@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/kebab-to-camel-string",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A common function for returning a kebab string as a camel string. 🍢🐫",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,18 +17,8 @@
   },
   "jest": {
     "name": "@common-utilities/kebab-to-camel-string",
-    "projects": [
-      "<rootDir>/packages/*"
-    ],
-    "resetMocks": true,
     "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    }
+    "roots": [ "<rootDir>/src"]
   },
   "keywords": [
     "strings",

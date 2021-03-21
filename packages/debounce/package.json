@@ -1,7 +1,7 @@
 {
-  "name": "@common-utilities/compose",
-  "version": "0.1.2",
-  "description": "A basic implementation of the common utility function, Compose 🚂",
+  "name": "@common-utilities/debounce",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, Debounce 🏓",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,12 +16,12 @@
     "clean": "rimraf dist"
   },
   "jest": {
-    "name": "@common-utilities/compose",
+    "name": "@common-utilities/debounce",
     "rootDir": "./",
     "roots": [ "<rootDir>/src"]
   },
   "keywords": [
-    "compose",
+    "debounce",
     "common-utilities",
     "utility",
     "functional"
