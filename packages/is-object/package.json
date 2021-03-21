@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/is-object",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Basic implementations of common utility function that check if data is an object 🎛",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,20 +17,9 @@
   },
   "jest": {
     "name": "@common-utilities/is-object",
-    "projects": [
-      "<rootDir>/packages/*"
-    ],
-    "resetMocks": true,
     "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts)$": "ts-jest"
-    }
+    "roots": [ "<rootDir>/src"]
   },
-  "gitHead": "91f796bedc77546871476c1b71d4bd771973f626",
   "keywords": [
     "object",
     "array",

@@ -30,13 +30,14 @@ Use what it needed without what is not.
 | [Pipe](/packages/pipe)                                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fpipe.svg)](https://badge.fury.io/js/%40common-utilities%2Fpipe) | passes function value until it delivers a final return value in the opposite order of compose |
 | [Trace](/packages/trace)                                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrace) | functionally logs values                                                                      |
 | [Repeat](/packages/repeat)                               | [![npm version](https://badge.fury.io/js/%40common-utilities%2Frepeat.svg)](https://badge.fury.io/js/%40common-utilities%2Frepeat) | recursively replaces a value based on a certain length                                        |
-| [Filter-array](/packages/filter-array)                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ffilter-array.svg)](https://badge.fury.io/js/%40common-utilities%2Ffilter-array) | removes duplicates from an array                                                              |
-| [Is-object](/packages/is-object)                         | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fis-object.svg)](https://badge.fury.io/js/%40common-utilities%2is-object) | determines if data is of object type                                                          |
-| [Merge-objects](/packages/merge-objects)                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fmerge-objects.svg)](https://badge.fury.io/js/%40common-utilities%2merge-objects) | deeply merges 2 objects                                                                       |
-| [String-interpolation](/packages/string-interpolation)   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation.svg)](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation) | interpolating variables in strings                                                            |
-| [Kebab-to-camel-string](/packages/kebab-to-camel-string) | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string.svg)](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string) | returns a kebab string as a camel string                                                      |
-| [Trim-whitespace](/packages/trim-whitespace)             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace) | returns a string with trimmed whitespace                                                      |
-| [Wait-until-defined](/packages/wait-until-defined)       | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined.svg)](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined) | waits and checks for a callback function to returns true                                      |
+| [Filter Array](/packages/filter-array)                   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ffilter-array.svg)](https://badge.fury.io/js/%40common-utilities%2Ffilter-array) | removes duplicates from an array                                                              |
+| [Is Object](/packages/is-object)                         | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fis-object.svg)](https://badge.fury.io/js/%40common-utilities%2is-object) | determines if data is of object type                                                          |
+| [Merge Objects](/packages/merge-objects)                 | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fmerge-objects.svg)](https://badge.fury.io/js/%40common-utilities%2merge-objects) | deeply merges 2 objects                                                                       |
+| [String Interpolation](/packages/string-interpolation)   | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation.svg)](https://badge.fury.io/js/%40common-utilities%2Fstring-interpolation) | interpolating variables in strings                                                            |
+| [Kebab To Camel String](/packages/kebab-to-camel-string) | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string.svg)](https://badge.fury.io/js/%40common-utilities%2Fkebab-to-camel-string) | returns a kebab string as a camel string                                                      |
+| [Trim Whitespace](/packages/trim-whitespace)             | [![npm version](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace.svg)](https://badge.fury.io/js/%40common-utilities%2Ftrim-whitespace) | returns a string with trimmed whitespace                                                      |
+| [Wait Until Defined](/packages/wait-until-defined)       | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined.svg)](https://badge.fury.io/js/%40common-utilities%2Fwait-until-defined) | waits and checks for a callback function to returns true                                      |
+| [Debounce](/packages/debounce)       | [![npm version](https://badge.fury.io/js/%40common-utilities%2Fdebounce.svg)](https://badge.fury.io/js/%40common-utilities%2Fdebounce) | waits a set amount of time before invoking a callback                                      |
 
 ---
 
@@ -213,6 +214,8 @@ trimWhitespace('    This is some  really crazy.     string.   ')
 // This is some really crazy. string.
 ```
 
+---
+
 ### Wait-until-defined ⌚️
 
 **[Wait-until-defined](/packages/wait-until-defined)** is a common function for waiting until data is defined via a callback which returns a boolean.
@@ -229,6 +232,24 @@ const test = async () => {
   return check
 }
 // true
+```
+
+---
+
+### Debounce 🏓
+
+**[Debounce](/packages/bedounce)** is a common function that waits a set amount of time before invoking a callback.
+
+Debounce is useful for ensuring that a function invocation doesn't happen too frequently.
+
+#### Usage
+
+```javascript
+let result = 1
+const add1 = (val) => {
+  result = val + 1
+}
+debounce(add1, 1000)(1) // returns 2, after 1 second
 ```
 
 ---

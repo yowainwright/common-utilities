@@ -26,7 +26,7 @@
     "lint-staged": "^10.1.1",
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^25.2.1",
+    "ts-jest": "^26.5.4",
     "tsconfig-paths": "^3.9.0",
     "tslib": "^2.0.1",
     "typescript": "^4.0.3"
@@ -71,6 +71,7 @@
         [
           "root",
           "compose",
+          "debounce",
           "head",
           "pipe",
           "repeat",
@@ -111,9 +112,11 @@
     }
   },
   "jest": {
-    "projects": [
-      "<rootDir>/packages/*"
-    ]
+    "resetMocks": true,
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md}": [

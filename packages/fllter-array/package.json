@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/filter-array",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A basic implementation of the common utility function, filter-array 🧹",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,20 +17,9 @@
   },
   "jest": {
     "name": "@common-utilities/filter-array",
-    "projects": [
-      "<rootDir>/packages/*"
-    ],
-    "resetMocks": true,
     "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts)$": "ts-jest"
-    }
+    "roots": [ "<rootDir>/src"]
   },
-  "gitHead": "91f796bedc77546871476c1b71d4bd771973f626",
   "keywords": [
     "array",
     "map",

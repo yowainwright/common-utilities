@@ -20,18 +20,8 @@
   },
   "jest": {
     "name": "@common-utilities/trim-whitespace",
-    "projects": [
-      "<rootDir>/packages/*"
-    ],
-    "resetMocks": true,
     "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    }
+    "roots": [ "<rootDir>/src"]
   },
   "keywords": [
     "white-space",

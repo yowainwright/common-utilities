@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/string-interpolation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A common utility for interpolating variables in strings, string-interpolation",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,20 +17,9 @@
   },
   "jest": {
     "name": "@common-utilities/string-interpolation",
-    "projects": [
-      "<rootDir>/packages/*"
-    ],
-    "resetMocks": true,
     "rootDir": "./",
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    }
+    "roots": [ "<rootDir>/src"]
   },
-  "gitHead": "a4d185229ac5a8bd02f6c9b80a4a39416f0ca6ed",
   "keywords": [
     "dynamic",
     "interpolation",
