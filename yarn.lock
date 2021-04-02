@@ -376,12 +376,12 @@
     conventional-commits-parser "^3.0.0"
 
 "@commitlint/prompt@^12.0.1":
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-12.0.1.tgz#f1d7c808c26e2864fde50a21fc95651c647cb395"
-  integrity sha512-EXCZzoyXIbIhV38tJMjVvwzpQwP08ZmLDbL2crU3zVsZ9FjHxw2ujreF23qpCnx7GQHm/D7Q7rIDHhUALAPj/Q==
+  version "12.1.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-12.1.1.tgz#73f8b6987f106f56cf7f2a9407392f26c26be869"
+  integrity sha512-Ln7M2CMedxPVaZXhZ1BH/mUidzKeNTu8SXeTpSYuUb/l1Kx9N1xoX65EFbZQrffxQ+YskG/fPth9tAc6xopFFg==
   dependencies:
-    "@commitlint/load" "^12.0.1"
-    "@commitlint/types" "^12.0.1"
+    "@commitlint/load" "^12.1.1"
+    "@commitlint/types" "^12.1.1"
     chalk "^4.0.0"
     lodash "^4.17.19"
     throat "^6.0.0"
