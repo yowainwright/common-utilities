@@ -300,9 +300,9 @@
     yargs "^16.2.0"
 
 "@commitlint/config-lerna-scopes@^12.0.0":
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-12.1.1.tgz#d7ebb34c083b181620d2ac97d8de566c37199e87"
-  integrity sha512-j5u3UHbd4nccBTz0DVraO5cJDVdMgEh7sfuW9BH9SPxlI2F0LmLUIssrUuyCNL1bk+VIH2pdAWonlIlAAfJ4Nw==
+  version "12.1.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-12.1.3.tgz#196fc15bd310837b3a1d0bf7c98a4c286228c08f"
+  integrity sha512-xao1/mLzOq1mpzhzmZgpKApvoZpI6BDPAZT0yWe6Mz8SbteojgnNTxbnywcvNRBdbnbe+lKE+knx0Q6EU5pmSQ==
   dependencies:
     globby "^11.0.1"
     import-from "3.0.0"
