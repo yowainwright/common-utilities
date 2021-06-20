@@ -6,9 +6,11 @@
  * @param {label} string
  * @param {value} any
  */
-export const trace = (label: string) => (value: unknown): unknown => {
-  console.log(`${label}: ${value}`)
-  return value
-}
+export const trace =
+  (label: string) =>
+  (value: unknown): unknown => {
+    console.log(`${label}: ${value}`)
+    return value
+  }
 
 export default trace

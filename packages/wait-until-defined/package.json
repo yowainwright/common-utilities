@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/wait-until-defined",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A basic implementation of the common utility function, wait until defined ⌚️",
   "main": "dist/index.js",
   "module": "dist/index.js",

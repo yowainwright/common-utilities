@@ -7,27 +7,4 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/merge-objects -D
-```
-
-## Usage
-
-```javascript
-mergeObjects({ foo: 'bar' }, { baz: 'biz' })
-// => { foo 'bar', baz: 'biz' }
-```
-
----
-
-## Common Utilities 🧰
-
-**No cruft. No bloat. No dependencies.**
-
-Simple, typed, functional, documented, and tested javascript utility functions.
-
----
-
-View other [common utilities](https://github.com/yowainwright/common-utilities).
+Check out the [merge-objects page](https://www.common-utilities.com/utilities/packages/merge-objects) in the [docs](https://www.common-utilities.com). License, MIT

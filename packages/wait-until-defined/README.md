@@ -7,32 +7,4 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/wait-until-defined -D
-```
-
-## Usage
-
-```javascript
-setTimeout(() => (window.Test = 'yay'), 2000)
-const hasWindowTest = () => window.Test === 'test'
-const test = async () => {
-  const check = await waitUntilDefined(hasWindowTest, 50, 3000)
-  return check
-}
-// true
-```
-
----
-
-## Common Utilities 🧰
-
-**No cruft. No bloat. No dependencies.**
-
-Simple, typed, functional, documented, and tested javascript utility functions.
-
----
-
-View other [common utilities](https://github.com/yowainwright/common-utilities).
+Check out the [wait-until-defined page](https://www.common-utilities.com/utilities/packages/wait-until-defined) in the [docs](https://www.common-utilities.com). License, MIT

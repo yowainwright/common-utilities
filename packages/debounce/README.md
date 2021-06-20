@@ -7,30 +7,5 @@
 
 ---
 
-## Install
+Check out the [debounce page](https://www.common-utilities.com/utilities/packages/debounce) in the [docs](https://www.common-utilities.com)! License, MIT
 
-```bash
-yarn add @common-utilities/debounce -D
-```
-
-## Usage
-
-```javascript
-let result = 1
-const add1 = (val) => {
-  result = val + 1
-}
-debounce(add1, 1000)(1) // returns 2, after 1 second
-```
-
----
-
-## Common Utilities 🧰
-
-**No cruft. No bloat. No dependencies.**
-
-Simple, typed, functional, documented, and tested javascript utility functions.
-
----
-
-View other [common utilities](https://github.com/yowainwright/common-utilities).
