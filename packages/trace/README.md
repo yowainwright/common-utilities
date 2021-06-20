@@ -8,6 +8,7 @@ A common function for tracing values.
 ---
 
 Check out the [trace page](https://www.common-utilities.com/utilities/packages/trace) in the [docs](https://www.common-utilities.com). 👋 
+
 ---
 
 ## Common Utilities 🧰

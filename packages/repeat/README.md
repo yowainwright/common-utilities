@@ -10,6 +10,7 @@ The repeat function can be used to replace while loops.
 ---
 
 Check out the [repeat page](https://www.common-utilities.com/utilities/packages/repeat) in the [docs](https://www.common-utilities.com). 👋 
+
 ---
 
 ## Common Utilities 🧰
