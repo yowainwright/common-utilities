@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/debounce",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A basic implementation of the common utility function, Debounce 🏓",
   "main": "dist/index.js",
   "module": "dist/index.js",

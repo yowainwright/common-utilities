@@ -7,22 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/pipe -D
-```
-
-## Usage
-
-```javascript
-const add1 = (val) => val + 1
-const subtract2 = (val) => val - 2
-const multiplyBy3 = (val) => val * 3
-const result = pipe(add1, subtract2, multiplyBy3)
-result(3) // 8 (3 * 3 - 2 + 1)
-```
-
+Check out the [pipe page](https://www.common-utilities.com/utilities/packages/pipe) in the [docs](https://www.common-utilities.com). 👋 
 ---
 
 ## Common Utilities 🧰

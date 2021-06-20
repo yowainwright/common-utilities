@@ -9,19 +9,7 @@ The repeat function can be used to replace while loops.
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/repeat -D
-```
-
-## Usage
-
-```javascript
-const add1 = (val) => val + 1
-repeat(100)(add1)(0) // 100
-```
-
+Check out the [repeat page](https://www.common-utilities.com/utilities/packages/repeat) in the [docs](https://www.common-utilities.com). 👋 
 ---
 
 ## Common Utilities 🧰

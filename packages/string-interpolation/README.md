@@ -7,19 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/string-interpolation -D
-```
-
-## Usage
-
-```javascript
-stringInterpolation('This string has #{dynamicData}', [{ dynamicData: 'a knot in it' }])
-// => 'This string has a knot in it'
-```
-
+Check out the [string-interpolation page](https://www.common-utilities.com/utilities/packages/string-interpolation) in the [docs](https://www.common-utilities.com). 👋 
 ---
 
 ## Common Utilities 🧰

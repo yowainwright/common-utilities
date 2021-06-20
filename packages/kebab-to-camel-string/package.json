@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/kebab-to-camel-string",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A common function for returning a kebab string as a camel string. 🍢🐫",
   "main": "dist/index.js",
   "module": "dist/index.js",

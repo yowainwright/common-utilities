@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/pipe",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A basic implementation of the common utility function, Pipe",
   "main": "dist/index.js",
   "module": "dist/index.js",

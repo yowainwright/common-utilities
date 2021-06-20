@@ -7,18 +7,7 @@ A common function for trimming whitespace without regex!
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/trim-whitespace -D
-```
-
-## Usage
-
-```javascript
-trimWhitespace('    This is some  really crazy.     string.   ')
-// This is some really crazy. string.
-```
+Check out the [trim-whitespace page](https://www.common-utilities.com/utilities/packages/trim-whitespace) in the [docs](https://www.common-utilities.com). 👋 
 
 ---
 

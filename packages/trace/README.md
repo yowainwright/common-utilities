@@ -7,19 +7,7 @@ A common function for tracing values.
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/trace -D
-```
-
-## Usage
-
-```javascript
-trace('number')(2)
-// logs number 2, awe s**t
-```
-
+Check out the [trace page](https://www.common-utilities.com/utilities/packages/trace) in the [docs](https://www.common-utilities.com). 👋 
 ---
 
 ## Common Utilities 🧰

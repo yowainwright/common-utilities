@@ -7,19 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/head -D
-```
-
-## Usage
-
-```javascript
-const input = Array.from(Array(10).keys())
-const firstInputItem = head(input)
-// 0
-```
+Check out the [head page](https://www.common-utilities.com/utilities/packages/head) in the [docs](https://www.common-utilities.com). 👋 
 
 ---
 

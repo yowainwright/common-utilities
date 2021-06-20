@@ -7,18 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/filter-array -D
-```
-
-## Usage
-
-```javascript
-filterArray(['test', 'test', 'foo', 'bar', 'biz'])
-// ['test', 'foo', 'bar', 'biz'])
-```
+Check out the [filter-array page](https://www.common-utilities.com/utilities/packages/filter-array) in the [docs](https://www.common-utilities.com). 👋 
 
 ---
 

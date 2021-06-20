@@ -7,23 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilitiee/kebab-to-camel-string -D
-```
-
-## Usage
-
-```javascript
-// string
-kebabToCamelString('test-thing')
-// testThing
-
-// object
-kebabToCamelStringsInObject({ 'test-thing': 'foo' })
-// { testThing: 'foo' }
-```
+Check out the [kebab-to-camel-string page](https://www.common-utilities.com/utilities/packages/kebab-to-camel-string) in the [docs](https://www.common-utilities.com). 👋 
 
 ---
 

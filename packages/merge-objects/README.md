@@ -7,19 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/merge-objects -D
-```
-
-## Usage
-
-```javascript
-mergeObjects({ foo: 'bar' }, { baz: 'biz' })
-// => { foo 'bar', baz: 'biz' }
-```
-
+Check out the [merge-objects page](https://www.common-utilities.com/utilities/packages/merge-objects) in the [docs](https://www.common-utilities.com). 👋 
 ---
 
 ## Common Utilities 🧰

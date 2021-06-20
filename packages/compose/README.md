@@ -7,21 +7,7 @@
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/compose -D
-```
-
-## Usage
-
-```javascript
-const add1 = (val) => val + 1
-const subtract2 = (val) => val - 2
-const multiplyBy3 = (val) => val * 3
-const result = compose(add1, subtract2, multiplyBy3)
-// result(3) // 5 (3 + 1 - 3 * 5)
-```
+Check out the [compose page](https://www.common-utilities.com/utilities/packages/compose) in the [docs](https://www.common-utilities.com). 👋 
 
 ---
 
@@ -33,4 +19,4 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 
-View other [common utilities](https://github.com/yowainwright/common-utilities).
+View other [common utilities](https://www.common-utilities.com/utilities/packages).

@@ -8,38 +8,7 @@ This function comes with `isArray` and `isOfObjectTypes` helper methods.
 
 ---
 
-## Install
-
-```bash
-yarn add @common-utilities/is-object -D
-```
-
-## Usage
-
-isArray
-
-```javascript
-isArray(['test', 'test']) // true
-isArray({ foo: 'test' }) // false
-```
-
-isOfObjectType
-
-```javascript
-isOfObjectType(['test', 'test']) // true
-isOfObjectType({ foo: 'test' }) // true
-isOfObjectType(9) // false
-isOfObjectType('string') // false
-isOfObjectType(null) // false
-isOfObjectType(undefined) // false
-```
-
-isObject
-
-```javascript
-isObject(['test', 'test']) // false
-isObject({ foo: 'test' }) // true
-```
+Check out the [is-object page](https://www.common-utilities.com/utilities/packages/is-object) in the [docs](https://www.common-utilities.com). 👋 
 
 ---
 
