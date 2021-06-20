@@ -7,4 +7,4 @@
 
 ---
 
-Check out the [wait-until-defined page](https://www.common-utilities.com/utilities/packages/wait-until-defined) in the [docs](https://www.common-utilities.com). 👋  License, MIT
+Check out the [wait-until-defined page](https://www.common-utilities.com/utilities/packages/wait-until-defined) in the [docs](https://www.common-utilities.com). License, MIT

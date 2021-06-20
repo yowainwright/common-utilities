@@ -7,4 +7,4 @@
 
 ---
 
-Check out the [merge-objects page](https://www.common-utilities.com/utilities/packages/merge-objects) in the [docs](https://www.common-utilities.com). 👋  License, MIT
+Check out the [merge-objects page](https://www.common-utilities.com/utilities/packages/merge-objects) in the [docs](https://www.common-utilities.com). License, MIT

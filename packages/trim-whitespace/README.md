@@ -7,4 +7,4 @@ A common function for trimming whitespace without regex!
 
 ---
 
-Check out the [trim-whitespace page](https://www.common-utilities.com/utilities/packages/trim-whitespace) in the [docs](https://www.common-utilities.com). 👋  License, MIT
+Check out the [trim-whitespace page](https://www.common-utilities.com/utilities/packages/trim-whitespace) in the [docs](https://www.common-utilities.com). License, MIT

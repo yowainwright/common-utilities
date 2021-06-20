@@ -7,5 +7,5 @@
 
 ---
 
-Check out the [debounce page](https://www.common-utilities.com/utilities/packages/debounce) in the [docs](https://www.common-utilities.com)! 👋  License, MIT
+Check out the [debounce page](https://www.common-utilities.com/utilities/packages/debounce) in the [docs](https://www.common-utilities.com)! License, MIT
 

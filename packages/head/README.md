@@ -7,4 +7,4 @@
 
 ---
 
-Check out the [head page](https://www.common-utilities.com/utilities/packages/head) in the [docs](https://www.common-utilities.com). 👋  License, MIT
+Check out the [head page](https://www.common-utilities.com/utilities/packages/head) in the [docs](https://www.common-utilities.com). License, MIT

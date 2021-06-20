@@ -7,4 +7,4 @@
 
 ---
 
-Check out the [string-interpolation page](https://www.common-utilities.com/utilities/packages/string-interpolation) in the [docs](https://www.common-utilities.com). 👋  License, MIT
+Check out the [string-interpolation page](https://www.common-utilities.com/utilities/packages/string-interpolation) in the [docs](https://www.common-utilities.com). License, MIT

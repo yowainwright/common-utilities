@@ -7,4 +7,4 @@
 
 ---
 
-Check out the [filter-array page](https://www.common-utilities.com/utilities/packages/filter-array) in the [docs](https://www.common-utilities.com)! 👋  License, MIT
+Check out the [filter-array page](https://www.common-utilities.com/utilities/packages/filter-array) in the [docs](https://www.common-utilities.com)! License, MIT

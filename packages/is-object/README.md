@@ -8,4 +8,4 @@ This function comes with `isArray` and `isOfObjectTypes` helper methods.
 
 ---
 
-Check out the [is-object page](https://www.common-utilities.com/utilities/packages/is-object) in the [docs](https://www.common-utilities.com). 👋  License, MIT
+Check out the [is-object page](https://www.common-utilities.com/utilities/packages/is-object) in the [docs](https://www.common-utilities.com). License, MIT

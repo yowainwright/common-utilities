@@ -7,4 +7,4 @@
 
 ---
 
-Check out the [compose page](https://www.common-utilities.com/utilities/packages/compose) in the [docs](https://www.common-utilities.com)! 👋  License, MIT
+Check out the [compose page](https://www.common-utilities.com/utilities/packages/compose) in the [docs](https://www.common-utilities.com)! License, MIT
