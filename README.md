@@ -10,8 +10,4 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 
-Check out the [docs](https://www.common-utilities.com)! 🛠 
-
----
-
-License, [MIT](./LICENSE)
+Check out the [docs](https://www.common-utilities.com)! 🛠  License, [MIT](./LICENSE)

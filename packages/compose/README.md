@@ -7,16 +7,4 @@
 
 ---
 
-Check out the [compose page](https://www.common-utilities.com/utilities/packages/compose) in the [docs](https://www.common-utilities.com). 👋 
-
----
-
-## Common Utilities 🧰
-
-**No cruft. No bloat. No dependencies.**
-
-Simple, typed, functional, documented, and tested javascript utility functions.
-
----
-
-View other [common utilities](https://www.common-utilities.com/utilities/packages).
+Check out the [compose page](https://www.common-utilities.com/utilities/packages/compose) in the [docs](https://www.common-utilities.com)! 👋  License, MIT

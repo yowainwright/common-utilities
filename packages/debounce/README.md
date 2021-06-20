@@ -7,16 +7,5 @@
 
 ---
 
-Check out the [debounce page](https://www.common-utilities.com/utilities/packages/debounce) in the [docs](https://www.common-utilities.com). 👋 
+Check out the [debounce page](https://www.common-utilities.com/utilities/packages/debounce) in the [docs](https://www.common-utilities.com)! 👋  License, MIT
 
----
-
-## Common Utilities 🧰
-
-**No cruft. No bloat. No dependencies.**
-
-Simple, typed, functional, documented, and tested javascript utility functions.
-
----
-
-View other [common utilities](https://github.com/yowainwright/common-utilities).

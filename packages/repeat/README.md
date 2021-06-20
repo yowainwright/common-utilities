@@ -9,16 +9,4 @@ The repeat function can be used to replace while loops.
 
 ---
 
-Check out the [repeat page](https://www.common-utilities.com/utilities/packages/repeat) in the [docs](https://www.common-utilities.com). 👋 
-
----
-
-## Common Utilities 🧰
-
-**No cruft. No bloat. No dependencies.**
-
-Simple, typed, functional, documented, and tested javascript utility functions.
-
----
-
-View other [common utilities](https://github.com/yowainwright/common-utilities).
+Check out the [repeat page](https://www.common-utilities.com/utilities/packages/repeat) in the [docs](https://www.common-utilities.com). 👋  License, MIT
