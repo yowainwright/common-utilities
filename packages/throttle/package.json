@@ -1,0 +1,26 @@
+{
+  "name": "@common-utilities/throttle",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, throttle ⏱",
+  "author": "yowainwright <yowainwright@gmail.com>",
+  "homepage": "https://github.com/yowainwright/common-utilities#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yowainwright/common-utilities.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/yowainwright/common-utilities/issues"
+  }
+}
