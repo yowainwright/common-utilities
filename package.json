@@ -81,6 +81,7 @@
           "is-object",
           "string-interpolation",
           "kebab-to-camel-string",
+          "throttle",
           "trim-whitespace",
           "wait-until-defined"
         ]

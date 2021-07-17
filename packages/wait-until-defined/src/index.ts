@@ -44,11 +44,7 @@ export const checkDefinition = async (callbackFn: () => boolean, timeout: number
   }
 }
 
-export const waitUntilDefined = async (
-  callbackFn: () => boolean,
-  interval: number,
-  timeout: number,
-): Promise<boolean> => {
+export const waitUntilDefined = async (callbackFn: () => boolean, interval = 100, timeout = 5000): Promise<boolean> => {
   const count = timeout / interval
   const definition = await checkDefinition(callbackFn, interval, count)
   return definition
