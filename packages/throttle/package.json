@@ -2,25 +2,31 @@
   "name": "@common-utilities/throttle",
   "version": "0.0.1",
   "description": "A basic implementation of the common utility function, throttle ⏱",
-  "author": "yowainwright <yowainwright@gmail.com>",
   "homepage": "https://github.com/yowainwright/common-utilities#readme",
   "license": "MIT",
-  "main": "src/index.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "publishConfig": {
+    "access": "public"
   },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yowainwright/common-utilities.git"
-  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "tsc",
+    "clean": "rimraf dist"
   },
-  "bugs": {
-    "url": "https://github.com/yowainwright/common-utilities/issues"
-  }
+  "jest": {
+    "name": "@common-utilities/debounce",
+    "rootDir": "./",
+    "roots": [
+      "<rootDir>/src"
+    ]
+  },
+  "keywords": [
+    "debounce",
+    "common-utilities",
+    "utility",
+    "functional"
+  ]
 }
