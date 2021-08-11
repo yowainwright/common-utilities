@@ -16,7 +16,7 @@
     "@commitlint/prompt": "^13.1.0",
     "@heartly/eslint-config-typescript": "1.0.4",
     "@heartly/prettier-config": "^0.0.1",
-    "@types/jest": "^26.0.4",
+    "@types/jest": "^27.0.0",
     "@types/node": "^16.0.0",
     "commitizen": "^4.0.3",
     "eslint": "7.32.0",
