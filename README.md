@@ -10,7 +10,7 @@ Simple, typed, functional, documented, and tested javascript utility functions.
 
 ---
 
-Check out the [docs](https://www.common-utilities.com)! 🛠  
+Checkout the **[docs website](https://www.common-utilities.com)**! 🛠  
 
 ---
 
