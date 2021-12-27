@@ -298,10 +298,10 @@
     resolve-global "1.0.0"
     yargs "^17.0.0"
 
-"@commitlint/config-lerna-scopes@^15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-15.0.0.tgz#1a74bd812810da7ff709c9b69af648783c1ce120"
-  integrity sha512-OZXkyePxWQ7h7X85gnDSLvuUTEcumCBzn27IkK2bR78/qyv505u4DFZssbYkezdyh86TbRQTAmyUshHj5HF2jA==
+"@commitlint/config-lerna-scopes@^16.0.0":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-lerna-scopes/-/config-lerna-scopes-16.0.0.tgz#1092b1f8c7a44f43a27622c057daf5a643ab0805"
+  integrity sha512-5bVNLa9IuDevvZzlIYIoAGXh4O5Wn2+vCTnqJkFveWQ3+NF9cWz9ZuTUvw6i9rhYCMn0xJdJ7Oa6R1fHwYbFew==
   dependencies:
     globby "^11.0.1"
     import-from "4.0.0"
