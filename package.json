@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^14.1.0",
+    "@commitlint/cli": "^16.0.0",
     "@commitlint/config-lerna-scopes": "^16.0.0",
     "@commitlint/prompt": "^16.0.0",
     "@heartly/eslint-config-typescript": "1.0.4",
