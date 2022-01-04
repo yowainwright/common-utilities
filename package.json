@@ -83,7 +83,8 @@
           "kebab-to-camel-string",
           "throttle",
           "trim-whitespace",
-          "wait-until-defined"
+          "wait-until-defined",
+          "rot13"
         ]
       ],
       "type-enum": [
