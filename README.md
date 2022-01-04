@@ -6,11 +6,11 @@
 
 #### No cruft. No bloat. No dependencies.
 
-Simple, typed, functional, documented, and tested javascript utility functions.
+Simple, typed, _generally_ functional, documented, and tested javascript utility functions.
 
 ---
 
-Checkout the **[docs website](https://www.common-utilities.com)**! 🛠  
+[Docs 👉](https://www.common-utilities.com)**! 🛠  
 
 ---
 
