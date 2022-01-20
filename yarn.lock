@@ -386,12 +386,12 @@
     conventional-commits-parser "^3.2.2"
 
 "@commitlint/prompt@^16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-16.0.0.tgz#87f212179a592c4c7903151f31575b6a242ffa5f"
-  integrity sha512-16/ocgIWErDDv+jmXWQtA0X6sswt+enx8DFo+K5bxHrKz4XFTeIspivLFWpieU/4EcjzGaqBirdnP3IYqqEXDg==
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-16.1.0.tgz#d5c22a6bdd87ae6c595e6fd1b77e20776bc355a4"
+  integrity sha512-YX/jGdP/VKUuWooBEz2sClxewQlXa6U1xXkfUseWXhbYJYPVb/tUDE5Bo1g9DXtBlyyLaYKfqZ3ZYvSEAd82Uw==
   dependencies:
     "@commitlint/ensure" "^16.0.0"
-    "@commitlint/load" "^16.0.0"
+    "@commitlint/load" "^16.1.0"
     "@commitlint/types" "^16.0.0"
     chalk "^4.0.0"
     inquirer "^6.5.2"
