@@ -316,14 +316,6 @@
     "@commitlint/types" "^16.2.1"
     ajv "^6.12.6"
 
-"@commitlint/ensure@^16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-16.0.0.tgz#fdac1e60a944a1993deb33b5e8454c559abe9866"
-  integrity sha512-WdMySU8DCTaq3JPf0tZFCKIUhqxaL54mjduNhu8v4D2AMUVIIQKYMGyvXn94k8begeW6iJkTf9cXBArayskE7Q==
-  dependencies:
-    "@commitlint/types" "^16.0.0"
-    lodash "^4.17.19"
-
 "@commitlint/ensure@^16.2.1":
   version "16.2.1"
   resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-16.2.1.tgz#0fc538173f95c1eb2694eeedb79cab478347f16f"
@@ -363,7 +355,7 @@
     "@commitlint/rules" "^16.2.1"
     "@commitlint/types" "^16.2.1"
 
-"@commitlint/load@>6.1.1", "@commitlint/load@^16.1.0", "@commitlint/load@^16.2.1":
+"@commitlint/load@>6.1.1", "@commitlint/load@^16.2.1":
   version "16.2.1"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-16.2.1.tgz#301bda1bff66b3e40a85819f854eda72538d8e24"
   integrity sha512-oSpz0jTyVI/A1AIImxJINTLDOMB8YF7lWGm+Jg5wVWM0r7ucpuhyViVvpSRTgvL0z09oIxlctyFGWUQQpI42uw==
@@ -395,13 +387,13 @@
     conventional-commits-parser "^3.2.2"
 
 "@commitlint/prompt@^16.0.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-16.1.0.tgz#d5c22a6bdd87ae6c595e6fd1b77e20776bc355a4"
-  integrity sha512-YX/jGdP/VKUuWooBEz2sClxewQlXa6U1xXkfUseWXhbYJYPVb/tUDE5Bo1g9DXtBlyyLaYKfqZ3ZYvSEAd82Uw==
+  version "16.2.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/prompt/-/prompt-16.2.1.tgz#2152c33ffcaa130f9fdd2400a5edf7c3bb9af78d"
+  integrity sha512-FW/16mYxeeLmEiRWItPNDKlHwwXRbW4KsMf5i96gsTtHxG4d9YqdA8cOhNVOgXhfLByHSfn184K+UVcl6Jw3xw==
   dependencies:
-    "@commitlint/ensure" "^16.0.0"
-    "@commitlint/load" "^16.1.0"
-    "@commitlint/types" "^16.0.0"
+    "@commitlint/ensure" "^16.2.1"
+    "@commitlint/load" "^16.2.1"
+    "@commitlint/types" "^16.2.1"
     chalk "^4.0.0"
     inquirer "^6.5.2"
     lodash "^4.17.19"
@@ -451,7 +443,7 @@
   dependencies:
     find-up "^5.0.0"
 
-"@commitlint/types@^16.0.0", "@commitlint/types@^16.2.1":
+"@commitlint/types@^16.2.1":
   version "16.2.1"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-16.2.1.tgz#f25d373b88b01e51fc3fa44488101361945a61bd"
   integrity sha512-7/z7pA7BM0i8XvMSBynO7xsB3mVQPUZbVn6zMIlp/a091XJ3qAXRXc+HwLYhiIdzzS5fuxxNIHZMGHVD4HJxdA==
