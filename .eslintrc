@@ -1,10 +1,6 @@
 {
-  "extends": "@heartly/eslint-config-typescript",
-  "globals": {
-    "describe": true,
-    "expect": true,
-    "jest": true,
-    "it": true,
-    "test": true
-  }
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"]
 }
