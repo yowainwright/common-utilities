@@ -14,29 +14,31 @@
     "@commitlint/cli": "^16.0.0",
     "@commitlint/config-lerna-scopes": "^16.0.0",
     "@commitlint/prompt": "^16.0.0",
-    "@heartly/eslint-config-typescript": "1.0.4",
-    "@heartly/prettier-config": "^0.0.1",
     "@types/jest": "^27.0.0",
     "@types/node": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "commitizen": "^4.0.3",
-    "eslint": "^8.6.0",
-    "husky": "4.2.1",
-    "jest": "^26.6.3",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.0",
+    "jest": "^27.5.1",
     "lerna": "^4.0.0",
     "lint-staged": "^12.0.2",
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.4",
+    "ts-jest": "^27.1.4",
     "tsconfig-paths": "^3.9.0",
     "tslib": "^2.3.1",
-    "typescript": "^4.0.3"
+    "tsutils": "^3.21.0",
+    "typescript": "^4.6.3"
   },
   "scripts": {
     "build": "yarn clean:dist && yarn build:dist",
     "build:dist": "lerna run build",
-    "clean": "lerna clean",
     "clean:dist": "lerna run clean",
-    "ci": "run-s lint:ci tsc test:ci",
+    "ci": "run-s lint:ci test:ci",
+    "commit-msg": "commitlint --edit $1",
     "lint": "yarn lint:cmd --fix",
     "lint:ci": "yarn lint:cmd",
     "lint:cmd": "eslint . --ext '.ts'",
@@ -48,7 +50,7 @@
     "commitmsg": "commitlint -e",
     "deploy": "yarn build && lerna publish from-package",
     "refresh": "rm -rf node_modules yarn.lock && yarn && yarn build",
-    "tsc": "tsc -p ./tsconfig.test.json"
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
@@ -104,15 +106,6 @@
       ]
     }
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "post-checkout": "if [[ $HUSKY_GIT_PARAMS =~ 1$ ]]; then yarn; fi",
-      "post-merge": "yarn",
-      "post-rewrite": "yarn",
-      "pre-commit": "yarn tsc && lint-staged "
-    }
-  },
   "jest": {
     "resetMocks": true,
     "testEnvironment": "node",
@@ -127,6 +120,5 @@
     "*.{ts,tsx}": [
       "jest --bail --findRelatedTests"
     ]
-  },
-  "prettier": "@heartly/eslint-config-typescript/dist/prettier"
+  }
 }
