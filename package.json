@@ -33,6 +33,9 @@
     "tsutils": "^3.21.0",
     "typescript": "^4.6.3"
   },
+  "resolutions": {
+    "minimist": "^1.2.6"
+  },
   "scripts": {
     "build": "yarn clean:dist && yarn build:dist",
     "build:dist": "lerna run build",
