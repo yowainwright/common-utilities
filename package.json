@@ -45,6 +45,7 @@
     "lint": "pnpm lint:cmd --fix",
     "lint:ci": "pnpm lint:cmd",
     "lint:cmd": "eslint . --ext '.ts'",
+    "lint-staged": "npx lint-staged",
     "test": "pnpm test:cmd",
     "test:ci": "pnpm test:cmd --ci",
     "test:cmd": "jest --maxWorkers=4 --noStackTrace --collectCoverage=true",

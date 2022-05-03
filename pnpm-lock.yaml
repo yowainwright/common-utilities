@@ -21,7 +21,7 @@ specifiers:
   lint-staged: ^12.0.2
   prettier: ^2.0.2
   rimraf: ^3.0.2
-  tsconfig-paths: ^3.9.0
+  tsconfig-paths: ^4.0.0
   tslib: ^2.3.1
   tsutils: ^3.21.0
   typescript: ^4.6.3
@@ -44,7 +44,7 @@ devDependencies:
   lint-staged: 12.4.1
   prettier: 2.6.2
   rimraf: 3.0.2
-  tsconfig-paths: 3.14.1
+  tsconfig-paths: 4.0.0
   tslib: 2.4.0
   tsutils: 3.21.0_typescript@4.6.4
   typescript: 4.6.4
@@ -1104,10 +1104,6 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
-    dev: true
-
-  /@types/json5/0.0.29:
-    resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
 
   /@types/minimist/1.2.2:
@@ -3344,13 +3340,6 @@ packages:
     resolution: {integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=}
     dev: true
 
-  /json5/1.0.1:
-    resolution: {integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.6
-    dev: true
-
   /json5/2.2.1:
     resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
     engines: {node: '>=6'}
@@ -4465,11 +4454,10 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /tsconfig-paths/3.14.1:
-    resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
+  /tsconfig-paths/4.0.0:
+    resolution: {integrity: sha512-SLBg2GBKlR6bVtMgJJlud/o3waplKtL7skmLkExomIiaAtLGtVsoXIqP3SYdjbcH9lq/KVv7pMZeCBpLYOit6Q==}
     dependencies:
-      '@types/json5': 0.0.29
-      json5: 1.0.1
+      json5: 2.2.1
       minimist: 1.2.6
       strip-bom: 3.0.0
     dev: true
