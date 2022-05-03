@@ -37,9 +37,7 @@
     "minimist": "^1.2.6"
   },
   "scripts": {
-    "build": "pnpm clean:dist && pnpm build:dist",
-    "build:dist": "pnpm -r build",
-    "clean:dist": "pnpm -r clean",
+    "build": "pnpm -r clean && pnpm -r build",
     "ci": "run-s lint:ci test:ci",
     "commit-msg": "commitlint --edit $1",
     "lint": "pnpm lint:cmd --fix",
