@@ -14,6 +14,8 @@
     "@commitlint/cli": "^16.0.0",
     "@commitlint/config-lerna-scopes": "^16.0.0",
     "@commitlint/prompt": "^16.0.0",
+    "@swc/core": "^1.2.175",
+    "@swc/jest": "^0.2.20",
     "@types/jest": "^27.0.0",
     "@types/node": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
@@ -23,11 +25,9 @@
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.0",
     "jest": "^27.5.1",
-    "lerna": "^4.0.0",
     "lint-staged": "^12.0.2",
     "prettier": "^2.0.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.4",
     "tsconfig-paths": "^3.9.0",
     "tslib": "^2.3.1",
     "tsutils": "^3.21.0",
@@ -37,22 +37,21 @@
     "minimist": "^1.2.6"
   },
   "scripts": {
-    "build": "yarn clean:dist && yarn build:dist",
-    "build:dist": "lerna run build",
-    "clean:dist": "lerna run clean",
+    "build": "pnpm clean:dist && pnpm build:dist",
+    "build:dist": "pnpm -r build",
+    "clean:dist": "pnpm -r clean",
     "ci": "run-s lint:ci test:ci",
     "commit-msg": "commitlint --edit $1",
-    "lint": "yarn lint:cmd --fix",
-    "lint:ci": "yarn lint:cmd",
+    "lint": "pnpm lint:cmd --fix",
+    "lint:ci": "pnpm lint:cmd",
     "lint:cmd": "eslint . --ext '.ts'",
-    "test": "yarn test:cmd",
-    "test:ci": "yarn test:cmd --ci",
+    "test": "pnpm test:cmd",
+    "test:ci": "pnpm test:cmd --ci",
     "test:cmd": "jest --maxWorkers=4 --noStackTrace --collectCoverage=true",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e",
-    "deploy": "yarn build && lerna publish from-package",
-    "refresh": "rm -rf node_modules yarn.lock && yarn && yarn build",
+    "deploy": "pnpm build && pnpm -r publish",
     "prepare": "husky install"
   },
   "config": {
@@ -113,12 +112,12 @@
     "resetMocks": true,
     "testEnvironment": "node",
     "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
+      "^.+\\.ts$": "@swc/jest"
     }
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,md}": [
-      "yarn lint"
+      "pnpm lint"
     ],
     "*.{ts,tsx}": [
       "jest --bail --findRelatedTests"
