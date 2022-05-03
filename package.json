@@ -116,7 +116,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,md}": [
+    "*.{ts,json,md}": [
       "pnpm lint"
     ],
     "*.{ts,tsx}": [
