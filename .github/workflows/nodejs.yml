@@ -27,7 +27,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - run: pnpm install
+      # --no-frozen-lockfile is required so that dependabot with automerge can work
+      # https://github.com/dependabot/dependabot-core/issues/1736
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm build
       - run: pnpm test
         env:
