@@ -12,7 +12,7 @@
   ],
   "devDependencies": {
     "@commitlint/cli": "^16.0.0",
-    "@commitlint/config-lerna-scopes": "^16.0.0",
+    "@commitlint/config-lerna-scopes": "^17.0.0",
     "@commitlint/prompt": "^16.0.0",
     "@swc/core": "^1.2.175",
     "@swc/jest": "^0.2.20",
