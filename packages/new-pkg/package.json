@@ -1,0 +1,32 @@
+{
+  "name": "@common-utilities/new-pkg",
+  "version": "0.0.1",
+  "description": "Creates a new `common-utilities` batteries included pkg 📦",
+  "author": "Jeff Wainwright <https://jeffry.in> (yowainwright@gmail.com)",
+  "license": "MIT",
+  "bin": {
+    "create-new": "./dist/program.js"
+  },
+  "files": [
+    "dist",
+    "pkg"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "cmd:test:run": "ts-node src/index.ts",
+    "test:new-pkg": "echo '🚧 building a test package...' && ts-node src/program.ts package -d 'Testing new package' -n 'test'",
+    "test:new-pkg-exists": "path-exists packages/test && echo '🎉 The test package exists!'",
+    "test:clean-up": "echo '⏱ deleting test packages...' && rimraf packages",
+    "test": "pnpm test:new-pkg && pnpm test:new-pkg-exists && pnpm test:clean-up"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "fs-extra": "^10.0.1",
+    "inquirer": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.1",
+    "ts-node": "^10.7.0"
+  }
+}
