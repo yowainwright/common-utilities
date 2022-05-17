@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { copySync, readFileSync, writeFileSync } from 'fs-extra'
+import { copySync, readFileSync, renameSync, writeFileSync } from 'fs-extra'
 import { Options } from './types'
 
 export function writeTextUpdates(name: string, description, dir: string) {
@@ -44,8 +44,7 @@ export function createPkg({ description, name }: Options = {}) {
 	copySync(config, newDir)
 
 	// write over initial package.json
-	const pkgJSON = resolve(`${newDir}/package.json`)
-	// @ts-ignore
+	const pkgJSON = resolve(`${newDir}/pkg-package.json`)
 	const json = require(pkgJSON)
 	json.name = `@common-utilities/${name}`
 	json.description = description
@@ -53,7 +52,8 @@ export function createPkg({ description, name }: Options = {}) {
 	/**
 	 * @note update the package json with the prettier config
 	 */
-	writeFileSync(pkgJSON, JSON.stringify(json, null, 2))
+	writeFileSync(`${newDir}/package.json`, JSON.stringify(json, null, 2))
+	renameSync(`${newDir}/pkg-package.json`, `${newDir}/package.json`)
 	writeTextUpdates(name, description, newDir)
 }
 

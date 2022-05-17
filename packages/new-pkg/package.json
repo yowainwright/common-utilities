@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "cmd:test:run": "ts-node src/index.ts",
     "test:new-pkg": "echo '🚧 building a test package...' && ts-node src/program.ts package -d 'Testing new package' -n 'test'",
     "test:new-pkg-exists": "path-exists packages/test && echo '🎉 The test package exists!'",
     "test:clean-up": "echo '⏱ deleting test packages...' && rimraf packages",

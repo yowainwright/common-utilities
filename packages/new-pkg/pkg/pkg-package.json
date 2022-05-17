@@ -14,7 +14,7 @@
     "tsc:check": "tsc --noEmit"
   },
   "jest": {
-    "name": "@common-utilities/unnamed",
+    "name": "@common-utilities/NAME",
     "rootDir": "./",
     "roots": [ "<rootDir>/src"]
   },
