@@ -7,6 +7,7 @@ specifiers:
   '@commitlint/cli': ^16.0.0
   '@commitlint/config-lerna-scopes': ^16.0.0
   '@commitlint/prompt': ^16.0.0
+  '@common-utilities/new-pkg': file:./packages/new-pkg
   '@swc/core': ^1.2.175
   '@swc/jest': ^0.2.20
   '@types/jest': ^27.0.0
@@ -30,6 +31,7 @@ devDependencies:
   '@commitlint/cli': 16.2.4_@swc+core@1.2.175
   '@commitlint/config-lerna-scopes': 16.2.4
   '@commitlint/prompt': 16.2.4_@swc+core@1.2.175
+  '@common-utilities/new-pkg': link:packages/new-pkg
   '@swc/core': 1.2.175
   '@swc/jest': 0.2.20_@swc+core@1.2.175
   '@types/jest': 27.5.0
