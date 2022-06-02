@@ -17,7 +17,7 @@
     "@common-utilities/new-pkg": "file:./packages/new-pkg",
     "@swc/core": "^1.2.175",
     "@swc/jest": "^0.2.20",
-    "@types/jest": "^27.0.0",
+    "@types/jest": "^28.1.0",
     "@types/node": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
