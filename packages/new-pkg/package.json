@@ -20,7 +20,7 @@
     "test": "pnpm test:new-pkg && pnpm test:new-pkg-exists && pnpm test:clean-up"
   },
   "dependencies": {
-    "commander": "^9.2.0",
+    "commander": "^10.0.0",
     "fs-extra": "^11.0.0",
     "inquirer": "^9.0.0"
   },
