@@ -54,6 +54,7 @@
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e",
     "deploy": "pnpm build && pnpm -r publish",
+    "prepublishOnly": "pnpm build",
     "prepare": "husky install",
     "release-prep": "changeset",
     "release-bumps": "changeset version",
