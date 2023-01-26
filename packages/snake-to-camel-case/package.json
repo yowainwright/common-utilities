@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/snake-to-camel-case",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a utility to convert a snake_case string to camelCase 🐍🐫",
   "types": "dist/index.d.ts",
   "files": [

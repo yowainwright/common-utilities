@@ -1,6 +1,6 @@
 {
   "name": "@common-utilities/curry",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "curry is a function that takes a function and returns a curried version of that function 🥵",
   "types": "dist/index.d.ts",
   "files": [
