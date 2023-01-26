@@ -8,6 +8,7 @@
   "main": "README.md",
   "private": true,
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-lerna-scopes": "17.4.2",
     "@commitlint/prompt": "17.4.2",
@@ -54,6 +55,9 @@
     "commitmsg": "commitlint -e",
     "deploy": "pnpm build && pnpm -r publish",
     "prepare": "husky install",
+    "release-prep": "changeset",
+    "release-bumps": "changeset version",
+    "release-packages": "pnpm prepublishOnly && changeset publish && git push --follow-tags",
     "update": "codependence --update"
   },
   "config": {
