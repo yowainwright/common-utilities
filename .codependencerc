@@ -26,6 +26,6 @@
     "@types/inquirer",
     "commander",
     "fs-extra",
-    "inquirer"
+    { "inquirer": "^8.0.0" }
   ]
 }
