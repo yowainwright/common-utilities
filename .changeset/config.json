@@ -7,5 +7,5 @@
   "access": "restricted",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": ["@goodrx/new-pkg"]
+  "ignore": ["@common-utilities/new-pkg"]
 }
