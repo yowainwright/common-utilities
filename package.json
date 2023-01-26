@@ -89,7 +89,8 @@
           "throttle",
           "trim-whitespace",
           "wait-until-defined",
-          "rot13"
+          "rot13",
+          "snake-to-camel-string"
         ]
       ],
       "type-enum": [
