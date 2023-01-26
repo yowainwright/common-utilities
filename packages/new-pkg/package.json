@@ -4,6 +4,7 @@
   "description": "Creates a new `common-utilities` batteries included pkg 📦",
   "author": "Jeff Wainwright <https://jeffry.in> (yowainwright@gmail.com)",
   "license": "MIT",
+  "private": true,
   "bin": {
     "create-new": "./dist/program.js"
   },
