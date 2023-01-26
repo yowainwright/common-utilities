@@ -27,6 +27,7 @@ importers:
       prettier: 2.8.3
       rimraf: 4.1.2
       ts-node: 10.9.1
+      ts-toolbelt: ^9.6.0
       tsconfig-paths: 4.1.2
       tslib: 2.4.1
       tsutils: ^3.21.0
@@ -52,6 +53,7 @@ importers:
       prettier: 2.8.3
       rimraf: 4.1.2
       ts-node: 10.9.1_4mfliqvs6b5kzafsmk7yzekhva
+      ts-toolbelt: 9.6.0
       tsconfig-paths: 4.1.2
       tslib: 2.4.1
       tsutils: 3.21.0_typescript@4.9.4
@@ -4628,6 +4630,10 @@ packages:
       typescript: 4.9.4
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+    dev: true
+
+  /ts-toolbelt/9.6.0:
+    resolution: {integrity: sha512-nsZd8ZeNUzukXPlJmTBwUAuABDe/9qtVDelJeT/qW0ow3ZS3BsQJtNkan1802aM9Uf68/Y8ljw86Hu0h5IUW3w==}
     dev: true
 
   /tsconfig-paths/4.1.2:
