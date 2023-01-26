@@ -6,7 +6,9 @@
   "files": [
     "dist"
   ],
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
