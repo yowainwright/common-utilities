@@ -9,7 +9,7 @@ Simple, typed, _generally_ functional, documented, and tested javascript utility
 
 ---
 
-#### [Docs 👉](https://www.common-utilities.com)! 🛠
+#### New docs coming! ⏰
 
 ---
 
