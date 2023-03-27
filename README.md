@@ -1,4 +1,4 @@
-# Common Utilities 🧰
+# [Common Utilities](https://yowainwright.gitbook.io/common-utilities/) 🧰
 
 ![Typed with TypeScript](https://flat.badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=blue&color=555555)
 
@@ -7,9 +7,7 @@
 
 Simple, typed, _generally_ functional, documented, and tested javascript utility functions.
 
----
-
-#### New docs coming! ⏰
+[~View the docs](https://yowainwright.gitbook.io/common-utilities/)
 
 ---
 
