@@ -10,13 +10,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.32.11
+          version: latest
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
