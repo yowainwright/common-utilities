@@ -73,3 +73,4 @@ packages/**/dist/
 .dccache
 
 index.js
+.pnpm-store
