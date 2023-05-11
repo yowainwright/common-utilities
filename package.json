@@ -18,7 +18,7 @@
     "@types/jest": "29.5.0",
     "@types/node": "18.15.10",
     "@typescript-eslint/eslint-plugin": "5.57.0",
-    "@typescript-eslint/parser": "5.57.0",
+    "@typescript-eslint/parser": "5.59.5",
     "codependence": "^0.2.6",
     "commitizen": "4.3.0",
     "eslint": "8.38.0",
