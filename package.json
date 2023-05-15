@@ -16,7 +16,7 @@
     "@swc/core": "^1.2.175",
     "@swc/jest": "0.2.26",
     "@types/jest": "29.5.1",
-    "@types/node": "20.1.3",
+    "@types/node": "20.1.4",
     "@typescript-eslint/eslint-plugin": "5.59.5",
     "@typescript-eslint/parser": "5.59.5",
     "codependence": "^0.2.6",
