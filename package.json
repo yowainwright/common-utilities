@@ -33,7 +33,7 @@
     "tsconfig-paths": "4.2.0",
     "tslib": "2.5.3",
     "tsutils": "^3.21.0",
-    "turbo": "^1.8.5",
+    "turbo": "^1.10.3",
     "type-fest": "^3.7.1",
     "typescript": "5.1.3"
   },
