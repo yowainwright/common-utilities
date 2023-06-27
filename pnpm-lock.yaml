@@ -21,8 +21,8 @@ importers:
         specifier: 17.6.6
         version: 17.6.6
       '@commitlint/prompt':
-        specifier: 17.6.5
-        version: 17.6.5(@swc/core@1.3.66)
+        specifier: 17.6.6
+        version: 17.6.6(@swc/core@1.3.66)
       '@common-utilities/new-pkg':
         specifier: workspace:*
         version: link:packages/new-pkg
@@ -800,8 +800,8 @@ packages:
       conventional-commits-parser: 3.2.4
     dev: true
 
-  /@commitlint/prompt@17.6.5(@swc/core@1.3.66):
-    resolution: {integrity: sha512-Zm4pkIvTN/VpnFNUg6D9aiQNdPB2iASmkm4QqR+JCgc6Fa/JNazWaM6g4onLjPbfh8+A4v4Q62/VHRvhlb5NHA==}
+  /@commitlint/prompt@17.6.6(@swc/core@1.3.66):
+    resolution: {integrity: sha512-CPf89ZTASfu91XnXnnhLeJv0zKuFIRWDA3MBtv4Q6OXf0zPgPUyOagKNrHdENAGozb67D12u0XItO6BwYsu26Q==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/ensure': 17.4.4
