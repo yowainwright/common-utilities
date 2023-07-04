@@ -17,15 +17,15 @@
     "@swc/jest": "0.2.26",
     "@types/jest": "29.5.2",
     "@types/node": "20.3.3",
-    "@typescript-eslint/eslint-plugin": "5.60.0",
-    "@typescript-eslint/parser": "5.60.0",
+    "@typescript-eslint/eslint-plugin": "5.61.0",
+    "@typescript-eslint/parser": "5.61.0",
     "codependence": "^0.2.6",
     "commitizen": "4.3.0",
-    "eslint": "8.43.0",
+    "eslint": "8.44.0",
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
     "jest": "29.5.0",
-    "lint-staged": "13.2.2",
+    "lint-staged": "13.2.3",
     "prettier": "2.8.8",
     "rimraf": "5.0.1",
     "ts-node": "10.9.1",
@@ -35,7 +35,7 @@
     "tsutils": "^3.21.0",
     "turbo": "^1.10.6",
     "type-fest": "^3.12.0",
-    "typescript": "5.1.5"
+    "typescript": "5.1.6"
   },
   "resolutions": {
     "minimist": "^1.2.6"
