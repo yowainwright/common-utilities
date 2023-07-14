@@ -23,7 +23,7 @@
   "dependencies": {
     "commander": "^11.0.0",
     "fs-extra": "^11.1.1",
-    "inquirer": "^9.2.7"
+    "inquirer": "^9.2.8"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.0",
