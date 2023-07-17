@@ -34,7 +34,7 @@
     "tslib": "2.6.0",
     "tsutils": "^3.21.0",
     "turbo": "^1.10.7",
-    "type-fest": "^3.13.0",
+    "type-fest": "^4.0.0",
     "typescript": "5.1.6"
   },
   "resolutions": {
