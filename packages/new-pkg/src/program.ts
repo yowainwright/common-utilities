@@ -29,18 +29,18 @@ async function action(options: Options = {}) {
 		const name = options?.name
 			? options.name
 			: await getInput({
-					name: 'name',
-					message: 'What is the name of the package?',
-			  })
+				name: 'name',
+				message: 'What is the name of the package?',
+			})
 
 		// resolves "description"
 		const description = options?.description
 			? options.description
 			: await getInput({
-					name: 'description',
-					message: 'What is the description of the package?',
-			  })
-		script({ description, name })
+				name: 'description',
+				message: 'What is the description of the package?',
+			})
+		await script({ description, name })
 	} catch (err) {
 		console.error(err)
 	}
@@ -54,4 +54,4 @@ program
 	.action(action)
 	.parse(process.argv)
 
-export { program }
+export default program

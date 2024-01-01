@@ -1,6 +1,10 @@
-import { resolve } from 'path'
-import { copySync, readFileSync, renameSync, writeFileSync } from 'fs-extra'
+import { resolve, dirname } from 'path'
+import { fileURLToPath } from 'url';
+import fsFns from 'fs-extra'
+const { copySync, readFileSync, renameSync, writeFileSync } = fsFns;
 import { Options } from './types'
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export function writeTextUpdates(name: string, description, dir: string) {
 	const readmeFile = readFileSync(`${dir}/README.md`, 'utf8')
@@ -31,7 +35,7 @@ export function writeTextUpdates(name: string, description, dir: string) {
  * @param {string} options.description
  * @returns {void}
  */
-export function createPkg({ description, name }: Options = {}) {
+export async function createPkg({ description, name }: Options = {}) {
 	if (!name) {
 		console.log('`Name` is required!')
 		process.exit(0)
@@ -45,14 +49,15 @@ export function createPkg({ description, name }: Options = {}) {
 
 	// write over initial package.json
 	const pkgJSON = resolve(`${newDir}/pkg-package.json`)
-	const json = require(pkgJSON)
-	json.name = `@common-utilities/${name}`
-	json.description = description
+	const json = await import(pkgJSON, { assert: { type: 'json' } })
+	const parsedJSON = JSON.parse(JSON.stringify(json))
+	parsedJSON.name = `@common-utilities/${name}`
+	parsedJSON.description = description
 
 	/**
 	 * @note update the package json with the prettier config
 	 */
-	writeFileSync(`${newDir}/package.json`, JSON.stringify(json, null, 2))
+	writeFileSync(`${newDir}/package.json`, JSON.stringify(parsedJSON, null, 2))
 	renameSync(`${newDir}/pkg-package.json`, `${newDir}/package.json`)
 	writeTextUpdates(name, description, newDir)
 }
