@@ -1,51 +1,89 @@
 import { fileURLToPath } from 'url';
-import { statSync, existsSync, appendFileSync, readdirSync, writeFileSync } from 'fs';
+import {
+  statSync,
+  existsSync,
+  appendFileSync,
+  readdirSync,
+  writeFileSync,
+  readFileSync
+} from 'fs';
 import { dirname, join } from 'path';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
-
-const packagesDir = join(__dirname, 'packages');
-const readmePath = join(__dirname, 'README.md');
-
-// Function to read package.json and return markdown text
-const getPackageMarkdown = (packagePath) => {
-  const packageJsonPath = join(packagePath, 'package.json');
-  const hasPackageJson = existsSync(packageJsonPath);
-  if (!hasPackageJson) return '';
-
-  const packageJson = require(packageJsonPath);
-  const name = packageJson.name || 'Unnamed package';
-  const description = packageJson.description || 'No description available';
-  return `### ${name}\n\n${description}\n\n`;
+export type LoggerOptions = {
+  file: string;
+  isLogging?: boolean;
 };
 
-// Function to update the README.md file
-const updateReadme = (markdownText) => {
-  if (existsSync(readmePath)) {
-    appendFileSync(readmePath, markdownText);
-    return;
-  }
-  writeFileSync(readmePath, markdownText);
-};
+export const logger = ({ file, isLogging = false }: LoggerOptions) => ({
+  debug: (msg: string, ...args: unknown[]) => {
+    if (!isLogging) return;
+    console.debug(`update-md-list:[${file}]: ${msg}`, ...args);
+  },
+  error: (msg: string, ...args: unknown[]) => {
+    console.error(`update-md-list:[${file}]: ${msg}`, ...args);
+  },
+});
 
-// Main function to process all packages
-const processPackages = () => {
-  if (!existsSync(packagesDir)) {
-    console.error('Packages directory not found.');
+export const processPackages = (pkgsDir: string, md: string, jsonFile: string, isLogging = false) => {
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
+  const dirs = join(__dirname, pkgsDir);
+  const mdPath = join(__dirname, md);
+
+  const log = logger({ file: __filename, isLogging });
+
+  if (!existsSync(dirs)) {
+    log.error('Packages directory not found.');
     return;
   }
 
-  const packages = readdirSync(packagesDir);
-  packages.forEach((packageName) => {
-    const packagePath = join(packagesDir, packageName);
-    const isDirectory = statSync(packagePath).isDirectory();
-    if (!isDirectory) return;
-    const markdownText = getPackageMarkdown(packagePath);
-    updateReadme(markdownText);
-  });
+  if (!existsSync(mdPath)) {
+    log.error('Markdown file not found.');
+    return;
+  }
 
-  console.log('README.md has been updated with package details.');
+  const packages = readdirSync(dirs);
+  packages.forEach(pkg => updateText(mdPath, jsonFile, log, dirs, pkg));
+
+  log.debug('README.md has been updated with package details.');
 };
 
-processPackages();
+export const getJsonData = (packagePath: string, jsonFile: string, log: ReturnType<typeof logger>) => {
+  const packageJsonPath = join(packagePath, jsonFile);
+  if (!existsSync(packageJsonPath)) {
+    log.error('package.json not found.', { packageJsonPath });
+    return '';
+  }
+
+  try {
+    const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
+    const name = packageJson.name || 'Unnamed package';
+    const description = packageJson.description || 'No description available';
+    return `### ${name}\n\n${description}\n\n`;
+  } catch (error) {
+    log.error('Error reading package.json', { error });
+    return '';
+  }
+};
+
+export const updateText = (mdPath: string, jsonFile: string, log: ReturnType<typeof logger>, packagesDir: string, pkg: string) => {
+  const path = join(packagesDir, pkg);
+  if (!statSync(path).isDirectory()) {
+    log.error('Not a directory.', { path });
+    return;
+  }
+  const mdText = getJsonData(path, jsonFile, log);
+  updateMd(mdText, mdPath, log);
+};
+
+export const updateMd = (markdownText: string, mdPath: string, log: ReturnType<typeof logger>) => {
+  try {
+    if (existsSync(mdPath)) {
+      appendFileSync(mdPath, markdownText);
+    } else {
+      writeFileSync(mdPath, markdownText);
+    }
+  } catch (error) {
+    log.error('Error updating Markdown file', { error });
+  }
+};

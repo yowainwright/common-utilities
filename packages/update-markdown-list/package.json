@@ -1,8 +1,11 @@
 {
   "name": "@common-utilities/update-markdown-list",
   "version": "0.0.1",
-  "description": "updates a markdown list with list data",
+  "description": "updates a markdown list with json data",
   "types": "dist/index.d.ts",
+  "bin": {
+    "update-md-list": "./dist/cli.js"
+  },
   "files": [
     "dist"
   ],
