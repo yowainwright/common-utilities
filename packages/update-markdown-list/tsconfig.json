@@ -8,6 +8,5 @@
 		"lib": ["ES2022", "DOM"],
 		"moduleResolution": "node"
 	},
-	"exclude": ["pkg/**", "src/*.test.ts", "*.js"],
 	"include": ["src"]
 }

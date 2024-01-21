@@ -42,7 +42,7 @@
   },
   "scripts": {
     "build": "turbo run clean && turbo run build",
-    "create-pkg": "node node_modules/@common-utilities/new-pkg/dist",
+    "create-pkg": "node --es-module-specifier-resolution=node node_modules/@common-utilities/new-pkg/dist",
     "ci": "run-s lint:ci test:ci",
     "commit-msg": "commitlint --edit $1",
     "lint": "pnpm lint:cmd --fix",

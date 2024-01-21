@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import { program } from './program'
+import program from './program'
 import { script } from './script'
 
 program
 
-module.exports = {
+export {
 	program,
 	script,
 }

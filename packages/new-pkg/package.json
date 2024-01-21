@@ -5,6 +5,7 @@
   "author": "Jeff Wainwright <https://jeffry.in> (yowainwright@gmail.com)",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "bin": {
     "create-new": "./dist/program.js"
   },
