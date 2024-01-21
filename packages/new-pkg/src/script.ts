@@ -51,13 +51,13 @@ export async function createPkg({ description, name }: Options = {}) {
 	const pkgJSON = resolve(`${newDir}/pkg-package.json`)
 	const json = await import(pkgJSON, { assert: { type: 'json' } })
 	const parsedJSON = JSON.parse(JSON.stringify(json))
-	parsedJSON.name = `@common-utilities/${name}`
-	parsedJSON.description = description
+	const updatedPakcageJSON = {
+		...parsedJSON,
+		name: `@common-utilities/${name}`,
+		description,
+	}
 
-	/**
-	 * @note update the package json with the prettier config
-	 */
-	writeFileSync(`${newDir}/package.json`, JSON.stringify(parsedJSON, null, 2))
+	writeFileSync(`${newDir}/package.json`, JSON.stringify(updatedPakcageJSON, null, 2))
 	renameSync(`${newDir}/pkg-package.json`, `${newDir}/package.json`)
 	writeTextUpdates(name, description, newDir)
 }

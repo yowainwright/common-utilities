@@ -2,7 +2,7 @@
 
 > @common-utilities/update-markdown-list
 
-
+Updates a markdown list with list data
 
 ## Synopsis
 

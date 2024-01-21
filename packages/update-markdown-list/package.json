@@ -1,7 +1,7 @@
 {
-  "name": "@common-utilities/NAME",
+  "name": "@common-utilities/update-markdown-list",
   "version": "0.0.1",
-  "description": "DESCRIPTION",
+  "description": "updates a markdown list with list data",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -14,7 +14,7 @@
     "tsc:check": "tsc --noEmit"
   },
   "jest": {
-    "name": "@common-utilities/NAME",
+    "name": "@common-utilities/update-markdown-list",
     "rootDir": "./",
     "roots": [ "<rootDir>/src"]
   },
