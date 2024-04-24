@@ -11,6 +11,9 @@
 export const pipe =
   (...fns: unknown[]) =>
   (patchedValue: unknown): unknown =>
-    fns.reduce((fnVal: unknown, fn: (fnVal: unknown) => unknown) => fn(fnVal), patchedValue)
+    fns.reduce(
+      (fnVal: unknown, fn: (fnVal: unknown) => unknown) => fn(fnVal),
+      patchedValue,
+    );
 
-export default pipe
+export default pipe;

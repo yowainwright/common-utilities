@@ -11,6 +11,9 @@
 export const compose =
   (...fns: unknown[]) =>
   (patchedValue: unknown): unknown =>
-    fns.reduceRight((fnVal: unknown, fn: (fnVal: unknown) => unknown) => fn(fnVal), patchedValue)
+    fns.reduceRight(
+      (fnVal: unknown, fn: (fnVal: unknown) => unknown) => fn(fnVal),
+      patchedValue,
+    );
 
-export default compose
+export default compose;

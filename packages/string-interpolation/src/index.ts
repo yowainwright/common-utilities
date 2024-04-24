@@ -8,15 +8,18 @@
  */
 
 export type KeyValueStringsObject = {
-  [key: string]: string
-}
+  [key: string]: string;
+};
 
-export const stringInterpolation = (str: string, arr: KeyValueStringsObject[]): string =>
+export const stringInterpolation = (
+  str: string,
+  arr: KeyValueStringsObject[],
+): string =>
   str && arr
     ? arr.reduce((generatedStr: string, item: KeyValueStringsObject) => {
-        const dynamicKey: string = Object.keys(item).toString()
-        return generatedStr.replace(`#{${dynamicKey}}`, item[dynamicKey])
+        const dynamicKey: string = Object.keys(item).toString();
+        return generatedStr.replace(`#{${dynamicKey}}`, item[dynamicKey]);
       }, str)
-    : str
+    : str;
 
-export default stringInterpolation
+export default stringInterpolation;

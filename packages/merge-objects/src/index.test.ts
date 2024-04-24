@@ -1,4 +1,4 @@
-import mergeObjects from '.'
+import mergeObjects from ".";
 
 const testItems = [
   {
@@ -31,7 +31,7 @@ const testItems = [
         cats: false,
         dogs: true,
       },
-      likes: ['home', 'yoga'],
+      likes: ["home", "yoga"],
     },
     lonelyObj2: {
       bummed: false,
@@ -39,13 +39,13 @@ const testItems = [
       complex: {
         likesDogs: true,
       },
-      likes: ['home', 'yoga'],
+      likes: ["home", "yoga"],
     },
     expected: {
       bummed: false,
       depressed: false,
       complex: { cats: false, dogs: true, likesDogs: true },
-      likes: ['home', 'yoga'],
+      likes: ["home", "yoga"],
     },
   },
   {
@@ -56,18 +56,18 @@ const testItems = [
         cats: false,
         dogs: true,
       },
-      likes: ['home', 'yoga'],
+      likes: ["home", "yoga"],
       person: {
         brain: {
           thoughts: true,
-          thoughtTypes: ['easy', 'hard'],
+          thoughtTypes: ["easy", "hard"],
         },
         bodyPart: [
           {
-            name: 'arm',
+            name: "arm",
           },
           {
-            name: 'leg',
+            name: "leg",
           },
         ],
       },
@@ -78,18 +78,18 @@ const testItems = [
       complex: {
         likesDogs: true,
       },
-      likes: ['home', 'yoga'],
+      likes: ["home", "yoga"],
       person: {
         brain: {
           ideas: true,
-          thoughtTypes: ['small'],
+          thoughtTypes: ["small"],
         },
         bodyPart: [
           {
-            name: 'arm',
+            name: "arm",
           },
           {
-            name: 'hand',
+            name: "hand",
           },
         ],
       },
@@ -98,37 +98,37 @@ const testItems = [
       bummed: false,
       depressed: false,
       complex: { cats: false, dogs: true, likesDogs: true },
-      likes: ['home', 'yoga'],
+      likes: ["home", "yoga"],
       person: {
         brain: {
           thoughts: true,
-          thoughtTypes: ['easy', 'hard', 'small'],
+          thoughtTypes: ["easy", "hard", "small"],
           ideas: true,
         },
         bodyPart: [
           {
-            name: 'arm',
+            name: "arm",
           },
           {
-            name: 'leg',
+            name: "leg",
           },
           {
-            name: 'arm',
+            name: "arm",
           },
           {
-            name: 'hand',
+            name: "hand",
           },
         ],
       },
     },
   },
-]
+];
 
-describe('mergeObjects', () => {
+describe("mergeObjects", () => {
   testItems.forEach((obj) => {
     test(`test ${obj}`, () => {
-      const result = mergeObjects(obj.lonelyObj1, obj.lonelyObj2)
-      expect(result).toEqual(obj.expected)
-    })
-  })
-})
+      const result = mergeObjects(obj.lonelyObj1, obj.lonelyObj2);
+      expect(result).toEqual(obj.expected);
+    });
+  });
+});

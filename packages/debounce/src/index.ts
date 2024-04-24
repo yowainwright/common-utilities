@@ -1,4 +1,4 @@
-type Fn = (args?: unknown) => void
+type Fn = (args?: unknown) => void;
 
 /**
  * debounce 🏓
@@ -11,8 +11,8 @@ type Fn = (args?: unknown) => void
 export const debounce =
   (fn: Fn, delay: number, timeout = 0): Fn =>
   (args?: unknown) => {
-    clearTimeout(timeout)
+    clearTimeout(timeout);
     // adds `as unknown as number` to ensure setTimeout returns a number
     // like window.setTimeout
-    timeout = setTimeout((): void => fn(args), delay) as unknown as number
-  }
+    timeout = setTimeout((): void => fn(args), delay) as unknown as number;
+  };

@@ -9,6 +9,8 @@ export const repeat =
   (iterations: number) =>
   (callback: (initialValue: unknown) => unknown) =>
   (initialValue: unknown): unknown =>
-    iterations === 0 ? initialValue : repeat(iterations - 1)(callback)(callback(initialValue))
+    iterations === 0
+      ? initialValue
+      : repeat(iterations - 1)(callback)(callback(initialValue));
 
-export default repeat
+export default repeat;

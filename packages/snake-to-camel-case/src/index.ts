@@ -7,8 +7,11 @@
  * @returns {string} returns a camelCase string
  */
 export const snakeToCamelCase = (str: string): string =>
-  str.split('_')
-    .map((word: string, index: number) => index === 0 ? word : word[0].toUpperCase() + word.slice(1))
-    .join('');
+  str
+    .split("_")
+    .map((word: string, index: number) =>
+      index === 0 ? word : word[0].toUpperCase() + word.slice(1),
+    )
+    .join("");
 
-export default snakeToCamelCase
+export default snakeToCamelCase;

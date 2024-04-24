@@ -9,8 +9,8 @@
 export const trace =
   (label: string) =>
   (value: unknown): unknown => {
-    console.log(`${label}: ${value}`)
-    return value
-  }
+    console.log(`${label}: ${value}`);
+    return value;
+  };
 
-export default trace
+export default trace;

@@ -1,14 +1,14 @@
 export type InputOptions = {
-	name?: string
-	message?: string
-}
+  name?: string;
+  message?: string;
+};
 
 export type Input = {
-	name: string
-}
+  name: string;
+};
 
 export type Options = {
-	description?: string
-	name?: string
-	pkgType?: string
-}
+  description?: string;
+  name?: string;
+  pkgType?: string;
+};

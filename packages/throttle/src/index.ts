@@ -1,5 +1,5 @@
-type Fn = (args?: unknown) => void
-type TimeoutHandler = null | number
+type Fn = (args?: unknown) => void;
+type TimeoutHandler = null | number;
 
 /**
  * throttle ⏱
@@ -15,7 +15,11 @@ export const throttle =
   (fn: Fn, delay: number, timeoutHandler: TimeoutHandler = null): Fn =>
   (args?: unknown): TimeoutHandler => {
     if (!timeoutHandler) {
-      timeoutHandler = setTimeout((): void => fn(args), (timeoutHandler = null), delay) as unknown as number
+      timeoutHandler = setTimeout(
+        (): void => fn(args),
+        (timeoutHandler = null),
+        delay,
+      ) as unknown as number;
     }
-    return timeoutHandler
-  }
+    return timeoutHandler;
+  };
