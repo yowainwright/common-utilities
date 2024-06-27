@@ -18,7 +18,7 @@
     "@swc/core": "^1.5.0",
     "@swc/jest": "0.2.36",
     "@types/jest": "29.5.12",
-    "@types/node": "20.14.4",
+    "@types/node": "20.14.8",
     "codependence": "^0.3.1",
     "commitizen": "4.3.0",
     "eslint": "9.5.0",
@@ -36,7 +36,7 @@
     "tsutils": "^3.21.0",
     "turbo": "^1.13.2",
     "type-fest": "^4.17.0",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "typescript-eslint": "^7.7.1"
   },
   "resolutions": {
