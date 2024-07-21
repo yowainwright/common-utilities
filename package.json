@@ -27,6 +27,7 @@
     "husky": "9.0.11",
     "jest": "29.7.0",
     "lint-staged": "15.2.2",
+    "pastoralist": "1.1.12-beta.5",
     "prettier": "3.2.5",
     "rimraf": "5.0.5",
     "ts-node": "10.9.2",
@@ -38,9 +39,6 @@
     "type-fest": "^4.17.0",
     "typescript": "5.4.5",
     "typescript-eslint": "^7.7.1"
-  },
-  "resolutions": {
-    "minimist": "^1.2.6"
   },
   "scripts": {
     "build": "turbo run clean && turbo run build",
@@ -63,7 +61,8 @@
     "release-prep": "changeset",
     "release-bumps": "changeset version",
     "release-packages": "pnpm prepublishOnly && changeset publish && git push --follow-tags",
-    "update": "codependence --update"
+    "update": "codependence --update",
+    "check-deps": "pastoralist --debug"
   },
   "commitlint": {
     "extends": [
@@ -128,5 +127,15 @@
     "*.{ts,tsx}": [
       "jest --bail --findRelatedTests --passWithNoTests"
     ]
+  },
+  "packageManager": "pnpm@9.5.0",
+  "pastoralist": {
+    "appendix": {
+      "minimist@^1.2.6": {
+        "dependents": {
+          "typescript": "minimist@^1.2.8"
+        }
+      }
+    }
   }
 }
