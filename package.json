@@ -18,10 +18,10 @@
     "@swc/core": "^1.5.0",
     "@swc/jest": "0.2.36",
     "@types/jest": "29.5.13",
-    "@types/node": "22.6.1",
+    "@types/node": "22.7.5",
     "codependence": "^0.3.1",
-    "commitizen": "4.3.0",
-    "eslint": "9.11.1",
+    "commitizen": "4.3.1",
+    "eslint": "9.12.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "husky": "9.1.6",
@@ -37,7 +37,7 @@
     "tsutils": "^3.21.0",
     "turbo": "^1.13.2",
     "type-fest": "^4.17.0",
-    "typescript": "5.6.2",
+    "typescript": "5.6.3",
     "typescript-eslint": "^7.7.1"
   },
   "scripts": {
