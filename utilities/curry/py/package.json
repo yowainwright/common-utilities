@@ -1,0 +1,10 @@
+{
+  "name": "@common-utilities/curry",
+  "version": "0.1.0",
+  "description": "curry is a function that takes a function and returns a curried version of that function 🥵",
+  "scripts": {
+    "build": "python -m py_compile curry.py",
+    "test": "python -m pytest test_curry.py -v",
+    "clean": "rm -rf __pycache__ *.pyc .pytest_cache"
+  }
+}
