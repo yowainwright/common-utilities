@@ -1,0 +1,36 @@
+{
+  "name": "@common-utilities/curry",
+  "version": "0.1.0",
+  "description": "curry is a function that takes a function and returns a curried version of that function 🥵",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "link:bin": "npm link",
+    "tsc:check": "tsc --noEmit"
+  },
+  "jest": {
+    "name": "@common-utilities/curry",
+    "rootDir": "./",
+    "roots": [
+      "<rootDir>/src"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yowainwright/common-utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yowainwright/common-utilities/issues"
+  },
+  "homepage": "https://github.com/yowainwright/common-utilities#readme"
+}

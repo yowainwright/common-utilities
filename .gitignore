@@ -64,14 +64,39 @@ typings/
 **/.DS_Store
 
 package-lock.json
-packages/**/package-lock.json
+utilities/**/package-lock.json
 
 dist/
 
-packages/**/dist/
+utilities/**/dist/
 
 .dccache
 
 index.js
 .pnpm-store
 .turbo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# Rust
+target/
+Cargo.lock
+*.rs.bk
