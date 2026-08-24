@@ -20,7 +20,7 @@
     "@types/jest": "29.5.14",
     "@types/node": "22.15.29",
     "codependence": "^0.3.1",
-    "commitizen": "4.3.1",
+    "commitizen": "4.3.2",
     "eslint": "9.28.0",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-prettier": "^5.1.3",
