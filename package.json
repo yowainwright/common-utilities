@@ -16,7 +16,7 @@
     "@common-utilities/new-pkg": "workspace:*",
     "@eslint/js": "^9.1.1",
     "@swc/core": "^1.5.0",
-    "@swc/jest": "0.2.38",
+    "@swc/jest": "0.2.39",
     "@types/jest": "29.5.14",
     "@types/node": "22.15.29",
     "codependence": "^0.3.1",
