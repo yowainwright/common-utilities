@@ -36,7 +36,7 @@
     "typescript": "7.0.2"
   },
   "scripts": {
-    "build": "turbo run clean && turbo run build",
+    "build": "pnpm --filter './u/*/*/ts' --filter './svcs/pkg' run build",
     "pkg": "node node_modules/@common-utilities/pkg/dist/cli.js",
     "new-u": "pnpm run pkg",
     "create-pkg": "pnpm run pkg",
