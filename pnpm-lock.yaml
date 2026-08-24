@@ -23,9 +23,9 @@ importers:
       '@commitlint/prompt':
         specifier: 19.8.1
         version: 19.8.1(@types/node@22.15.29)(typescript@7.0.2)
-      '@common-utilities/new-u':
+      '@common-utilities/pkg':
         specifier: workspace:*
-        version: link:utls/new-u
+        version: link:svcs/pkg
       '@eslint/js':
         specifier: ^9.1.1
         version: 9.7.0
@@ -83,29 +83,8 @@ importers:
       typescript:
         specifier: 7.0.2
         version: 7.0.2
-      typescript-eslint:
-        specifier: ^7.7.1
-        version: 7.16.1(eslint@9.28.0(jiti@2.4.1)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@7.0.2)
 
-  utls/compose/ts: {}
-
-  utls/curry/ts: {}
-
-  utls/debounce/ts: {}
-
-  utls/filter-array/ts: {}
-
-  utls/fn/ts: {}
-
-  utls/head/ts: {}
-
-  utls/is-object/ts: {}
-
-  utls/kebab-to-camel-string/ts: {}
-
-  utls/merge-objects/ts: {}
-
-  utls/new-u:
+  svcs/pkg:
     dependencies:
       '@modelcontextprotocol/server':
         specifier: 2.0.0
@@ -121,25 +100,41 @@ importers:
         specifier: ^22.15.29
         version: 22.15.29
 
-  utls/pipe/ts: {}
+  u/arr/filter-array/ts: {}
 
-  utls/repeat/ts: {}
+  u/arr/head/ts: {}
 
-  utls/rot13/ts: {}
+  u/doc/update-markdown-list/ts: {}
 
-  utls/snake-to-camel-case/ts: {}
+  u/fn/compose/ts: {}
 
-  utls/string-interpolation/ts: {}
+  u/fn/curry/ts: {}
 
-  utls/throttle/ts: {}
+  u/fn/pipe/ts: {}
 
-  utls/trace/ts: {}
+  u/fn/repeat/ts: {}
 
-  utls/trim-whitespace/ts: {}
+  u/obj/is-object/ts: {}
 
-  utls/update-markdown-list/ts: {}
+  u/obj/merge-objects/ts: {}
 
-  utls/wait-until-defined/ts: {}
+  u/obx/trace/ts: {}
+
+  u/rx/debounce/ts: {}
+
+  u/rx/throttle/ts: {}
+
+  u/rx/wait-until-defined/ts: {}
+
+  u/str/kebab-to-camel-string/ts: {}
+
+  u/str/rot13/ts: {}
+
+  u/str/snake-to-camel-case/ts: {}
+
+  u/str/string-interpolation/ts: {}
+
+  u/str/trim-whitespace/ts: {}
 
 packages:
 

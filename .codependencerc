@@ -4,8 +4,6 @@
     "@commitlint/config-lerna-scopes",
     "@commitlint/prompt",
     "@types/node",
-    "@typescript-eslint/eslint-plugin",
-    "@typescript-eslint/parser",
     "codependence",
     "commitizen",
     "eslint",

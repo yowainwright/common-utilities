@@ -7,13 +7,14 @@
   "license": "MIT",
   "main": "README.md",
   "private": true,
+  "packageManager": "pnpm@11.18.0",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/format": "^19.3.0",
     "@commitlint/prompt": "19.8.1",
-    "@common-utilities/new-u": "workspace:*",
+    "@common-utilities/pkg": "workspace:*",
     "@eslint/js": "^9.1.1",
     "@types/node": "22.15.29",
     "codependence": "^0.3.1",
@@ -32,12 +33,13 @@
     "tsutils": "^3.21.0",
     "turbo": "^1.13.2",
     "type-fest": "^4.17.0",
-    "typescript": "7.0.2",
-    "typescript-eslint": "^7.7.1"
+    "typescript": "7.0.2"
   },
   "scripts": {
     "build": "turbo run clean && turbo run build",
-    "new-u": "node node_modules/@common-utilities/new-u/dist/cli.js",
+    "pkg": "node node_modules/@common-utilities/pkg/dist/cli.js",
+    "new-u": "pnpm run pkg",
+    "create-pkg": "pnpm run pkg",
     "ci": "run-s lint:ci test:ci",
     "commit-msg": "commitlint --edit $1",
     "lint": "pnpm lint:cmd --fix",
@@ -47,7 +49,7 @@
     "lint-staged": "npx lint-staged",
     "test": "pnpm test:cmd",
     "test:ci": "pnpm test:cmd",
-    "test:cmd": "node --test --experimental-strip-types \"utls/**/src/*.test.ts\"",
+    "test:cmd": "node --test --experimental-strip-types \"u/**/src/*.test.ts\" \"svcs/**/src/*.test.ts\"",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "setup": "sh scripts/setup.sh",
@@ -114,7 +116,9 @@
     "*.{ts,json,md}": [
       "pnpm lint"
     ],
-    "*.{ts,tsx}": ["pnpm test:cmd"]
+    "*.{ts,tsx}": [
+      "pnpm test:cmd"
+    ]
   },
   "pastoralist": {
     "appendix": {
