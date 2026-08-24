@@ -1,0 +1,26 @@
+{
+  "name": "@common-utilities/throttle",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A basic implementation of the common utility function, throttle ⏱",
+  "homepage": "https://github.com/yowainwright/common-utilities#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "debounce",
+    "common-utilities",
+    "utility",
+    "functional"
+  ]
+}

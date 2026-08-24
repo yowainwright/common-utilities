@@ -13,7 +13,7 @@ Simple, typed, functional, documented, and tested utility functions for JavaScri
 This monorepo contains utilities implemented in multiple languages. Each utility is organized as:
 
 ```
-utilities/
+utls/
 ├── [utility-name]/
 │   ├── ts/      # TypeScript implementation
 │   ├── py/      # Python implementation
