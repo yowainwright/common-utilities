@@ -1,3 +1,4 @@
 packages:
+  - "u/*"
   - "u/*/*/ts"
   - "svcs/*"
