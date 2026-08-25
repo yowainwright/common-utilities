@@ -5,8 +5,9 @@ import { applyNewU } from "./new-u.ts";
 
 const [name, description, targetDirectory = resolve(process.cwd(), "u")] =
   process.argv.slice(2);
+const hasMissingArgument = !name || !description;
 
-if (!name || !description) {
+if (hasMissingArgument) {
   process.stderr.write("Usage: pkg <name> <description> [target-directory]\n");
   process.exitCode = 1;
 } else {

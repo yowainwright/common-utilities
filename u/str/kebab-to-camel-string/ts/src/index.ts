@@ -5,13 +5,17 @@ export type ObjectOfStrings = {
 export const kebabToCamelString = (kebabString: string): string =>
   kebabString
     .split("-")
-    .map((camelString: string, i: number): string =>
-      i === 0
-        ? camelString
-        : camelString
-          ? `${camelString.charAt(0).toUpperCase()}${camelString.slice(1)}`
-          : "",
-    )
+    .map((camelString: string, index: number): string => {
+      if (index === 0) {
+        return camelString;
+      }
+
+      if (!camelString) {
+        return "";
+      }
+
+      return `${camelString.charAt(0).toUpperCase()}${camelString.slice(1)}`;
+    })
     .join("");
 
 export const kebabToCamelStringsInObject = (

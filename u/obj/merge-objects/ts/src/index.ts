@@ -20,13 +20,16 @@ const isObject = (item: Item): item is Record<string, unknown> =>
  * @param {otherItem} probably another object
  */
 export const mergeObjects = (item: Item, otherItem: Item): Item => {
-  if (
-    (!isObject(item) && !isArray(item)) ||
-    (!isObject(otherItem) && !isArray(otherItem))
-  ) {
+  const isMergeableItem = isObject(item) || isArray(item);
+  const isMergeableOtherItem = isObject(otherItem) || isArray(otherItem);
+  const hasUnmergeableItem = !isMergeableItem || !isMergeableOtherItem;
+
+  if (hasUnmergeableItem) {
     return item;
   }
-  if (isArray(item) && isArray(otherItem)) {
+
+  const areBothArrays = isArray(item) && isArray(otherItem);
+  if (areBothArrays) {
     return filterArray([
       ...(item as Array<Item>),
       ...(otherItem as Array<Item>),
@@ -42,18 +45,32 @@ export const mergeObjects = (item: Item, otherItem: Item): Item => {
 
   return keys.reduce(
     (acc: Record<string, unknown>, key: string) => {
-      if (typeof acc[key] === "undefined") {
+      const currentValue = acc[key];
+      const isMissingValue = typeof currentValue === "undefined";
+
+      if (isMissingValue) {
         acc[key] = otherItemObject[key];
-      } else if (isObject(acc[key]) || isArray(acc[key])) {
-        acc[key] =
-          !isPrototypePolluted(key) &&
-          mergeObjects(itemObject[key], otherItemObject[key]);
-      } else if (
-        acc[key] !== otherItemObject[key] &&
-        typeof otherItemObject[key] !== "undefined"
-      ) {
+        return acc;
+      }
+
+      const isMergeableValue = isObject(currentValue) || isArray(currentValue);
+      if (isMergeableValue) {
+        const isSafeKey = !isPrototypePolluted(key);
+        let mergedValue: Item = false;
+        if (isSafeKey) {
+          mergedValue = mergeObjects(itemObject[key], otherItemObject[key]);
+        }
+        acc[key] = mergedValue;
+        return acc;
+      }
+
+      const hasDifferentValue = acc[key] !== otherItemObject[key];
+      const hasDefinedOtherValue = typeof otherItemObject[key] !== "undefined";
+      const shouldUseOtherValue = hasDifferentValue && hasDefinedOtherValue;
+      if (shouldUseOtherValue) {
         acc[key] = otherItemObject[key];
       }
+
       return acc;
     },
     itemObject,

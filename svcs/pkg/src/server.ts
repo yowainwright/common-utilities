@@ -17,11 +17,11 @@ export function createNewUServer() {
       return;
     }
 
+    const isBodylessRequest =
+      request.method === "GET" || request.method === "HEAD";
+    const requestBody = isBodylessRequest ? undefined : body;
     const webRequest = new Request(`http://localhost${request.url ?? "/"}`, {
-      body:
-        request.method === "GET" || request.method === "HEAD"
-          ? undefined
-          : body,
+      body: requestBody,
       headers: toHeaders(request),
       method: request.method,
     });
@@ -56,7 +56,8 @@ async function readBody(
       return null;
     }
 
-    chunks.push(buffer);
+    const chunkIndex = chunks.length;
+    chunks[chunkIndex] = buffer;
   }
 
   return Buffer.concat(chunks).toString("utf8");

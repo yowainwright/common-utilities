@@ -37,8 +37,9 @@ export const waitUntilDefined = async (
 ): Promise<boolean> => {
   const isValidInterval = Number.isFinite(interval) && interval > 0;
   const isValidTimeout = Number.isFinite(timeout) && timeout >= 0;
+  const hasInvalidOptions = !isValidInterval || !isValidTimeout;
 
-  if (!isValidInterval || !isValidTimeout) {
+  if (hasInvalidOptions) {
     throw new RangeError("interval must be > 0 and timeout must be >= 0");
   }
 

@@ -79,31 +79,32 @@ async function parseRequest(request: Request) {
 }
 
 function readInput(body: Record<string, unknown>): NewUInput {
-  const description = body.description;
-  const name = body.name;
-  const targetDirectory = body.targetDirectory;
-  const hasStrings = [description, name, targetDirectory].every(
-    (value) => typeof value === "string",
-  );
-
-  if (
-    !hasStrings ||
-    typeof description !== "string" ||
-    typeof name !== "string" ||
-    typeof targetDirectory !== "string"
-  ) {
-    throw new NewUError(
-      "invalid-input",
-      "description, name, and targetDirectory are required strings.",
-      400,
-    );
-  }
+  const description = readString(body.description);
+  const name = readString(body.name);
+  const targetDirectory = readString(body.targetDirectory);
 
   return { description, name, targetDirectory };
 }
 
+function readString(value: unknown): string {
+  if (typeof value === "string") {
+    return value;
+  }
+
+  throw new NewUError(
+    "invalid-input",
+    "description, name, and targetDirectory are required strings.",
+    400,
+  );
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === "object" && value !== null && !Array.isArray(value);
+  const isObjectValue = typeof value === "object";
+  const hasValue = value !== null;
+  const isArrayValue = Array.isArray(value);
+  const isRecordValue = isObjectValue && hasValue && !isArrayValue;
+
+  return isRecordValue;
 }
 
 function json(value: unknown, status: number) {
