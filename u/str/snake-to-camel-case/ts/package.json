@@ -16,7 +16,6 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf dist",
     "link:bin": "npm link",
     "tsc:check": "tsc --noEmit"
   },

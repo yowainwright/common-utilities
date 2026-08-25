@@ -3,7 +3,6 @@
     "declaration": true,
     "esModuleInterop": true,
     "erasableSyntaxOnly": true,
-    "importHelpers": true,
     "lib": ["esnext", "dom", "dom.iterable"],
     "module": "nodenext",
     "moduleResolution": "nodenext",

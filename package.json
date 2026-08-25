@@ -9,30 +9,19 @@
   "private": true,
   "packageManager": "pnpm@11.18.0",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/format": "^19.3.0",
-    "@commitlint/prompt": "19.8.1",
+    "@changesets/cli": "^3.0.1",
+    "@commitlint/cli": "21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/format": "^21.2.2",
+    "@commitlint/prompt": "21.2.2",
     "@common-utilities/pkg": "workspace:*",
-    "@eslint/js": "^9.1.1",
-    "@types/node": "22.15.29",
-    "codependence": "^0.3.1",
-    "commitizen": "4.3.1",
-    "eslint": "9.28.0",
-    "eslint-config-prettier": "10.1.5",
-    "eslint-plugin-prettier": "^5.1.3",
-    "lint-staged": "16.1.0",
-    "pastoralist": "1.1.12-beta.5",
-    "prettier": "3.5.3",
-    "rimraf": "6.0.1",
-    "ts-node": "10.9.2",
+    "@types/node": "26.2.0",
+    "codependence": "^1.0.8",
+    "commitizen": "4.3.2",
+    "eslint-plugin-legibility": "^0.3.3",
+    "oxlint": "^1.79.0",
+    "pastoralist": "1.13.1",
     "ts-toolbelt": "^9.6.0",
-    "tsconfig-paths": "4.2.0",
-    "tslib": "2.8.1",
-    "tsutils": "^3.21.0",
-    "turbo": "^1.13.2",
-    "type-fest": "^4.17.0",
     "typescript": "7.0.2"
   },
   "scripts": {
@@ -40,13 +29,12 @@
     "pkg": "node node_modules/@common-utilities/pkg/dist/cli.js",
     "new-u": "pnpm run pkg",
     "create-pkg": "pnpm run pkg",
-    "ci": "run-s lint:ci test:ci",
+    "ci": "pnpm run lint:ci && pnpm run test:ci",
     "commit-msg": "commitlint --edit $1",
-    "lint": "pnpm lint:cmd --fix",
-    "lint:ci": "pnpm lint:cmd",
-    "lint:cmd": "eslint",
+    "lint": "pnpm run lint:oxlint --fix",
+    "lint:ci": "pnpm run lint:oxlint",
+    "lint:oxlint": "oxlint -c .oxlintrc.json .",
     "lint:shell": "shellcheck-legibility check scripts",
-    "lint-staged": "npx lint-staged",
     "test": "pnpm test:cmd",
     "test:ci": "pnpm test:cmd",
     "test:cmd": "node --test --experimental-strip-types \"u/**/src/*.test.ts\" \"svcs/**/src/*.test.ts\"",
@@ -111,14 +99,6 @@
         ]
       ]
     }
-  },
-  "lint-staged": {
-    "*.{ts,json,md}": [
-      "pnpm lint"
-    ],
-    "*.{ts,tsx}": [
-      "pnpm test:cmd"
-    ]
   },
   "pastoralist": {
     "appendix": {
