@@ -4,26 +4,24 @@ import {
   inputRequired,
   McpServer,
 } from "@modelcontextprotocol/server";
-import * as z from "zod/v4";
-import { applyNewU, generateNewU } from "./new-u.ts";
-import { newUOutputSchema } from "./schema.ts";
-import type { NewUInput } from "./types.ts";
-
-const inputSchema = z
-  .object({
-    description: z.string().min(1),
-    name: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
-    targetDirectory: z.string().min(1),
-  })
-  .strict();
-const confirmationSchema = z.object({ confirm: z.boolean() });
+import { applyNewU, generateNewU } from "../index.ts";
+import { newUOutputSchema } from "../constants.ts";
+import {
+  confirmationSchema,
+  inputSchema,
+  serverDescription,
+  serverName,
+  serverVersion,
+  toolDescription,
+  toolNames,
+} from "./constants.ts";
+import type { McpInput } from "./types.ts";
 
 export function createNewUMcpServer() {
   const server = new McpServer({
-    description:
-      "Create TypeScript utilities with reviewable copy/paste output.",
-    name: "common-utilities",
-    version: "0.0.1",
+    description: serverDescription,
+    name: serverName,
+    version: serverVersion,
   });
 
   const registerTool = (toolName: string) => {
@@ -36,7 +34,7 @@ export function createNewUMcpServer() {
           openWorldHint: false,
           readOnlyHint: false,
         },
-        description: "Preview and create a TypeScript utility package.",
+        description: toolDescription,
         inputSchema,
         outputSchema: fromJsonSchema(newUOutputSchema),
       },
@@ -48,7 +46,7 @@ export function createNewUMcpServer() {
         );
 
         if (confirmed?.confirm !== true) {
-          const preview = generateNewU(input as NewUInput);
+          const preview = generateNewU(input as McpInput);
           const diff = preview.diff.map(({ patch }) => patch).join("\n");
 
           return inputRequired({
@@ -61,7 +59,7 @@ export function createNewUMcpServer() {
           });
         }
 
-        const resource = applyNewU(input as NewUInput);
+        const resource = applyNewU(input as McpInput);
 
         return {
           content: [{ type: "text", text: resource.markdown }],
@@ -71,8 +69,7 @@ export function createNewUMcpServer() {
     );
   };
 
-  registerTool("pkg");
-  registerTool("new-u");
+  toolNames.forEach(registerTool);
 
   return server;
 }

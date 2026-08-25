@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { describe, it } from "node:test";
-import { applyNewU, generateNewU, NewUError } from "./new-u.ts";
+import { applyNewU, generateNewU, NewUError } from "./index.ts";
 
 describe("generateNewU", () => {
   it("returns a TypeScript package preview without writing files", () => {
@@ -23,10 +23,14 @@ describe("generateNewU", () => {
     assert.match(result.markdown, /# first-item/);
     assert.match(result.diff[0]?.patch ?? "", /new file mode 100644/);
     assert.deepStrictEqual(result.provenance.dependencies, []);
+    assert.match(
+      result.files.find(({ path }) => path === "tsconfig.json")?.content ?? "",
+      /"outDir": "\.\/dist"/,
+    );
   });
 
   it("writes a package only when applyNewU is called", () => {
-    const targetDirectory = mkdtempSync(join(process.cwd(), "tmp/new-u-"));
+    const targetDirectory = mkdtempSync(join(process.cwd(), "tmp-new-u-"));
 
     try {
       const result = applyNewU({

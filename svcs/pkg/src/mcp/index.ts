@@ -1,4 +1,4 @@
 import { serveStdio } from "@modelcontextprotocol/server/stdio";
-import { createNewUMcpServer } from "./mcp-server.ts";
+import { createNewUMcpServer } from "./utils.ts";
 
 serveStdio(createNewUMcpServer);

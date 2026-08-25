@@ -1,3 +1,5 @@
+export const namePattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
 const fileSchema = {
   type: "object",
   additionalProperties: false,

@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "pnpm --filter './u/*/*/ts' --filter './svcs/pkg' run build",
-    "pkg": "node node_modules/@common-utilities/pkg/dist/cli.js",
+    "pkg": "node node_modules/@common-utilities/pkg/dist/cli/index.js",
     "new-u": "pnpm run pkg",
     "create-pkg": "pnpm run pkg",
     "ci": "pnpm run lint:ci && pnpm run test:ci",
@@ -37,7 +37,7 @@
     "lint:shell": "shellcheck-legibility check scripts",
     "test": "pnpm test:cmd",
     "test:ci": "pnpm test:cmd",
-    "test:cmd": "node --test --experimental-strip-types \"u/**/src/*.test.ts\" \"svcs/**/src/*.test.ts\"",
+    "test:cmd": "node --test --experimental-strip-types \"u/**/src/*.test.ts\" \"svcs/**/src/**/*.test.ts\"",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "setup": "sh scripts/setup.sh",

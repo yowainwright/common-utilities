@@ -1,4 +1,4 @@
-import { createNewUServer } from "./server.ts";
+import { createNewUServer } from "./utils.ts";
 
 const port = Number(process.env.PORT ?? 3000);
 

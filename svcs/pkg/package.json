@@ -7,18 +7,18 @@
   "private": true,
   "type": "module",
   "bin": {
-    "pkg": "./dist/cli.js",
-    "new-u": "./dist/cli.js",
-    "create-pkg": "./dist/cli.js"
+    "pkg": "./dist/cli/index.js",
+    "new-u": "./dist/cli/index.js",
+    "create-pkg": "./dist/cli/index.js"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc",
-    "mcp": "node dist/mcp.js",
-    "serve": "node dist/server.js",
-    "test": "node --test --experimental-strip-types \"src/*.test.ts\""
+    "mcp": "node dist/mcp/index.js",
+    "serve": "node dist/serve/index.js",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\""
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0",

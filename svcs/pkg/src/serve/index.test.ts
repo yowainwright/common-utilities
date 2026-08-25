@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { describe, it } from "node:test";
-import { createNewURouter } from "./rest.ts";
+import { createNewURouter } from "./utils.ts";
 
 describe("new-u REST resource", () => {
   it("returns a preview resource for a POST", async () => {
@@ -26,7 +26,7 @@ describe("new-u REST resource", () => {
   });
 
   it("writes only when the REST request opts in", async () => {
-    const targetDirectory = mkdtempSync(join(process.cwd(), "tmp/rest-new-u-"));
+    const targetDirectory = mkdtempSync(join(process.cwd(), "tmp-rest-new-u-"));
 
     try {
       const router = createNewURouter();

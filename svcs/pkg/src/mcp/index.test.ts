@@ -4,11 +4,11 @@ import { InMemoryTransport } from "@modelcontextprotocol/server";
 import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { describe, it } from "node:test";
-import { createNewUMcpServer } from "./mcp-server.ts";
+import { createNewUMcpServer } from "./utils.ts";
 
 describe("new-u MCP tool", () => {
   it("confirms before applying the generated package", async () => {
-    const targetDirectory = mkdtempSync(join(process.cwd(), "tmp/mcp-new-u-"));
+    const targetDirectory = mkdtempSync(join(process.cwd(), "tmp-mcp-new-u-"));
     const [clientTransport, serverTransport] =
       InMemoryTransport.createLinkedPair();
     const server = createNewUMcpServer();
