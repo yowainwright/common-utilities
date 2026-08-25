@@ -1,0 +1,30 @@
+{
+  "name": "@common-utilities/wait-until-defined",
+  "type": "module",
+  "version": "1.1.2",
+  "description": "[Deprecated] A polling utility that waits until a callback returns true ⌚️",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "aysnc",
+    "wait",
+    "await",
+    "callback",
+    "later",
+    "wait-until",
+    "until",
+    "functional",
+    "typescript",
+    "utility"
+  ]
+}

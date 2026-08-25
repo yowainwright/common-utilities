@@ -1,0 +1,27 @@
+{
+  "name": "@common-utilities/trace",
+  "type": "module",
+  "version": "0.1.3",
+  "description": "A basic implementation of the common utility function, Trace 🖋",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:yowainwright/common-utilities.git",
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (jeffry.in)",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "log",
+    "check",
+    "development",
+    "debug",
+    "debugging",
+    "utility",
+    "functional"
+  ]
+}

@@ -1,26 +1,21 @@
 {
   "compilerOptions": {
-    "baseUrl": "./packages",
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
     "declaration": true,
     "esModuleInterop": true,
-    "checkJs": false,
-    "jsx": "react",
-    "importHelpers": true,
-    "lib": ["esnext", "dom", "es6", "dom.iterable"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmit": false,
+    "erasableSyntaxOnly": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "preserveConstEnums": true,
-    "removeComments": false,
+    "rewriteRelativeImportExtensions": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "es6"
+    "target": "esnext",
+    "verbatimModuleSyntax": true
   },
-  "exclude": ["dist", "**/*.test.ts", "packages/*/dist/**", "*.js"]
+  "exclude": ["dist", "**/*.test.ts", "*.js"]
 }

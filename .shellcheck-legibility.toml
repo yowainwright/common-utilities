@@ -1,0 +1,2 @@
+# setup.sh is the deliberate root-level entrypoint for scripts/.
+ignore = ["LEG025"]

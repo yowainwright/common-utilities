@@ -64,11 +64,13 @@ typings/
 **/.DS_Store
 
 package-lock.json
-utilities/**/package-lock.json
+u/**/package-lock.json
+svcs/**/package-lock.json
 
 dist/
 
-utilities/**/dist/
+u/**/dist/
+svcs/**/dist/
 
 .dccache
 
