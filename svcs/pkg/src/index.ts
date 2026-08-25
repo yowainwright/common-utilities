@@ -55,27 +55,32 @@ export function generateNewU(input: NewUInput): NewUResource {
 export function applyNewU(input: NewUInput): NewUResource {
   const preview = generateNewU(input);
   let stagingDirectory: string | undefined;
+  let destinationReserved = false;
 
   try {
-    const currentStagingDirectory = mkdtempSync(
-      join(dirname(preview.packageDirectory), ".new-u-"),
-    );
-    stagingDirectory = currentStagingDirectory;
-    mkdirSync(join(currentStagingDirectory, "src"));
-    preview.files.forEach((file) => {
-      writeFileSync(join(currentStagingDirectory, file.path), file.content, {
-        encoding: "utf8",
-        flag: "wx",
-      });
-    });
+    mkdirSync(preview.packageDirectory);
+    destinationReserved = true;
+    stagingDirectory = createStagingDirectory(preview);
     renameSync(stagingDirectory, preview.packageDirectory);
+    stagingDirectory = undefined;
   } catch (error) {
     if (stagingDirectory) {
       rmSync(stagingDirectory, { force: true, recursive: true });
     }
+    if (destinationReserved) {
+      removeEmptyDirectory(preview.packageDirectory);
+    }
 
     if (error instanceof NewUError) {
       throw error;
+    }
+
+    if (isExistsError(error)) {
+      throw new NewUError(
+        "already-exists",
+        `The package ${preview.name} already exists.`,
+        409,
+      );
     }
 
     throw new NewUError(
@@ -86,6 +91,40 @@ export function applyNewU(input: NewUInput): NewUResource {
   }
 
   return { ...preview, status: "created" };
+}
+
+function createStagingDirectory(preview: NewUResource) {
+  const stagingDirectory = mkdtempSync(
+    join(dirname(preview.packageDirectory), ".new-u-"),
+  );
+  mkdirSync(join(stagingDirectory, "src"));
+  preview.files.forEach((file) => {
+    writeFileSync(join(stagingDirectory, file.path), file.content, {
+      encoding: "utf8",
+      flag: "wx",
+    });
+  });
+
+  return stagingDirectory;
+}
+
+function isExistsError(error: unknown) {
+  if (!(error instanceof Error)) {
+    return false;
+  }
+  if (!("code" in error)) {
+    return false;
+  }
+
+  return error.code === "EEXIST";
+}
+
+function removeEmptyDirectory(directory: string) {
+  try {
+    rmSync(directory, { force: true });
+  } catch {
+    return;
+  }
 }
 
 function resolveInput(input: NewUInput) {
