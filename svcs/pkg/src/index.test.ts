@@ -23,6 +23,20 @@ describe("generateNewU", () => {
     assert.match(result.markdown, /# first-item/);
     assert.match(result.diff[0]?.patch ?? "", /new file mode 100644/);
     assert.deepStrictEqual(result.provenance.dependencies, []);
+    const packageJsonContent =
+      result.files.find(({ path }) => path === "package.json")?.content ?? "{}";
+    const packageJson = JSON.parse(packageJsonContent);
+
+    assert.deepStrictEqual(packageJson, {
+      name: "@common-utilities/first-item",
+      version: "0.0.1",
+      description: "A small array helper",
+      type: "module",
+      exports: { ".": "./src/index.ts" },
+      private: true,
+      scripts: { build: "tsc", "tsc:check": "tsc --noEmit" },
+      license: "MIT",
+    });
     assert.match(
       result.files.find(({ path }) => path === "tsconfig.json")?.content ?? "",
       /"outDir": "\.\/dist"/,
