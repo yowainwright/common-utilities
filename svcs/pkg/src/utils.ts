@@ -10,7 +10,7 @@ export function createFiles(name: string, description: string): NewUFile[] {
     type: "module",
     exports: { ".": "./src/index.ts" },
     private: true,
-    scripts: { build: "tsc", "tsc:check": "tsc --noEmit" },
+    scripts: { "tsc:check": "tsc --noEmit" },
     license: "MIT",
   };
   const tsconfig = {

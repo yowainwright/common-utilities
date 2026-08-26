@@ -34,7 +34,7 @@ describe("generateNewU", () => {
       type: "module",
       exports: { ".": "./src/index.ts" },
       private: true,
-      scripts: { build: "tsc", "tsc:check": "tsc --noEmit" },
+      scripts: { "tsc:check": "tsc --noEmit" },
       license: "MIT",
     });
     assert.match(
