@@ -28,6 +28,6 @@
   "devDependencies": {
     "@types/koa": "^3.0.3",
     "@types/koa-pino-logger": "^3.0.5",
-    "@types/node": "^22.15.29"
+    "@types/node": "^26.3.0"
   }
 }

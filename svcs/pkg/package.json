@@ -32,6 +32,6 @@
   },
   "devDependencies": {
     "@modelcontextprotocol/client": "2.0.0",
-    "@types/node": "^22.15.29"
+    "@types/node": "^26.3.0"
   }
 }
