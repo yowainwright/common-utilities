@@ -1,0 +1,20 @@
+FROM node:26-alpine
+
+WORKDIR /app
+
+ENV CI=true
+ENV HOST=0.0.0.0
+ENV PORT=8787
+
+RUN npm install --global pnpm@11.18.0
+
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.json ./
+COPY svcs ./svcs
+COPY u ./u
+
+RUN pnpm install --frozen-lockfile
+RUN pnpm --filter @common-utilities/api build
+
+EXPOSE 8787
+
+CMD ["pnpm", "--filter", "@common-utilities/api", "serve"]
