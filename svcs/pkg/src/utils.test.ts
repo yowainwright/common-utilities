@@ -19,7 +19,7 @@ test("createFiles returns the scaffold files sorted by path", () => {
   ]);
 });
 
-test("createFiles creates a package.json that exports the source entry", () => {
+test("createFiles creates a package.json that exports the build entry", () => {
   const files = createFiles("first-item", "A small array helper");
   const packageJsonContent =
     files.find(({ path }) => path === "package.json")?.content ?? "{}";
@@ -29,9 +29,20 @@ test("createFiles creates a package.json that exports the source entry", () => {
     version: "0.0.1",
     description: "A small array helper",
     type: "module",
-    exports: { ".": "./src/index.ts" },
+    exports: {
+      ".": {
+        types: "./dist/index.d.ts",
+        default: "./dist/index.js",
+      },
+    },
+    main: "./dist/index.js",
+    module: "./dist/index.js",
     private: true,
-    scripts: { "tsc:check": "tsc --noEmit" },
+    scripts: {
+      build: "tsc",
+      "tsc:check": "tsc --noEmit",
+    },
+    types: "./dist/index.d.ts",
     license: "MIT",
   });
 });

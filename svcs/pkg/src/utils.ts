@@ -3,14 +3,29 @@ import type { NewUDiff, NewUFile, NewUProvenance } from "./types.ts";
 
 export function createFiles(name: string, description: string): NewUFile[] {
   const functionName = toFunctionName(name);
+  const packageEntry = "./dist/index.js";
+  const packageTypes = "./dist/index.d.ts";
+  const packageExports = {
+    ".": {
+      types: packageTypes,
+      default: packageEntry,
+    },
+  };
+  const scripts = {
+    build: "tsc",
+    "tsc:check": "tsc --noEmit",
+  };
   const packageJson = {
     name: `@common-utilities/${name}`,
     version: "0.0.1",
     description,
     type: "module",
-    exports: { ".": "./src/index.ts" },
+    exports: packageExports,
+    main: packageEntry,
+    module: packageEntry,
     private: true,
-    scripts: { "tsc:check": "tsc --noEmit" },
+    scripts,
+    types: packageTypes,
     license: "MIT",
   };
   const tsconfig = {
@@ -52,7 +67,7 @@ function createReadme(name: string, description: string, functionName: string) {
 }
 
 function createTest(functionName: string) {
-  return `import assert from "node:assert/strict";\nimport { it } from "node:test";\nimport ${functionName} from "./index.ts";\n\nit("returns the first item", () => {\n  assert.strictEqual(${functionName}(["first", "second"]), "first");\n});\n`;
+  return `import assert from "node:assert/strict";\nimport { test } from "node:test";\nimport ${functionName} from "./index.ts";\n\ntest("${functionName} returns the first item", () => {\n  assert.strictEqual(${functionName}(["first", "second"]), "first");\n});\n`;
 }
 
 export function createDiff(file: NewUFile): NewUDiff {
