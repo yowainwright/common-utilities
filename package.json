@@ -17,7 +17,7 @@
     "@common-utilities/api": "workspace:*",
     "@common-utilities/pkg": "workspace:*",
     "@types/node": "26.2.0",
-    "codependence": "^1.0.8",
+    "codependence": "^1.0.12",
     "commitizen": "4.3.2",
     "eslint-plugin-legibility": "^0.3.3",
     "oxlint": "^1.79.0",
