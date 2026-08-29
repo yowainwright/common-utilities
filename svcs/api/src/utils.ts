@@ -56,10 +56,15 @@ import type {
 const responseCache = new Map<string, CachedResponse>();
 const rateLimitBuckets = new Map<string, RateLimitBucket>();
 
+type PackageRouteResult = Readonly<{
+  problem: Response | null;
+  route: PackageRoute | null;
+}>;
+
 export function createNewURouter(options: ServeOptions = {}) {
   return async (request: Request): Promise<Response> => {
     const url = new URL(request.url);
-    const packageRoute = readPackageRoute(url.pathname);
+    const packageRouteResult = readPackageRoute(url.pathname);
     const statusResponse = handleStatusRequest(request, url.pathname);
 
     if (isAuthRoute(url.pathname)) {
@@ -68,6 +73,10 @@ export function createNewURouter(options: ServeOptions = {}) {
 
     if (statusResponse) {
       return statusResponse;
+    }
+
+    if (packageRouteResult.problem) {
+      return packageRouteResult.problem;
     }
 
     const authResult = await readAuthResult(request, options);
@@ -92,8 +101,8 @@ export function createNewURouter(options: ServeOptions = {}) {
 
     if (isPackageResolutionRoute(url.pathname)) {
       response = await handlePackageResolution(request, url);
-    } else if (packageRoute) {
-      response = await handlePackage(request, packageRoute);
+    } else if (packageRouteResult.route) {
+      response = await handlePackage(request, packageRouteResult.route);
     } else if (!routes.has(url.pathname)) {
       response = problem(
         404,
@@ -712,7 +721,7 @@ function isCacheEnabled(request: Request, options: ServeOptions) {
 
   const url = new URL(request.url);
   const isGetMethod = request.method === "GET" || request.method === "HEAD";
-  const isPackageDetailRead = readPackageRoute(url.pathname) !== null;
+  const isPackageDetailRead = readPackageRoute(url.pathname).route !== null;
   const isPackageSearchRead = isPackageResolutionRoute(url.pathname);
   const isPackageRead = isPackageSearchRead || isPackageDetailRead;
   const shouldCache = isGetMethod && isPackageRead;
@@ -789,23 +798,47 @@ function readGetProblem(request: Request) {
   return new Response(null, { headers: { Allow: "GET, HEAD" }, status: 405 });
 }
 
-function readPackageRoute(pathname: string): PackageRoute | null {
+function readPackageRoute(pathname: string): PackageRouteResult {
   const prefix = `${packageRouteRoot}/`;
 
   if (!pathname.startsWith(prefix)) {
-    return null;
+    return { problem: null, route: null };
   }
 
   const routePath = pathname.slice(prefix.length);
-  const segments = routePath.split("/").filter(Boolean).map(decodeURIComponent);
+  const segments = readPathSegments(routePath);
+
+  if (!segments) {
+    return {
+      problem: problem(
+        400,
+        "invalid-package-path",
+        "The package path must be valid percent-encoded UTF-8.",
+      ),
+      route: null,
+    };
+  }
+
   const [kind, group, slug, ...rest] = segments;
   const hasPackageIdentity = Boolean(kind) && Boolean(group) && Boolean(slug);
 
   if (!hasPackageIdentity) {
-    return null;
+    return { problem: null, route: null };
   }
 
-  return { group, kind, rest, slug };
+  return { problem: null, route: { group, kind, rest, slug } };
+}
+
+function readPathSegments(routePath: string) {
+  try {
+    return routePath.split("/").filter(Boolean).map(decodeURIComponent);
+  } catch (error) {
+    if (error instanceof URIError) {
+      return null;
+    }
+
+    throw error;
+  }
 }
 
 function readSearchParam(url: URL, primary: string, fallback: string) {
@@ -844,7 +877,7 @@ export function createNewUApp(options: ServeOptions = {}) {
   app.use(async (context) => {
     const webResponse = await routeKoaRequest(context, router);
 
-    applyWebResponse(context, webResponse);
+    await applyWebResponse(context, webResponse);
   });
 
   return app;
@@ -935,8 +968,42 @@ function toHeaders(request: IncomingMessage) {
 
 async function applyWebResponse(context: Context, response: Response) {
   context.status = response.status;
-  response.headers.forEach((value, name) => {
+
+  applyResponseHeaders(context, response.headers);
+  context.body = await response.text();
+}
+
+function applyResponseHeaders(context: Context, headers: Headers) {
+  const setCookies = readSetCookieHeaders(headers);
+
+  setCookies.forEach((value) => {
+    context.append("Set-Cookie", value);
+  });
+
+  headers.forEach((value, name) => {
+    if (name.toLowerCase() === "set-cookie") {
+      return;
+    }
+
     context.set(name, value);
   });
-  context.body = await response.text();
+}
+
+function readSetCookieHeaders(headers: Headers) {
+  const headersWithCookies = headers as Headers & {
+    getSetCookie?: () => string[];
+  };
+  const setCookies = headersWithCookies.getSetCookie?.() ?? [];
+
+  if (setCookies.length > 0) {
+    return setCookies;
+  }
+
+  const setCookie = headers.get("set-cookie");
+
+  if (setCookie) {
+    return [setCookie];
+  }
+
+  return [];
 }
