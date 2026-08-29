@@ -1,0 +1,10 @@
+.git
+.pnpm-store
+dist
+logs
+node_modules
+tmp
+*.log
+*.tgz
+u/**/dist
+svcs/**/dist

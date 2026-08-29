@@ -1,3 +1,4 @@
 [tools]
+mprocs = "0.9.6"
 node = "26"
 pnpm = "11.18.0"

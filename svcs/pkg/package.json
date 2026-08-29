@@ -1,7 +1,7 @@
 {
   "name": "@common-utilities/pkg",
   "version": "0.0.1",
-  "description": "Creates TypeScript utilities through REST and MCP.",
+  "description": "Manages common-utilities package lifecycle operations.",
   "author": "Jeff Wainwright <https://jeffry.in> (yowainwright@gmail.com)",
   "license": "MIT",
   "private": true,
@@ -11,14 +11,20 @@
     "new-u": "./dist/cli/index.js",
     "create-pkg": "./dist/cli/index.js"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc",
     "mcp": "node dist/mcp/index.js",
-    "serve": "node dist/serve/index.js",
-    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\""
+    "test": "pnpm run test:unit",
+    "test:unit": "node --test --experimental-strip-types \"src/**/*.test.ts\""
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0",

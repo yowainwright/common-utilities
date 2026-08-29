@@ -1,0 +1,33 @@
+{
+  "name": "@common-utilities/api",
+  "version": "0.0.1",
+  "description": "Serves the common-utilities API.",
+  "author": "Jeff Wainwright <https://jeffry.in> (yowainwright@gmail.com)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm --filter @common-utilities/pkg build && tsc",
+    "serve": "node dist/index.js",
+    "test": "pnpm --filter @common-utilities/pkg build && node --test --experimental-strip-types \"tests/unit/**/*.test.ts\"",
+    "test:e2e:server": "node --experimental-strip-types tests/e2e/server.ts",
+    "test:integration": "pnpm --filter @common-utilities/pkg build && node --test --experimental-strip-types \"tests/integration/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@better-auth/api-key": "^1.7.2",
+    "@common-utilities/pkg": "workspace:*",
+    "better-auth": "^1.7.2",
+    "koa": "^3.2.1",
+    "koa-pino-logger": "^5.0.0",
+    "pino": "^10.3.1",
+    "rxjs": "9.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^3.0.3",
+    "@types/koa-pino-logger": "^3.0.5",
+    "@types/node": "^22.15.29"
+  }
+}

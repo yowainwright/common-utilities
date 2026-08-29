@@ -22,7 +22,12 @@
       }
     ],
     "legibility/no-complex-ternaries": "warn",
-    "legibility/no-computed-values": "warn",
+    "legibility/no-computed-values": [
+      "warn",
+      {
+        "max": 0
+      }
+    ],
     "legibility/no-hidden-side-effects": "warn",
     "legibility/no-quadratic-patterns": "warn",
     "legibility/no-standalone-array-mutations": "warn",

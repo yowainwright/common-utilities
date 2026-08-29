@@ -1,0 +1,43 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ops/docker/Dockerfile.api
+    environment:
+      COMMON_UTILITIES_TEST_TOKEN: test-token
+      HOST: 0.0.0.0
+      PORT: "8787"
+    command:
+      - pnpm
+      - --filter
+      - "@common-utilities/api"
+      - test:e2e:server
+    expose:
+      - "8787"
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:8787/api/v1/ready').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"
+      interval: 3s
+      retries: 20
+      timeout: 3s
+
+  k6:
+    image: grafana/k6:2.2.0
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      API_TOKEN: test-token
+      API_URL: http://api:8787
+      K6_DURATION: 5s
+      K6_VUS: "1"
+    profiles:
+      - e2e
+    volumes:
+      - ./svcs/api/tests/e2e/api.k6.js:/scripts/api.k6.js:ro
+    command:
+      - run
+      - /scripts/api.k6.js

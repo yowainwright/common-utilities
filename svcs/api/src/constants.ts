@@ -1,0 +1,11 @@
+export const maxBodyBytes = 1_000_000;
+export const aliveRoute = "/api/v1/alive";
+export const authRouteRoot = "/api/auth";
+export const cacheMaxEntries = 250;
+export const cacheTtlMs = 1_209_600_000;
+export const healthRoute = "/api/v1/health";
+export const packageRouteRoot = "/api/v1/packages";
+export const rateLimitMax = 120;
+export const rateLimitWindowMs = 60_000;
+export const readyRoute = "/api/v1/ready";
+export const routes = new Set(["/pkg", "/new-u"]);

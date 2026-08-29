@@ -26,7 +26,9 @@ export const checkDefinition = async (
   }
 
   await wait(interval);
-  return checkDefinition(callbackFn, interval, attempts - 1);
+  const remainingAttempts = attempts - 1;
+
+  return checkDefinition(callbackFn, interval, remainingAttempts);
 };
 
 /** @deprecated Prefer an event-driven readiness signal. */

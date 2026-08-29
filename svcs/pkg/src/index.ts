@@ -37,6 +37,7 @@ export function generateNewU(input: NewUInput): NewUResource {
   const { name, packageDirectory } = resolveInput(input);
   const files = createFiles(name, input.description);
   const diff = files.map(createDiff);
+  const markdown = files.find(({ path }) => path === "README.md")?.content ?? "";
   const provenance = createProvenance(files);
 
   return {
@@ -44,7 +45,7 @@ export function generateNewU(input: NewUInput): NewUResource {
     files,
     function: { name: toFunctionName(name), path: "src/index.ts" },
     kind: "pkg",
-    markdown: files.find(({ path }) => path === "README.md")?.content ?? "",
+    markdown,
     name,
     packageDirectory,
     provenance,
@@ -116,7 +117,9 @@ function isExistsError(error: unknown) {
     return false;
   }
 
-  return error.code === "EEXIST";
+  const isExistsErrorCode = error.code === "EEXIST";
+
+  return isExistsErrorCode;
 }
 
 function removeEmptyDirectory(directory: string) {
@@ -206,10 +209,8 @@ function validateInput(input: NewUInput) {
 }
 
 export { createNewUMcpServer } from "./mcp/utils.ts";
-export { createNewURouter } from "./serve/utils.ts";
 export { newUInputSchema, newUOutputSchema } from "./constants.ts";
 export { createNewUMcpServer as createPkgMcpServer } from "./mcp/utils.ts";
-export { createNewURouter as createPkgRouter } from "./serve/utils.ts";
 export type {
   NewUDiff,
   NewUFile,

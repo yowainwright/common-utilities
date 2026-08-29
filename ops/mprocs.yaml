@@ -1,0 +1,14 @@
+procs:
+  api:
+    shell: "pnpm run dev:api"
+  mcp:
+    shell: "pnpm run dev:mcp"
+  unit:
+    shell: "pnpm run test:unit"
+    autostart: false
+  integration:
+    shell: "pnpm run test:integration"
+    autostart: false
+  e2e:
+    shell: "pnpm run test:e2e"
+    autostart: false
