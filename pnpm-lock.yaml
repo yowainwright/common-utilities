@@ -33,8 +33,8 @@ importers:
         specifier: 26.2.0
         version: 26.2.0
       codependence:
-        specifier: ^1.0.8
-        version: 1.0.8
+        specifier: ^1.0.12
+        version: 1.0.12
       commitizen:
         specifier: 4.3.2
         version: 4.3.2(@types/node@26.2.0)(typescript@7.0.2)
@@ -487,6 +487,10 @@ packages:
 
   '@noble/ciphers@2.4.0':
     resolution: {integrity: sha512-AnjFn0Jv92laAkvMrghlFZq4qQCIN/4DxFV/eooqtC2YTjB7kBeLMS2T9KJX4Dn+ZVXLOwK0lSgqDtx9gvxtiw==}
+    engines: {node: '>= 20.19.0'}
+
+  '@noble/hashes@2.3.0':
+    resolution: {integrity: sha512-oN+QwyX7VSHotibwubG3kpzbwKrfnyR6OOO+3Nk/53ADL7FmgHHz4TgrbaYKvvOw09u6QTx0oiH1cNCIOuN0CQ==}
     engines: {node: '>= 20.19.0'}
 
   '@noble/hashes@2.4.0':
@@ -1044,8 +1048,8 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  codependence@1.0.8:
-    resolution: {integrity: sha512-84txLfRSlyObi7MZDoJaUxjbHLdd19FblKxVtsinzOPpDLKUEvkZfiINCskE0iF2uOmsgAwKV6VLl00//XaU2w==}
+  codependence@1.0.12:
+    resolution: {integrity: sha512-wWu3QyLo+LGxj6tt0/hUNV8Ge6YaaIZD+Nww3+9I6i2ilBU9a5iUaCxTo3TCXGNYOCHiJZtx7TU9DqTMiDRKBg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2143,11 +2147,11 @@ snapshots:
 
   '@better-auth/utils@0.4.2':
     dependencies:
-      '@noble/hashes': 2.4.0
+      '@noble/hashes': 2.3.0
 
   '@better-auth/utils@0.5.0':
     dependencies:
-      '@noble/hashes': 2.4.0
+      '@noble/hashes': 2.3.0
 
   '@better-fetch/fetch@1.3.1': {}
 
@@ -2499,6 +2503,8 @@ snapshots:
       zod: 4.4.3
 
   '@noble/ciphers@2.4.0': {}
+
+  '@noble/hashes@2.3.0': {}
 
   '@noble/hashes@2.4.0': {}
 
@@ -2901,7 +2907,7 @@ snapshots:
 
   clone@1.0.4: {}
 
-  codependence@1.0.8: {}
+  codependence@1.0.12: {}
 
   color-convert@1.9.3:
     dependencies:
