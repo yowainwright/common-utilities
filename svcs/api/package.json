@@ -19,7 +19,7 @@
   "dependencies": {
     "@better-auth/api-key": "^1.7.2",
     "@common-utilities/pkg": "workspace:*",
-    "better-auth": "^1.7.2",
+    "better-auth": "^1.7.7",
     "koa": "^3.2.1",
     "koa-pino-logger": "^5.0.0",
     "pino": "^10.3.1",
